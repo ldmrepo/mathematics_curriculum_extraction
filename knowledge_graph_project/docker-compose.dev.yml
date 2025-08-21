@@ -73,38 +73,6 @@ services:
     networks:
       - kg_network_dev
 
-  # pgAdmin - PostgreSQL 관리 도구
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    container_name: kg_pgadmin_dev
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin123
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    ports:
-      - "8080:80"
-    volumes:
-      - pgadmin_data_dev:/var/lib/pgadmin
-    depends_on:
-      - postgres
-    restart: unless-stopped
-    networks:
-      - kg_network_dev
-
-  # Grafana - 모니터링
-  grafana:
-    image: grafana/grafana:latest
-    container_name: kg_grafana_dev
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin123
-      - GF_USERS_ALLOW_SIGN_UP=false
-    ports:
-      - "3000:3000"
-    volumes:
-      - grafana_data_dev:/var/lib/grafana
-    restart: unless-stopped
-    networks:
-      - kg_network_dev
 
 networks:
   kg_network_dev:
@@ -130,9 +98,3 @@ volumes:
   chromadb_data_dev:
     driver: local
     name: kg_chromadb_data_dev
-  pgadmin_data_dev:
-    driver: local
-    name: kg_pgadmin_data_dev
-  grafana_data_dev:
-    driver: local
-    name: kg_grafana_data_dev
