@@ -1,6 +1,6 @@
 # 수학과 교육과정 데이터 추출 가이드
 
-**버전**: 2.0.0  
+**버전**: 2.1.0  
 **수정일**: 2025-01-21  
 **기준**: 2022 개정 수학과 교육과정
 
@@ -27,6 +27,7 @@
 - **데이터 유형**: 
   - 내용 체계 (핵심 아이디어, 내용 요소, 학습 요소)
   - 성취기준 및 해설
+  - 성취수준 (성취기준별 수준)
   - 용어와 기호
 
 ## 데이터 구조
@@ -41,7 +42,8 @@
 │   │   │   ├── 내용 요소 (3개 범주)
 │   │   │   ├── 학습 요소 (3개 범주)
 │   │   │   ├── 성취기준
-│   │   │   │   └── 해설 및 고려사항
+│   │   │   │   ├── 해설 및 고려사항
+│   │   │   │   └── 성취수준 (A, B, C, D, E)
 │   │   │   └── 용어와 기호
 ```
 
@@ -59,6 +61,11 @@ data/
 ├── achievement_standards/   # 성취기준
 │   ├── achievement_standards_*.csv
 │   └── standard_explanations_*.csv
+├── achievement_levels/      # 성취수준
+│   ├── achievement_levels_elementary_1-2_*.csv
+│   ├── achievement_levels_elementary_3-4_*.csv
+│   ├── achievement_levels_elementary_5-6_*.csv
+│   └── achievement_levels_middle_*.csv
 └── terms_symbols/          # 용어와 기호
     └── terms_symbols_*.csv
 ```
@@ -109,18 +116,18 @@ level_id,school_type,grade_range,grade_start,grade_end,level_code
 
 #### 4.1 성취기준 코드 패턴
 ```regex
-^[0-9]{1,2}수[0-9]{2}-[0-9]{2}$
+^\[[0-9]{1}수[0-9]{2}-[0-9]{2}\]$
 
 예시:
-- 2수01-01: 초등 1-2학년, 수와 연산, 첫 번째
-- 9수04-06: 중학교, 자료와 가능성, 여섯 번째
+- [2수01-01]: 초등 1-2학년, 수와 연산, 첫 번째
+- [9수04-06]: 중학교, 자료와 가능성, 여섯 번째
 ```
 
 #### 4.2 성취기준 구조
 ```csv
 # achievement_standards_elementary_1-2.csv 예시
 standard_id,standard_code,level_id,domain_id,element_id,standard_title,standard_content,standard_order
-1,2수01-01,1,1,1,네 자리 이하의 수,"수의 필요성을 인식하면서...",1
+1,[2수01-01],1,1,1,네 자리 이하의 수,"수의 필요성을 인식하면서...",1
 ```
 
 #### 4.3 성취기준 해설
@@ -130,13 +137,32 @@ standard_id,standard_code,level_id,domain_id,element_id,standard_title,standard_
   - 용어와 기호 (영역별)
 - **매칭**: standard_id로 연결 (용어와 기호는 NULL)
 
-### 5단계: 용어와 기호 추출
+### 5단계: 성취수준 추출
 
-#### 5.1 추출 위치
+#### 5.1 성취수준 구조
+- **초등학교**: A, B, C (3수준)
+- **중학교**: A, B, C, D, E (5수준)
+
+#### 5.2 추출 형식
+```csv
+# achievement_levels_elementary_1-2_number_operation.csv 예시
+성취기준,수준,성취수준
+[2수01-01],A,"0과 100까지의 수를 여러 가지 방법으로 세고 읽고 쓰며, 수의 필요성을 설명할 수 있다."
+[2수01-01],B,"0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다."
+[2수01-01],C,"안내된 절차에 따라 0과 100까지의 간단한 수를 세고 읽고 쓸 수 있다."
+```
+
+#### 5.3 파일 분류
+- 학년별: `achievement_levels_elementary_1-2_*.csv`
+- 영역별: `*_number_operation.csv`, `*_change_relation.csv`, `*_geometry_measurement.csv`, `*_data_possibility.csv`
+
+### 6단계: 용어와 기호 추출
+
+#### 6.1 추출 위치
 - 각 학년군 성취기준 해설의 마지막 부분
 - "용어와 기호" 섹션
 
-#### 5.2 분류 방법
+#### 6.2 분류 방법
 ```python
 def classify_term(text):
     if any(symbol in text for symbol in ['+', '-', '×', '÷', '=', '<', '>']):
@@ -147,7 +173,7 @@ def classify_term(text):
         return '용어'
 ```
 
-#### 5.3 LaTeX 처리
+#### 6.3 LaTeX 처리
 ```python
 # 특수 기호 매핑
 latex_map = {
@@ -187,12 +213,12 @@ latex_map = {
 
 #### 올바른 형식
 ```csv
-1,2수01-01,1,1,1,"네 자리 이하의 수","수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",1
+1,[2수01-01],1,1,1,"네 자리 이하의 수","수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",1
 ```
 
 #### 잘못된 형식
 ```csv
-1, 2수01-01 ,1,1,1,네 자리 이하의 수,수의 필요성을 인식하면서
+1, [2수01-01] ,1,1,1,네 자리 이하의 수,수의 필요성을 인식하면서
 0과 100까지의 수 개념을 이해하고,
 수를 세고 읽고 쓸 수 있다.,1
 ```
@@ -208,6 +234,14 @@ latex_map = {
 | 초3-4 | 47 | ±3 |
 | 초5-6 | 45 | ±3 |
 | 중1-3 | 60 | ±5 |
+
+#### 성취수준 개수 확인
+| 학년군 | 성취기준 수 | 수준 수 | 총 레코드 |
+|--------|------------|---------|----------|
+| 초1-2 | 29 | 3 | 87 |
+| 초3-4 | 47 | 3 | 141 |
+| 초5-6 | 45 | 3 | 135 |
+| 중1-3 | 60 | 5 | 300 |
 
 #### 용어 개수 확인
 | 학년군 | 최소 개수 |
@@ -227,8 +261,8 @@ import re
 def validate_achievement_standards(file_path):
     df = pd.read_csv(file_path)
     
-    # 성취기준 코드 형식 검증
-    pattern = r'^[0-9]{1,2}수[0-9]{2}-[0-9]{2}$'
+    # 성취기준 코드 형식 검증 (대괄호 포함)
+    pattern = r'^\[[0-9]{1}수[0-9]{2}-[0-9]{2}\]$'
     invalid_codes = df[~df['standard_code'].str.match(pattern)]
     
     if not invalid_codes.empty:
@@ -249,8 +283,26 @@ def validate_achievement_standards(file_path):
     
     return len(invalid_codes) == 0 and duplicates.empty
 
+# 성취수준 검증
+def validate_achievement_levels(file_path, school_type='elementary'):
+    df = pd.read_csv(file_path)
+    
+    # 수준 체계 검증
+    if school_type == 'elementary':
+        expected_levels = ['A', 'B', 'C']
+    else:  # middle
+        expected_levels = ['A', 'B', 'C', 'D', 'E']
+    
+    for standard_code in df['성취기준'].unique():
+        levels = df[df['성취기준'] == standard_code]['수준'].tolist()
+        if sorted(levels) != expected_levels:
+            print(f"{standard_code}: 수준 체계 불일치")
+    
+    return True
+
 # 사용 예시
 is_valid = validate_achievement_standards('achievement_standards_elementary_1-2.csv')
+is_valid = validate_achievement_levels('achievement_levels_elementary_1-2_number_operation.csv', 'elementary')
 ```
 
 ### 3. 참조 무결성 검증
@@ -262,6 +314,20 @@ SELECT COUNT(*) as orphan_count
 FROM achievement_standards ast
 LEFT JOIN school_levels sl ON ast.level_id = sl.level_id
 WHERE sl.level_id IS NULL;
+
+-- 성취수준 검증 (초등학교)
+SELECT standard_code, COUNT(DISTINCT level_code) as level_count
+FROM achievement_levels
+WHERE standard_code LIKE '[2%' OR standard_code LIKE '[4%' OR standard_code LIKE '[6%'
+GROUP BY standard_code
+HAVING COUNT(DISTINCT level_code) != 3;
+
+-- 성취수준 검증 (중학교)
+SELECT standard_code, COUNT(DISTINCT level_code) as level_count
+FROM achievement_levels
+WHERE standard_code LIKE '[9%'
+GROUP BY standard_code
+HAVING COUNT(DISTINCT level_code) != 5;
 
 -- 결과가 0이어야 정상
 ```
@@ -286,9 +352,9 @@ def extract_text_from_pdf(pdf_path):
 class AchievementStandardParser:
     def __init__(self):
         self.pattern = re.compile(
-            r'([0-9]{1,2}수[0-9]{2}-[0-9]{2})\s+'
+            r'(\[[0-9]{1}수[0-9]{2}-[0-9]{2}\])\s+'
             r'(.+?)\s+'
-            r'([가-힣].+?)(?=[0-9]{1,2}수|$)',
+            r'([가-힣].+?)(?=\[[0-9]{1}수|$)',
             re.DOTALL
         )
     
@@ -312,7 +378,28 @@ class AchievementStandardParser:
         return ' '.join(text.split())
 ```
 
-### 3. 배치 처리 스크립트
+### 3. 성취수준 파서
+```python
+class AchievementLevelParser:
+    def __init__(self, school_type='elementary'):
+        self.school_type = school_type
+        self.levels = ['A', 'B', 'C'] if school_type == 'elementary' else ['A', 'B', 'C', 'D', 'E']
+    
+    def parse(self, text, standard_code):
+        levels = []
+        for level in self.levels:
+            pattern = rf"{level}\s+(.+?)(?={self.levels[self.levels.index(level)+1] if level != self.levels[-1] else '$'})"
+            match = re.search(pattern, text, re.DOTALL)
+            if match:
+                levels.append({
+                    '성취기준': standard_code,
+                    '수준': level,
+                    '성취수준': self.clean_content(match.group(1))
+                })
+        return levels
+```
+
+### 4. 배치 처리 스크립트
 ```bash
 #!/bin/bash
 # process_all.sh
@@ -330,13 +417,21 @@ for grade in "elementary_1-2" "elementary_3-4" "elementary_5-6" "middle_1-3"; do
         --input "$DATA_DIR/raw/$grade.txt" \
         --output "$OUTPUT_DIR/achievement_standards_$grade.csv"
     
+    # 성취수준 추출
+    for domain in "number_operation" "change_relation" "geometry_measurement" "data_possibility"; do
+        python extract_levels.py \
+            --input "$DATA_DIR/raw/${grade}_levels.txt" \
+            --output "$OUTPUT_DIR/achievement_levels_${grade}_${domain}.csv" \
+            --domain "$domain"
+    done
+    
     # 용어 추출
     python extract_terms.py \
         --input "$DATA_DIR/raw/$grade.txt" \
         --output "$OUTPUT_DIR/terms_symbols_$grade.csv"
     
     # 검증
-    python validate.py "$OUTPUT_DIR/*_$grade.csv"
+    python validate.py "$OUTPUT_DIR/*_$grade*.csv"
 done
 
 echo "Complete!"
@@ -381,7 +476,21 @@ for old, new in special_chars.items():
     text = text.replace(old, new)
 ```
 
-#### 4. 외래키 불일치
+#### 4. 성취기준 코드 대괄호
+**문제**: 대괄호 누락 또는 형식 오류  
+**해결**:
+```python
+# 대괄호 추가
+if not code.startswith('['):
+    code = f'[{code}]'
+
+# 형식 검증
+pattern = r'^\[[0-9]{1}수[0-9]{2}-[0-9]{2}\]$'
+if not re.match(pattern, code):
+    print(f"Invalid code format: {code}")
+```
+
+#### 5. 외래키 불일치
 **문제**: 참조 테이블에 키가 없음  
 **해결**:
 1. 기준 데이터 먼저 로드
@@ -391,7 +500,8 @@ for old, new in special_chars.items():
 ### 데이터 품질 체크리스트
 
 - [ ] 모든 성취기준 코드가 유일한가?
-- [ ] 코드 형식이 정규식과 일치하는가?
+- [ ] 코드 형식이 정규식과 일치하는가? (대괄호 포함)
+- [ ] 성취수준이 올바른 체계인가? (초등: A,B,C / 중등: A,B,C,D,E)
 - [ ] 외래키가 모두 유효한가?
 - [ ] 순서 필드가 연속적인가?
 - [ ] 텍스트 필드에 불필요한 공백이 없는가?
@@ -417,7 +527,18 @@ for old, new in special_chars.items():
 - [수학과 교육과정 원문](https://www.moe.go.kr/)
 - [PostgreSQL 문서](https://www.postgresql.org/docs/)
 
+## 변경 이력
+
+### v2.1.0 (2025-01-21)
+- 성취수준 데이터 추출 섹션 추가
+- 성취기준 코드 형식 업데이트 (대괄호 포함)
+- 성취수준 검증 방법 추가
+- 파일 구조 업데이트
+
+### v2.0.0 (2025-01-21)
+- 초기 버전
+
 ---
 **작성자**: AI Assistant  
 **최종 수정일**: 2025-01-21  
-**문서 버전**: 2.0.0
+**문서 버전**: 2.1.0

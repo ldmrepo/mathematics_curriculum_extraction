@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  # PostgreSQL - 기존 교육과정 데이터 (필수)
+  postgres:
+    image: postgres:15-alpine
+    container_name: kg_postgres
+    environment:
+      POSTGRES_DB: mathematics_curriculum
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --locale=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../data:/data:ro  # 기존 데이터 접근
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mathematics_curriculum"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - kg_network
+
+  # Neo4j - 지식 그래프 저장 (필수)
+  neo4j:
+    image: neo4j:5.15-community
+    container_name: kg_neo4j
+    environment:
+      NEO4J_AUTH: neo4j/neo4j123
+      NEO4J_dbms_memory_heap_initial__size: 256m
+      NEO4J_dbms_memory_heap_max__size: 512m
+      NEO4J_dbms_memory_pagecache_size: 256m
+      NEO4J_dbms_jvm_additional: "-Dfile.encoding=UTF-8"
+    ports:
+      - "7474:7474"  # HTTP 브라우저
+      - "7687:7687"  # Bolt 연결
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "neo4j123", "RETURN 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - kg_network
+
+  # Redis - 캐싱 (권장)
+  redis:
+    image: redis:7-alpine
+    container_name: kg_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 128mb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - kg_network
+
+networks:
+  kg_network:
+    driver: bridge
+    name: knowledge_graph_network
+
+volumes:
+  postgres_data:
+    driver: local
+    name: kg_postgres_data
+  neo4j_data:
+    driver: local
+    name: kg_neo4j_data
+  neo4j_logs:
+    driver: local
+    name: kg_neo4j_logs
+  redis_data:
+    driver: local
+    name: kg_redis_data

@@ -1,5 +1,5 @@
 # 데이터 사전 (Data Dictionary)
-**버전**: 2.0.0  
+**버전**: 2.1.0  
 **수정일**: 2025-01-21  
 **기준**: 2022 개정 수학과 교육과정
 
@@ -20,6 +20,7 @@
 - **학년**: 초1-2, 초3-4, 초5-6, 중1-3
 - **영역**: 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성
 - **성취기준**: 총 181개
+- **성취수준**: 성취기준별 3-5단계 수준 (초등 543개, 중학 300개)
 - **용어 및 기호**: 총 685개
 
 ## 테이블 구조
@@ -91,7 +92,7 @@
 | 필드명 | 타입 | 필수 | 설명 | 예시 |
 |--------|------|------|------|------|
 | standard_id | INT | Y | 성취기준 고유 ID | 1, 2, 3 |
-| standard_code | VARCHAR(10) | Y | 성취기준 코드 | 2수01-01, 9수01-01 |
+| standard_code | VARCHAR(10) | Y | 성취기준 코드 | [2수01-01], [9수01-01] |
 | level_id | INT | Y | 학년군 ID (FK) | 1, 2, 3, 4 |
 | domain_id | INT | Y | 영역 ID (FK) | 1, 2, 3, 4 |
 | element_id | INT | N | 내용요소 ID (FK) | 1, 2, 3 |
@@ -107,6 +108,15 @@
 | explanation_type | VARCHAR(30) | Y | 해설 유형 | 성취기준 해설, 적용시 고려사항, 용어와 기호 |
 | explanation_content | TEXT | Y | 해설 내용 | 덧셈은 두 자리 수... |
 | explanation_order | INT | Y | 유형별 순서 | 1, 2, 3 |
+
+#### 3.3 achievement_levels (성취수준)
+| 필드명 | 타입 | 필수 | 설명 | 예시 |
+|--------|------|------|------|------|
+| level_id | INT | Y | 수준 고유 ID | 1, 2, 3 |
+| standard_code | VARCHAR(15) | Y | 성취기준 코드 | [2수01-01], [9수01-01] |
+| level_code | VARCHAR(1) | Y | 수준 코드 | A, B, C, D, E |
+| level_description | TEXT | Y | 수준별 성취수준 설명 | 덧셈과 뺄셈을 능숙하게... |
+| level_order | INT | Y | 수준 순서 (1=최상위) | 1, 2, 3, 4, 5 |
 
 ### 4. 용어 및 기호 테이블 (Terms and Symbols)
 
@@ -139,7 +149,8 @@ domains (1) ─┬─ (N) core_ideas
 categories (1) ─┬─ (N) content_elements
                 └─ (N) learning_elements
 
-achievement_standards (1) ─── (N) standard_explanations
+achievement_standards (1) ─┬─ (N) standard_explanations
+                           └─ (N) achievement_levels
 ```
 
 ### 외래키 관계
@@ -162,6 +173,9 @@ achievement_standards.element_id → content_elements.element_id (Optional)
 -- 성취기준 해설
 standard_explanations.standard_id → achievement_standards.standard_id (Optional)
 
+-- 성취수준
+achievement_levels.standard_code → achievement_standards.standard_code
+
 -- 용어 및 기호
 terms_symbols.level_id → school_levels.level_id
 terms_symbols.domain_id → domains.domain_id
@@ -176,7 +190,7 @@ terms_symbols.domain_id → domains.domain_id
    - `(domain_id, idea_order)`: core_ideas에서 유일
 
 2. **형식 제약**
-   - 성취기준 코드: `^[0-9]{1,2}수[0-9]{2}-[0-9]{2}$`
+   - 성취기준 코드: `^\[[0-9]{1}수[0-9]{2}-[0-9]{2}\]$`
    - level_code: 2, 4, 6, 9 중 하나
    - domain_code: 01, 02, 03, 04 중 하나
 
@@ -201,13 +215,13 @@ terms_symbols.domain_id → domains.domain_id
 
 ### 성취기준 코드 구조
 ```
-[학년코드]수[영역코드]-[순번]
+[학년코드수영역코드-순번]
 
 예시:
-- 2수01-01: 초등 1-2학년, 수와 연산, 첫 번째 성취기준
-- 4수02-03: 초등 3-4학년, 변화와 관계, 세 번째 성취기준
-- 6수03-15: 초등 5-6학년, 도형과 측정, 15번째 성취기준
-- 9수04-06: 중학교 1-3학년, 자료와 가능성, 6번째 성취기준
+- [2수01-01]: 초등 1-2학년, 수와 연산, 첫 번째 성취기준
+- [4수02-03]: 초등 3-4학년, 변화와 관계, 세 번째 성취기준
+- [6수03-15]: 초등 5-6학년, 도형과 측정, 15번째 성취기준
+- [9수04-06]: 중학교 1-3학년, 자료와 가능성, 6번째 성취기준
 ```
 
 ### 학년 코드
@@ -231,8 +245,26 @@ terms_symbols.domain_id → domains.domain_id
 ### 성취기준 예시
 ```csv
 standard_id,standard_code,level_id,domain_id,element_id,standard_title,standard_content,standard_order
-1,2수01-01,1,1,1,네 자리 이하의 수,"수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",1
-122,9수01-01,4,1,54,소인수분해,"소인수분해의 뜻을 알고, 자연수를 소인수분해 할 수 있다.",1
+1,[2수01-01],1,1,1,네 자리 이하의 수,"수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",1
+122,[9수01-01],4,1,54,소인수분해,"소인수분해의 뜻을 알고, 자연수를 소인수분해 할 수 있다.",1
+```
+
+### 성취수준 예시 (초등학교)
+```csv
+standard_code,level_code,level_description
+[2수01-01],A,"0과 100까지의 수를 여러 가지 방법으로 세고 읽고 쓰며, 수의 필요성을 설명할 수 있다."
+[2수01-01],B,"0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다."
+[2수01-01],C,"안내된 절차에 따라 0과 100까지의 간단한 수를 세고 읽고 쓸 수 있다."
+```
+
+### 성취수준 예시 (중학교)
+```csv
+standard_code,level_code,level_description
+[9수01-01],A,"자연수를 소인수분해하고, 그 과정을 설명할 수 있다."
+[9수01-01],B,"소인수분해의 뜻을 알고, 자연수를 소인수분해할 수 있다."
+[9수01-01],C,"간단한 자연수를 소인수분해할 수 있다."
+[9수01-01],D,"소인수분해의 뜻을 안다."
+[9수01-01],E,"소인수분해와 관련된 기초적인 개념을 부분적으로 이해한다."
 ```
 
 ### 성취기준 해설 예시
@@ -272,16 +304,27 @@ term_id,level_id,domain_id,term_type,term_name,term_description,latex_expression
 | learning_elements | 150+ |
 | achievement_standards | 181 |
 | standard_explanations | 300+ |
+| achievement_levels | 843 |
 | terms_symbols | 685 |
 
+### 성취수준 분포
+| 학교급 | 학년군 | 수준 체계 | 성취기준 수 | 총 수준 수 |
+|--------|--------|----------|------------|-----------|
+| 초등학교 | 1-2 | A, B, C | 29 | 87 |
+| | 3-4 | A, B, C | 47 | 141 |
+| | 5-6 | A, B, C | 45 | 135 |
+| **초등 계** | | | **121** | **363** |
+| 중학교 | 1-3 | A, B, C, D, E | 60 | 300 |
+| **전체** | | | **181** | **843** |
+
 ### 학년별 성취기준 분포
-| 학년군 | 성취기준 수 | 비율 |
-|--------|------------|------|
-| 초1-2 | 29 | 16% |
-| 초3-4 | 47 | 26% |
-| 초5-6 | 45 | 25% |
-| 중1-3 | 60 | 33% |
-| **합계** | **181** | **100%** |
+| 학년군 | 수와 연산 | 변화와 관계 | 도형과 측정 | 자료와 가능성 | 합계 |
+|--------|-----------|------------|------------|--------------|------|
+| 초1-2 | 10 | 2 | 13 | 4 | 29 |
+| 초3-4 | 16 | 3 | 25 | 3 | 47 |
+| 초5-6 | 15 | 5 | 19 | 6 | 45 |
+| 중1-3 | 15 | 10 | 24 | 11 | 60 |
+| **합계** | **56** | **20** | **81** | **24** | **181** |
 
 ### 영역별 용어 분포
 | 영역 | 용어 수 | 기호 수 | 합계 |
@@ -295,22 +338,37 @@ term_id,level_id,domain_id,term_type,term_name,term_description,latex_expression
 ## 데이터 품질 체크리스트
 
 ### 입력 시 확인사항
-- [ ] 성취기준 코드 형식 준수
+- [ ] 성취기준 코드 형식 준수 (대괄호 포함)
 - [ ] 외래키 참조 유효성
 - [ ] 필수 필드 입력 완료
 - [ ] 순서 필드 연속성
 - [ ] LaTeX 문법 유효성
+- [ ] 성취수준 수준 체계 일치 (초등: A,B,C / 중등: A,B,C,D,E)
 
 ### 검증 쿼리
 ```sql
 -- 성취기준 코드 형식 검증
 SELECT * FROM achievement_standards 
-WHERE NOT (standard_code ~ '^[0-9]{1,2}수[0-9]{2}-[0-9]{2}$');
+WHERE NOT (standard_code ~ '^\[[0-9]{1}수[0-9]{2}-[0-9]{2}\]$');
 
 -- 외래키 참조 검증
 SELECT * FROM achievement_standards ast
 LEFT JOIN school_levels sl ON ast.level_id = sl.level_id
 WHERE sl.level_id IS NULL;
+
+-- 성취수준 수준 체계 검증 (초등학교)
+SELECT standard_code, COUNT(DISTINCT level_code) as level_count
+FROM achievement_levels
+WHERE standard_code LIKE '[2%' OR standard_code LIKE '[4%' OR standard_code LIKE '[6%'
+GROUP BY standard_code
+HAVING COUNT(DISTINCT level_code) != 3;
+
+-- 성취수준 수준 체계 검증 (중학교)
+SELECT standard_code, COUNT(DISTINCT level_code) as level_count
+FROM achievement_levels
+WHERE standard_code LIKE '[9%'
+GROUP BY standard_code
+HAVING COUNT(DISTINCT level_code) != 5;
 
 -- 순서 연속성 검증
 SELECT domain_id, array_agg(idea_order ORDER BY idea_order) 
@@ -318,7 +376,32 @@ FROM core_ideas
 GROUP BY domain_id;
 ```
 
+## 파일 구조
+
+### CSV 파일 위치
+```
+data/
+├── achievement_levels/                    # 성취수준 데이터
+│   ├── achievement_levels_elementary_1-2_*.csv
+│   ├── achievement_levels_elementary_3-4_*.csv
+│   ├── achievement_levels_elementary_5-6_*.csv
+│   └── achievement_levels_middle_*.csv
+├── achievement_standards.csv              # 성취기준
+├── categories.csv                         # 범주
+├── content_elements_*.csv                 # 내용 요소
+├── core_ideas.csv                        # 핵심 아이디어
+├── domains.csv                           # 영역
+├── learning_elements_*.csv               # 학습 요소
+├── school_levels.csv                     # 학교급/학년
+├── standard_explanations.csv             # 성취기준 해설
+└── terms_symbols_*.csv                   # 용어 및 기호
+```
+
+### 파일명 규칙
+- 학년별 구분: `*_elementary_1-2`, `*_elementary_3-4`, `*_elementary_5-6`, `*_middle`
+- 영역별 구분: `*_number_operation`, `*_change_relation`, `*_geometry_measurement`, `*_data_possibility`
+
 ---
 **작성자**: AI Assistant  
 **최종 수정일**: 2025-01-21  
-**문서 버전**: 2.0.0
+**문서 버전**: 2.1.0
