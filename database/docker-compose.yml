@@ -1,0 +1,80 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: curriculum-postgres
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_SUPERUSER}
+      POSTGRES_PASSWORD: ${DB_SUPERPASS}
+      # 로케일이 꼭 ko_KR이어야 하면 아래 주석 해제(이미지에 로케일 설치 필요)
+      # POSTGRES_INITDB_ARGS: "--locale=C.UTF-8"
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_SUPERUSER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks:
+      - curriculum-net
+
+  pgadmin:
+    image: dpage/pgadmin4:8
+    container_name: curriculum-pgadmin
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "${PGADMIN_PORT}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - curriculum-net
+
+  # 선택: 로컬 백업 (매일 새벽 3시)
+  backup:
+    image: prodrigestivill/postgres-backup-local:16
+    container_name: curriculum-backup
+    profiles: ["backup"]   # 필요 시만 실행: `docker compose --profile backup up -d`
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_SUPERUSER}
+      POSTGRES_PASSWORD: ${DB_SUPERPASS}
+      SCHEDULE: "0 3 * * *"
+      BACKUP_DIR: /backups
+      BACKUP_KEEP_DAYS: 7
+      BACKUP_KEEP_WEEKS: 4
+      BACKUP_KEEP_MONTHS: 6
+      HEALTHCHECK_PORT: 8080
+    volumes:
+      - ./db/backups:/backups
+    networks:
+      - curriculum-net
+
+networks:
+  curriculum-net:
+
+volumes:
+  pg_data:
+  pgadmin_data:
