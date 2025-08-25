@@ -63,6 +63,17 @@ class Neo4jManager:
         """Create all curriculum nodes"""
         logger.info("Creating curriculum nodes")
         
+        # Extract curriculum data if available
+        curriculum_data = all_results.get('curriculum_data', {})
+        if not curriculum_data:
+            # Try to load from database if not in results
+            try:
+                from src.data_manager import DatabaseManager
+                db_manager = DatabaseManager()
+                curriculum_data = db_manager.extract_all_curriculum_data()
+            except Exception as e:
+                logger.warning(f"Could not load curriculum data: {e}")
+        
         # Create grade level nodes
         grade_levels = [
             {"code": "ELEM_1_2", "name": "초등 1-2학년군", "grade_start": 1, "grade_end": 2},
@@ -97,87 +108,110 @@ class Neo4jManager:
                 })
             """, **domain)
         
-        # Create achievement standard nodes (sample - would use actual data)
-        self._create_achievement_standards(session)
+        # Create achievement standard nodes from actual data
+        self._create_achievement_standards(session, curriculum_data)
         
-        # Create achievement level nodes
-        self._create_achievement_levels(session)
+        # Create achievement level nodes from actual data
+        self._create_achievement_levels(session, curriculum_data)
     
-    def _create_achievement_standards(self, session):
-        """Create achievement standard nodes"""
-        # Sample achievement standards - in real implementation, load from database
-        standards = [
-            {
-                "code": "2수01-01",
-                "content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
-                "grade_code": "ELEM_1_2",
-                "domain_code": "NUMBER_OPERATION",
-                "difficulty": 2,
-                "cognitive_level": "understand"
-            },
-            {
-                "code": "2수01-04",
-                "content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
-                "grade_code": "ELEM_1_2",
-                "domain_code": "NUMBER_OPERATION",
-                "difficulty": 3,
-                "cognitive_level": "apply"
-            },
-            {
-                "code": "4수01-02",
-                "content": "곱셈이 이루어지는 상황을 이해하고, 곱셈의 의미를 설명할 수 있다.",
-                "grade_code": "ELEM_3_4",
-                "domain_code": "NUMBER_OPERATION",
-                "difficulty": 3,
-                "cognitive_level": "understand"
+    def _create_achievement_standards(self, session, curriculum_data=None):
+        """Create achievement standard nodes from actual data"""
+        if curriculum_data and 'achievement_standards' in curriculum_data:
+            standards_df = curriculum_data['achievement_standards']
+            
+            # Map grade levels to codes
+            grade_map = {
+                '1-2': 'ELEM_1_2',
+                '3-4': 'ELEM_3_4', 
+                '5-6': 'ELEM_5_6',
+                '1-3': 'MIDDLE'
             }
-        ]
-        
-        for standard in standards:
-            session.run("""
-                CREATE (s:AchievementStandard {
-                    code: $code,
-                    content: $content,
-                    grade_code: $grade_code,
-                    domain_code: $domain_code,
-                    difficulty: $difficulty,
-                    cognitive_level: $cognitive_level
-                })
-            """, **standard)
+            
+            # Map domains to codes
+            domain_map = {
+                '수와 연산': 'NUMBER_OPERATION',
+                '변화와 관계': 'CHANGE_RELATION',
+                '도형과 측정': 'GEOMETRY_MEASUREMENT',
+                '자료와 가능성': 'DATA_POSSIBILITY'
+            }
+            
+            for _, row in standards_df.iterrows():
+                # Extract grade code from grade_range
+                grade_range = row.get('grade_range', '')
+                grade_code = 'UNKNOWN'
+                for key, value in grade_map.items():
+                    if key in grade_range:
+                        grade_code = value
+                        break
+                
+                # Map domain name to code
+                domain_code = domain_map.get(row.get('domain_name', ''), 'UNKNOWN')
+                
+                # Estimate difficulty based on standard order
+                difficulty = min(5, max(1, row.get('standard_order', 3) // 3 + 1))
+                
+                session.run("""
+                    CREATE (s:AchievementStandard {
+                        code: $code,
+                        title: $title,
+                        content: $content,
+                        grade_code: $grade_code,
+                        grade_range: $grade_range,
+                        domain_code: $domain_code,
+                        domain_name: $domain_name,
+                        difficulty: $difficulty,
+                        standard_order: $standard_order,
+                        level_id: $level_id,
+                        domain_id: $domain_id
+                    })
+                """, 
+                    code=row.get('standard_code', ''),
+                    title=row.get('standard_title', ''),
+                    content=row.get('standard_content', ''),
+                    grade_code=grade_code,
+                    grade_range=row.get('grade_range', ''),
+                    domain_code=domain_code,
+                    domain_name=row.get('domain_name', ''),
+                    difficulty=difficulty,
+                    standard_order=row.get('standard_order', 0),
+                    level_id=row.get('level_id', 0),
+                    domain_id=row.get('domain_id', 0)
+                )
+            
+            logger.info(f"Created {len(standards_df)} achievement standard nodes")
+        else:
+            logger.warning("No achievement standards data provided, skipping node creation")
     
-    def _create_achievement_levels(self, session):
-        """Create achievement level nodes"""
-        # Sample achievement levels
-        levels = [
-            {
-                "id": "2수01-01_A",
-                "standard_code": "2수01-01",
-                "level": "A",
-                "description": "수가 사용되는 여러 가지 실생활 상황에서 수의 필요성을 말하고 0과 50까지 또는 100까지의 수를 10개씩 묶음과 낱개로 나타내며 수를 읽고 쓸 수 있다."
-            },
-            {
-                "id": "2수01-01_B",
-                "standard_code": "2수01-01",
-                "level": "B",
-                "description": "실생활에서 수가 사용되는 상황을 말하고 10개씩 묶음과 낱개를 이용하여 0과 50까지 또는 100까지의 수 개념을 이해하며 수를 읽고 쓸 수 있다."
-            },
-            {
-                "id": "2수01-01_C",
-                "standard_code": "2수01-01",
-                "level": "C",
-                "description": "실생활에서 수가 사용됨을 알고 구체물을 세어 0과 50까지 또는 100까지의 수 개념을 이해하며 수를 읽고 쓸 수 있다."
-            }
-        ]
-        
-        for level in levels:
-            session.run("""
-                CREATE (l:AchievementLevel {
-                    id: $id,
-                    standard_code: $standard_code,
-                    level: $level,
-                    description: $description
-                })
-            """, **level)
+    def _create_achievement_levels(self, session, curriculum_data=None):
+        """Create achievement level nodes from actual data"""
+        if curriculum_data and 'achievement_levels' in curriculum_data:
+            levels_df = curriculum_data['achievement_levels']
+            
+            for _, row in levels_df.iterrows():
+                # Create unique ID
+                level_id = f"{row.get('standard_code', '')}_{row.get('level_code', '')}"
+                
+                session.run("""
+                    CREATE (l:AchievementLevel {
+                        id: $id,
+                        achievement_level_id: $achievement_level_id,
+                        standard_code: $standard_code,
+                        level_code: $level_code,
+                        level_name: $level_name,
+                        description: $description
+                    })
+                """,
+                    id=level_id,
+                    achievement_level_id=row.get('achievement_level_id', 0),
+                    standard_code=row.get('standard_code', ''),
+                    level_code=row.get('level_code', ''),
+                    level_name=row.get('level_name', ''),
+                    description=row.get('level_description', '')
+                )
+            
+            logger.info(f"Created {len(levels_df)} achievement level nodes")
+        else:
+            logger.warning("No achievement levels data provided, skipping node creation")
     
     def _create_relationships(self, session, all_results: Dict):
         """Create relationships between nodes"""

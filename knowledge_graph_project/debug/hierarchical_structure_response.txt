@@ -1,0 +1,200 @@
+```json
+{
+  "knowledgeGraph": {
+    "name": "2022 개정 한국 수학과 교육과정 지식 그래프",
+    "version": "2022",
+    "summary": {
+      "achievementStandards": 181,
+      "achievementLevels": 663,
+      "contentElements": 291,
+      "termsAndSymbols": 362
+    },
+    "hierarchicalStructure": [
+      {
+        "level": 1,
+        "name": "교육과정 전체",
+        "description": "지식 그래프의 최상위 루트 노드. 전체 교육과정을 대표합니다.",
+        "nodeDefinition": {
+          "count": 1,
+          "distribution": [
+            "2022 개정 수학과 교육과정"
+          ]
+        },
+        "connectionRules": {
+          "upward": null,
+          "downward": "Level 2(학년군)의 모든 노드와 'hasGradeGroup' 관계로 연결됩니다."
+        },
+        "intraLevelRelationships": null,
+        "searchAndInference": {
+          "strategy": "전체 교육과정에 대한 글로벌 검색 및 통계 분석의 시작점 역할을 합니다. (예: '분수'와 관련된 모든 성취기준 검색)"
+        }
+      },
+      {
+        "level": 2,
+        "name": "학년군",
+        "description": "교육과정이 적용되는 학년의 그룹입니다.",
+        "nodeDefinition": {
+          "count": 4,
+          "distribution": [
+            {
+              "name": "초1-2학년군",
+              "achievementStandards": 29
+            },
+            {
+              "name": "초3-4학년군",
+              "achievementStandards": 47
+            },
+            {
+              "name": "초5-6학년군",
+              "achievementStandards": 45
+            },
+            {
+              "name": "중1-3학년군",
+              "achievementStandards": 60
+            }
+          ]
+        },
+        "connectionRules": {
+          "upward": "각 학년군 노드는 Level 1(교육과정 전체) 노드와 'isGradeGroupOf' 관계로 연결됩니다.",
+          "downward": "각 학년군 노드는 해당 학년군에 속한 Level 3(영역) 노드들과 'hasDomain' 관계로 연결됩니다."
+        },
+        "intraLevelRelationships": [
+          {
+            "type": "precedes",
+            "description": "학년 순서에 따른 선후 관계를 정의합니다. (예: '초1-2학년군' precedes '초3-4학년군')"
+          }
+        ],
+        "searchAndInference": {
+          "strategy": "학년군별 학습 내용 필터링 및 비교 분석에 사용됩니다. 특정 학년군의 교육 목표 및 내용 분포를 파악할 수 있습니다."
+        }
+      },
+      {
+        "level": 3,
+        "name": "영역",
+        "description": "수학과 교육과정의 내용 체계를 구성하는 4개의 핵심 영역입니다.",
+        "nodeDefinition": {
+          "count": 4,
+          "distribution": [
+            {
+              "name": "수와 연산",
+              "achievementStandards": 52
+            },
+            {
+              "name": "변화와 관계",
+              "achievementStandards": 32
+            },
+            {
+              "name": "도형과 측정",
+              "achievementStandards": 76
+            },
+            {
+              "name": "자료와 가능성",
+              "achievementStandards": 21
+            }
+          ]
+        },
+        "connectionRules": {
+          "upward": "각 영역 노드는 상위 Level 2(학년군) 노드와 'isDomainOf' 관계로 연결됩니다. (예: '초1-2학년군'의 '수와 연산' 영역)",
+          "downward": "각 영역 노드는 해당 영역 및 학년군에 속한 Level 4(성취기준) 노드들과 'hasAchievementStandard' 관계로 연결됩니다."
+        },
+        "intraLevelRelationships": [
+          {
+            "type": "relatedTo",
+            "description": "영역 간 개념적 연관성을 나타냅니다. (예: '수와 연산'은 '변화와 관계'의 문제 해결을 위한 도구적 기반을 제공)"
+          }
+        ],
+        "searchAndInference": {
+          "strategy": "특정 수학 분야(대수, 기하 등)에 대한 내용 검색 및 분석에 활용됩니다. 학년군별 특정 영역의 학습량 변화를 추적할 수 있습니다."
+        }
+      },
+      {
+        "level": 4,
+        "name": "성취기준",
+        "description": "학생이 학습을 통해 성취해야 할 지식, 기능, 가치를 나타내는 구체적인 목표입니다. 각 성취기준은 고유 ID를 가집니다.",
+        "nodeDefinition": {
+          "count": 181,
+          "distribution": "학년군 및 영역별로 분포하며, 각 노드는 성취기준 내용, 관련 내용 요소, 용어 및 기호 정보를 속성으로 가집니다."
+        },
+        "connectionRules": {
+          "upward": "각 성취기준 노드는 상위 Level 3(영역) 노드와 'isAchievementStandardOf' 관계로 연결됩니다.",
+          "downward": "각 성취기준 노드는 해당 기준을 상세화하는 Level 5(성취수준) 노드들과 'hasAchievementLevel' 관계로 연결됩니다."
+        },
+        "intraLevelRelationships": [
+          {
+            "type": "prerequisiteFor",
+            "description": "동일 학년군 내에서 특정 성취기준이 다른 성취기준의 선수 학습 요소임을 나타냅니다."
+          },
+          {
+            "type": "relatedTo",
+            "description": "유사한 수학적 개념이나 아이디어를 다루는 성취기준 간의 관계를 나타냅니다."
+          }
+        ],
+        "searchAndInference": {
+          "strategy": "교육과정의 핵심 노드로서, 특정 키워드(예: '일차방정식')를 포함하는 학습 목표를 직접 검색하는 데 사용됩니다. 선수-후수 관계 추적을 통해 학습 경로를 설계할 수 있습니다."
+        }
+      },
+      {
+        "level": 5,
+        "name": "성취수준",
+        "description": "성취기준에 대한 학생의 도달 정도를 A, B, C (초등) 또는 A, B, C, D, E (중등) 등으로 구분하여 기술한 것입니다.",
+        "nodeDefinition": {
+          "count": 663,
+          "distribution": [
+            {
+              "group": "초등 (1-6학년)",
+              "levels": ["A", "B", "C"],
+              "count": 363
+            },
+            {
+              "group": "중등 (1-3학년)",
+              "levels": ["A", "B", "C", "D", "E"],
+              "count": 300
+            }
+          ]
+        },
+        "connectionRules": {
+          "upward": "각 성취수준 노드는 상위 Level 4(성취기준) 노드와 'isAchievementLevelOf' 관계로 연결됩니다.",
+          "downward": null
+        },
+        "intraLevelRelationships": [
+          {
+            "type": "isMoreAdvancedThan",
+            "description": "동일 성취기준 내에서 성취수준 간의 위계 관계를 정의합니다. (예: 'A' isMoreAdvancedThan 'B')"
+          }
+        ],
+        "searchAndInference": {
+          "strategy": "학생 평가의 기준점으로 활용됩니다. 특정 성취기준에 대해 '상', '중', '하' 수준의 학생이 무엇을 할 수 있고 없는지를 구체적으로 정의하여 평가 문항 개발 및 결과 분석에 사용됩니다."
+        }
+      }
+    ],
+    "crossLevelConnections": {
+      "name": "나선형 교육과정 연결 (Spiral Curriculum Links)",
+      "description": "학년군을 넘나들며 동일하거나 유사한 개념이 심화/확장되는 성취기준 간의 연결을 정의합니다. 이는 나선형 교육과정 구조를 명시적으로 표현합니다.",
+      "connectionRule": {
+        "source": "하위 학년군의 성취기준 ID",
+        "target": "상위 학년군의 성취기준 ID",
+        "relationshipType": [
+          "deepens",
+          "extends"
+        ],
+        "description": "'deepens'는 동일 개념의 심화(예: 자연수의 덧셈 -> 분수의 덧셈)를, 'extends'는 관련 개념으로의 확장(예: 평면도형 -> 입체도형)을 의미합니다."
+      },
+      "examples": [
+        {
+          "source": "초3-4학년군 '분수의 의미 이해' 성취기준",
+          "target": "초5-6학년군 '분수의 덧셈과 뺄셈' 성취기준",
+          "relationshipType": "deepens"
+        },
+        {
+          "source": "초5-6학년군 '비와 비율' 성취기준",
+          "target": "중1-3학년군 '함수의 기초' 성취기준",
+          "relationshipType": "extends"
+        }
+      ],
+      "searchAndInference": {
+        "strategy": "특정 수학 개념(예: '방정식')이 초-중등 교육과정 전체에 걸쳐 어떻게 발전하는지 계통적으로 추적할 수 있습니다. 학생의 학습 결손이 발생했을 때, 관련된 이전 학년군의 선수 학습 요소를 찾아 진단하고 보충하는 데 활용됩니다."
+      }
+    }
+  }
+}
+```

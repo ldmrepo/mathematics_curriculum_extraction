@@ -169,11 +169,18 @@ class GeminiInterface(AIModelInterface):
     async def generate_completion(self, prompt: str, **kwargs) -> Dict[str, Any]:
         """Generate completion using Gemini API"""
         try:
+            # Debug logging
+            logger.debug(f"Gemini config max_tokens: {self.config.max_tokens}")
+            logger.debug(f"Additional kwargs: {kwargs}")
+            
             generation_config = genai.types.GenerationConfig(
                 temperature=self.config.temperature,
                 max_output_tokens=self.config.max_tokens,
                 **kwargs
             )
+            
+            logger.info(f"Gemini generation_config: max_output_tokens={generation_config.max_output_tokens}, "
+                       f"temperature={generation_config.temperature}")
             
             response = await self.model.generate_content_async(
                 prompt,
@@ -185,16 +192,24 @@ class GeminiInterface(AIModelInterface):
             output_tokens = len(response.text.split()) * 1.3
             cost = self.calculate_cost(int(input_tokens), int(output_tokens))
             
+            finish_reason = response.candidates[0].finish_reason.name if response.candidates else 'STOP'
+            
             result = {
                 'content': response.text,
                 'model': self.config.name,
                 'cost': cost,
                 'input_tokens': int(input_tokens),
                 'output_tokens': int(output_tokens),
-                'finish_reason': response.candidates[0].finish_reason.name if response.candidates else 'STOP'
+                'finish_reason': finish_reason
             }
             
-            logger.info(f"Gemini completion - Cost: ${cost:.4f}, Tokens: ~{int(input_tokens)}+{int(output_tokens)}")
+            # Check for truncation
+            if finish_reason in ['MAX_TOKENS', 'LENGTH']:
+                logger.warning(f"Gemini response may be truncated! Finish reason: {finish_reason}, "
+                             f"Max tokens: {self.config.max_tokens}, Output tokens: ~{int(output_tokens)}")
+            
+            logger.info(f"Gemini completion - Cost: ${cost:.4f}, Tokens: ~{int(input_tokens)}+{int(output_tokens)}, "
+                       f"Finish: {finish_reason}")
             return result
             
         except Exception as e:

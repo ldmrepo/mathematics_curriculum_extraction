@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose down:*)",
+      "Bash(docker compose logs:*)",
+      "Bash(docker compose:*)",
+      "Bash(chmod:*)",
+      "Bash(docker exec:*)",
+      "Bash(python:*)",
+      "Bash(docker ps:*)",
+      "Bash(env)",
+      "WebSearch",
+      "Bash(sed:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

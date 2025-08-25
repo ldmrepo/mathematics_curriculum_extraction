@@ -37,7 +37,7 @@ DB_CONFIG = {
 }
 
 BASE = Path(__file__).resolve().parent.parent  # .../database
-DATA_PATH = (BASE / "data").resolve()
+DATA_PATH = (BASE.parent / "data").resolve()  # 상위 폴더의 data 디렉토리
 
 ACHIEVEMENT_LEVELS_PATH    = DATA_PATH / "achievement_levels"
 ACHIEVEMENT_STANDARDS_PATH = DATA_PATH / "achievement_standards"

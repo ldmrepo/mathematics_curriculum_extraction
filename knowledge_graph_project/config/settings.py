@@ -48,7 +48,7 @@ class Config:
             "gemini_pro": ModelConfig(
                 name="gemini-2.5-pro",
                 api_key=os.getenv("GOOGLE_API_KEY"),
-                max_tokens=4000,
+                max_tokens=65536,  # Gemini 2.5 Pro maximum output tokens
                 temperature=0.2,
                 cost_per_input_token=1.25e-6,  # $1.25 per 1M tokens
                 cost_per_output_token=10e-6    # $10 per 1M tokens

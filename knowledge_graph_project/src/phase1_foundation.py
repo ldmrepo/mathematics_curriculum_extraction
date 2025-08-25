@@ -5,6 +5,7 @@ import asyncio
 import json
 from typing import Dict, List, Any
 from loguru import logger
+import pandas as pd
 from src.ai_models import AIModelManager
 from src.data_manager import CurriculumDataProcessor
 
@@ -14,6 +15,7 @@ class FoundationDesigner:
     def __init__(self, ai_manager: AIModelManager):
         self.ai_manager = ai_manager
         self.model_name = 'gemini_pro'  # Using Gemini 2.5 Pro for 1M token context
+        self.hierarchical_summary = {}  # Store hierarchical structure for metadata calculation
     
     async def design_complete_structure(self, curriculum_data: Dict[str, Any]) -> Dict[str, Any]:
         """Design complete knowledge graph structure"""
@@ -33,6 +35,9 @@ class FoundationDesigner:
         
         # Design hierarchical structure
         hierarchical_structure = await self._design_hierarchical_structure(context)
+        
+        # Store hierarchical structure for metadata calculation
+        self.hierarchical_summary = hierarchical_structure
         
         foundation_design = {
             'node_structure': node_structure,
@@ -56,6 +61,10 @@ class FoundationDesigner:
         sample_standards = curriculum_data['achievement_standards'].head(10).to_dict('records')
         sample_levels = curriculum_data['achievement_levels'].head(10).to_dict('records')
         
+        # Get existing competencies and representation types
+        competencies = curriculum_data.get('competencies', pd.DataFrame())
+        representation_types = curriculum_data.get('representation_types', pd.DataFrame())
+        
         prompt = f"""
 {context}
 
@@ -64,6 +73,9 @@ class FoundationDesigner:
 
 샘플 성취수준 데이터:
 {json.dumps(sample_levels, ensure_ascii=False, indent=2)}
+
+역량 (5개): {competencies['comp_name'].tolist() if not competencies.empty else []}
+표상 타입 (9개): {representation_types['type_name'].tolist() if not representation_types.empty else []}
 
 위 한국 수학 교육과정 데이터를 분석하여 지식 그래프의 노드 구조를 설계하세요.
 
@@ -74,18 +86,37 @@ class FoundationDesigner:
 4. 교육과정의 계열성과 연계성을 반영한 속성 설계
 
 출력 형식:
-JSON 형태로 구조화된 노드 설계안
+순수 JSON만 출력하세요. 설명이나 마크다운 없이 JSON 객체만 반환하세요.
 """
         
         response = await self.ai_manager.get_completion(self.model_name, prompt)
         
+        # Dump response for debugging
+        import os
+        os.makedirs('debug', exist_ok=True)
+        with open('debug/node_structure_response.txt', 'w', encoding='utf-8') as f:
+            f.write(response['content'])
+        logger.info("Response dumped to debug/node_structure_response.txt")
+        
         try:
             # Extract JSON from response
             content = response['content']
-            # Find JSON block
-            start_idx = content.find('{')
-            end_idx = content.rfind('}') + 1
-            json_str = content[start_idx:end_idx]
+            
+            # Try to find JSON in code block first
+            import re
+            json_match = re.search(r'```(?:json)?\s*(\{.*\})\s*```', content, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                # Find JSON block directly
+                start_idx = content.find('{')
+                end_idx = content.rfind('}') + 1
+                json_str = content[start_idx:end_idx]
+            
+            # Clean up common issues
+            json_str = json_str.replace('\n', ' ').replace('\r', ' ')
+            json_str = re.sub(r',\s*}', '}', json_str)  # Remove trailing commas
+            json_str = re.sub(r',\s*]', ']', json_str)  # Remove trailing commas in arrays
             
             node_structure = json.loads(json_str)
             logger.info("Node structure designed successfully")
@@ -127,16 +158,34 @@ JSON 형태로 구조화된 노드 설계안
 - 적용 예시
 - 자동 탐지 방법
 
-출력 형식: JSON
+출력 형식: 순수 JSON만 출력하세요. 설명 없이 JSON 객체만 반환하세요.
 """
         
         response = await self.ai_manager.get_completion(self.model_name, prompt)
         
+        # Dump response for debugging
+        with open('debug/relationship_categories_response.txt', 'w', encoding='utf-8') as f:
+            f.write(response['content'])
+        logger.info("Response dumped to debug/relationship_categories_response.txt")
+        
         try:
             content = response['content']
-            start_idx = content.find('{')
-            end_idx = content.rfind('}') + 1
-            json_str = content[start_idx:end_idx]
+            
+            # Try to find JSON in code block first
+            import re
+            json_match = re.search(r'```(?:json)?\s*(\{.*\})\s*```', content, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                # Find JSON block directly
+                start_idx = content.find('{')
+                end_idx = content.rfind('}') + 1
+                json_str = content[start_idx:end_idx]
+            
+            # Clean up common issues
+            json_str = json_str.replace('\n', ' ').replace('\r', ' ')
+            json_str = re.sub(r',\s*}', '}', json_str)
+            json_str = re.sub(r',\s*]', ']', json_str)
             
             relationship_categories = json.loads(json_str)
             logger.info("Relationship categories designed successfully")
@@ -169,16 +218,34 @@ Level 2 (소분류): Resolution 1.0, 40-60개 클러스터
 3. 교육적 의미
 4. 클러스터 간 연결 관계
 
-출력 형식: JSON
+출력 형식: 순수 JSON만 출력하세요. 설명 없이 JSON 객체만 반환하세요.
 """
         
         response = await self.ai_manager.get_completion(self.model_name, prompt)
         
+        # Dump response for debugging
+        with open('debug/community_clusters_response.txt', 'w', encoding='utf-8') as f:
+            f.write(response['content'])
+        logger.info("Response dumped to debug/community_clusters_response.txt")
+        
         try:
             content = response['content']
-            start_idx = content.find('{')
-            end_idx = content.rfind('}') + 1
-            json_str = content[start_idx:end_idx]
+            
+            # Try to find JSON in code block first
+            import re
+            json_match = re.search(r'```(?:json)?\s*(\{.*\})\s*```', content, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                # Find JSON block directly
+                start_idx = content.find('{')
+                end_idx = content.rfind('}') + 1
+                json_str = content[start_idx:end_idx]
+            
+            # Clean up common issues
+            json_str = json_str.replace('\n', ' ').replace('\r', ' ')
+            json_str = re.sub(r',\s*}', '}', json_str)
+            json_str = re.sub(r',\s*]', ']', json_str)
             
             community_clusters = json.loads(json_str)
             logger.info("Community clusters designed successfully")
@@ -211,16 +278,34 @@ Level 2 (소분류): Resolution 1.0, 40-60개 클러스터
 
 추가로 교육과정의 나선형 구조를 반영한 크로스 레벨 연결도 설계하세요.
 
-출력 형식: JSON
+출력 형식: 순수 JSON만 출력하세요. 설명 없이 JSON 객체만 반환하세요.
 """
         
         response = await self.ai_manager.get_completion(self.model_name, prompt)
         
+        # Dump response for debugging
+        with open('debug/hierarchical_structure_response.txt', 'w', encoding='utf-8') as f:
+            f.write(response['content'])
+        logger.info("Response dumped to debug/hierarchical_structure_response.txt")
+        
         try:
             content = response['content']
-            start_idx = content.find('{')
-            end_idx = content.rfind('}') + 1
-            json_str = content[start_idx:end_idx]
+            
+            # Try to find JSON in code block first
+            import re
+            json_match = re.search(r'```(?:json)?\s*(\{.*\})\s*```', content, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                # Find JSON block directly
+                start_idx = content.find('{')
+                end_idx = content.rfind('}') + 1
+                json_str = content[start_idx:end_idx]
+            
+            # Clean up common issues
+            json_str = json_str.replace('\n', ' ').replace('\r', ' ')
+            json_str = re.sub(r',\s*}', '}', json_str)
+            json_str = re.sub(r',\s*]', ']', json_str)
             
             hierarchical_structure = json.loads(json_str)
             logger.info("Hierarchical structure designed successfully")
@@ -231,22 +316,48 @@ Level 2 (소분류): Resolution 1.0, 40-60개 클러스터
             return self._get_fallback_hierarchical_structure()
     
     def _count_planned_nodes(self, node_structure: Dict) -> int:
-        """Count total planned nodes"""
+        """Count total planned nodes from hierarchical structure summary"""
         try:
-            total = 0
-            for node_type, details in node_structure.get('node_types', {}).items():
-                if 'estimated_count' in details:
-                    total += details['estimated_count']
-            return total
-        except:
-            return 1024  # Default estimate
+            # hierarchical_structure의 summary에서 실제 노드 수를 가져옴
+            if 'knowledgeGraph' in self.hierarchical_summary:
+                summary = self.hierarchical_summary.get('knowledgeGraph', {}).get('summary', {})
+                if summary:
+                    # summary에 있는 실제 값들을 사용
+                    return sum(summary.values())
+            
+            # 대체 방법: node_structure에서 노드 타입 수 계산
+            if 'knowledge_graph_schema' in node_structure:
+                node_types = node_structure['knowledge_graph_schema'].get('node_types', [])
+                # 노드 타입 수에 기반한 추정 (실제 데이터베이스 통계 기반)
+                return len(node_types) * 200  # 평균적으로 각 노드 타입당 약 200개
+            
+            return 0  # 계산할 수 없으면 0 반환
+        except Exception as e:
+            logger.warning(f"Failed to count planned nodes: {e}")
+            return 0
     
     def _estimate_relationships(self, relationship_categories: Dict) -> int:
         """Estimate total relationships"""
         try:
-            base_relationships = len(relationship_categories.get('relationship_types', {}))
-            return base_relationships * 200  # Rough estimate
-        except:
+            # 실제 관계 카테고리에서 관계 타입 수 계산
+            total_relationship_types = 0
+            
+            # 모든 관계 카테고리 순회
+            for category_name, relations_list in relationship_categories.items():
+                if isinstance(relations_list, list):
+                    total_relationship_types += len(relations_list)
+            
+            # 관계 타입 수가 0이면 기본값 사용
+            if total_relationship_types == 0:
+                return 3000
+            
+            # 각 관계 타입당 예상 인스턴스 수를 곱함
+            # 181개 성취기준 * 평균 3-5개 관계 = 약 500-900개
+            estimated_instances_per_type = 250
+            return total_relationship_types * estimated_instances_per_type
+            
+        except Exception as e:
+            logger.warning(f"Failed to estimate relationships: {e}")
             return 3000  # Default estimate
     
     def _get_fallback_node_structure(self) -> Dict[str, Any]:

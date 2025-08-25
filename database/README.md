@@ -24,10 +24,6 @@ CURRICULUM_WRITER_USER=curriculum_writer
 CURRICULUM_WRITER_PASS=curriculum_writer
 CURRICULUM_READER_USER=curriculum_reader
 CURRICULUM_READER_PASS=curriculum_reader
-
-PGADMIN_EMAIL=admin@example.com
-PGADMIN_PASSWORD=pgadmin
-PGADMIN_PORT=5050
 ```
 
 3. 컨테이너 기동 (DB + pgAdmin, 스키마/패치 자동 적용)

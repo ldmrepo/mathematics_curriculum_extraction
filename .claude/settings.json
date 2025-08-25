@@ -1,0 +1,65 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose:*)",
+      "Bash(docker exec:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(pytest:*)",
+      "Bash(streamlit:*)",
+      "Bash(psql:*)",
+      "Bash(neo4j:*)",
+      "Bash(git:*)",
+      "Bash(black:*)",
+      "Bash(chmod:*)",
+      "Bash(./docker-manage.sh:*)",
+      "Read(**)",
+      "Write(**)",
+      "Edit(**)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(**/.env)",
+      "Read(.env.*)",
+      "Write(.env)",
+      "Bash(rm -rf /)",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ]
+  },
+  "env": {
+    "PYTHONPATH": "${workspaceFolder}",
+    "DOCKER_BUILDKIT": "1",
+    "COMPOSE_DOCKER_CLI_BUILD": "1"
+  },
+  "hooks": {
+    "beforeEdit": {
+      "*.py": "black --check ${file} 2>/dev/null || true",
+      "*.sql": "echo 'Editing SQL: ${file}'"
+    },
+    "afterEdit": {
+      "*.py": "black ${file} && echo '✅ Formatted with Black'",
+      "requirements.txt": "echo '📦 Dependencies updated. Run: pip install -r requirements.txt'",
+      "docker-compose.yml": "echo '🐳 Docker config changed. Run: docker-compose up -d'",
+      "*.csv": "echo '📊 Data file modified. Consider running validation.'"
+    }
+  },
+  "customInstructions": {
+    "codeStyle": "Use type hints, docstrings, and follow PEP 8",
+    "errorHandling": "Always use try-except blocks for database and API operations",
+    "testing": "Write unit tests for all new functions",
+    "dataValidation": "Validate all data before database operations",
+    "costOptimization": "Always calculate and show API costs before execution"
+  },
+  "projectSettings": {
+    "defaultBranch": "main",
+    "testCommand": "pytest tests/ -v",
+    "lintCommand": "black . --check",
+    "dockerServices": ["postgres", "neo4j", "app"],
+    "dataFiles": {
+      "achievement_standards": 181,
+      "achievement_levels": 843,
+      "terms_symbols": 685
+    }
+  }
+}

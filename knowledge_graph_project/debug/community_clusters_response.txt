@@ -1,0 +1,1026 @@
+```json
+{
+  "knowledge_graph_clusters": [
+    {
+      "level": 0,
+      "resolution": 0.1,
+      "cluster_count_target": "8-12개",
+      "clusters": [
+        {
+          "cluster_id": "L0-01",
+          "cluster_name": "초등기초_수와연산",
+          "characteristics": {
+            "size": "대",
+            "density": "중",
+            "centrality": "고"
+          },
+          "educational_meaning": "초등 1-2학년군 대상. 수의 기본 개념과 사칙연산의 기초를 형성하는 수학 학습의 출발점.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-03",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-02",
+          "cluster_name": "초등기초_도형과측정",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "초등 1-2학년군 대상. 기본적인 평면도형과 입체도형을 인식하고 길이, 시간 등 기초적인 측정 개념을 학습.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-04",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-03",
+          "cluster_name": "초등심화_수와연산",
+          "characteristics": {
+            "size": "대",
+            "density": "중",
+            "centrality": "고"
+          },
+          "educational_meaning": "초등 3-4학년군 대상. 곱셈, 나눗셈으로 연산을 확장하고 분수와 소수의 개념을 처음 도입하는 핵심 단계.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-01",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-06",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-04",
+          "cluster_name": "초등심화_도형과측정",
+          "characteristics": {
+            "size": "대",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "초등 3-4학년군 대상. 각, 원, 삼각형, 사각형 등 구체적인 도형의 성질을 탐구하고 다양한 측정 단위를 학습.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-02",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-07",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-05",
+          "cluster_name": "초등심화_변화와관계_자료와가능성",
+          "characteristics": {
+            "size": "중",
+            "density": "저",
+            "centrality": "중"
+          },
+          "educational_meaning": "초등 3-4학년군 대상. 규칙 찾기, 자료 정리 등 대수 및 통계적 사고의 기초를 형성.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-08",
+              "relation_type": "선행"
+            },
+            {
+              "to_cluster_id": "L0-09",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-06",
+          "cluster_name": "초등응용_수와연산",
+          "characteristics": {
+            "size": "대",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "초등 5-6학년군 대상. 약수와 배수, 분수와 소수의 사칙연산 등 초등 수 연산을 완성하는 단계.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-03",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-10",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-07",
+          "cluster_name": "초등응용_도형과측정",
+          "characteristics": {
+            "size": "대",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "초등 5-6학년군 대상. 도형의 합동, 대칭, 넓이, 부피 등 기하학적 개념을 종합적으로 응용.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-04",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-11",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-08",
+          "cluster_name": "초등응용_변화와관계",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "초등 5-6학년군 대상. 비와 비율, 비례식 등 중등 함수의 기초가 되는 관계적 사고를 학습.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-05",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-10",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-09",
+          "cluster_name": "초등응용_자료와가능성",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "초등 5-6학년군 대상. 평균, 가능성, 다양한 그래프 해석 등 자료를 비판적으로 이해하는 능력을 함양.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-05",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-12",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-10",
+          "cluster_name": "중등_대수",
+          "characteristics": {
+            "size": "대",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "중학교 1-3학년군 대상. 수 체계를 정수와 유리수로 확장하고, 문자를 사용한 식, 방정식, 함수 등 추상적 사고의 핵심을 다룸.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-06",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-11",
+              "relation_type": "연계"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-11",
+          "cluster_name": "중등_기하",
+          "characteristics": {
+            "size": "대",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "중학교 1-3학년군 대상. 논리적 증명과 추론을 바탕으로 도형의 성질을 탐구하며, 닮음, 피타고라스 정리, 삼각비, 원의 성질을 학습.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-07",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L0-10",
+              "relation_type": "연계"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L0-12",
+          "cluster_name": "중등_통계와확률",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "중학교 1-3학년군 대상. 자료를 체계적으로 정리, 분석하고 불확실한 현상을 수학적으로 예측하는 확률의 기본 개념을 학습.",
+          "connections": [
+            {
+              "to_cluster_id": "L0-09",
+              "relation_type": "심화"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "resolution": 0.5,
+      "cluster_count_target": "20-30개",
+      "clusters": [
+        {
+          "cluster_id": "L1-01",
+          "cluster_name": "수체계와연산기초",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "네 자리 수까지의 수 체계를 이해하고 덧셈, 뺄셈의 원리를 학습. 모든 수와 연산 학습의 기반.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-03",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-02",
+          "cluster_name": "평면도형과기초측정",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "도형의 기본 구성 요소를 인식하고, 길이, 시간 등 일상과 밀접한 측정 활동을 통해 양감을 기르는 클러스터.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-05",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-03",
+          "cluster_name": "곱셈과나눗셈",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "반복되는 덧셈과 덜어내기로부터 곱셈과 나눗셈의 의미를 이해하고 계산 능력을 숙달.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-01",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-08",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-04",
+          "cluster_name": "분수와소수기초",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "자연수 범위에서 벗어난 새로운 수인 분수와 소수를 도입하고 그 관계를 이해하는 중요한 개념 확장 클러스터.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-08",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-05",
+          "cluster_name": "각과도형의이해",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "중"
+          },
+          "educational_meaning": "각의 개념을 바탕으로 삼각형, 사각형, 원 등 다양한 평면도형의 성질을 구체적으로 탐구.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-02",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-19",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-06",
+          "cluster_name": "자료정리와규칙찾기",
+          "characteristics": {
+            "size": "소",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "표와 그래프로 자료를 정리하고, 수의 배열 등에서 규칙을 찾아 식으로 표현하는 대수적 사고의 싹을 틔움.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-12",
+              "relation_type": "선행"
+            },
+            {
+              "to_cluster_id": "L1-17",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-07",
+          "cluster_name": "약수와배수",
+          "characteristics": {
+            "size": "소",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "수의 성질을 이해하는 기초. 최대공약수와 최소공배수는 분수의 연산과 이후 소인수분해의 핵심 기반.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-03",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-13",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-08",
+          "cluster_name": "분수와소수의연산",
+          "characteristics": {
+            "size": "대",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "초등 수학의 가장 복잡한 연산. 통분, 약분 등 다양한 개념을 종합적으로 적용하여 문제 해결 능력을 기르는 핵심 클러스터.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-04",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-14",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-09",
+          "cluster_name": "도형의합동과대칭",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "도형의 모양과 크기 관계(합동), 균형미(대칭)를 이해하고, 도형을 변환하는 공간 감각을 함양.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-05",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-21",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-10",
+          "cluster_name": "다각형과입체도형의측정",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "중"
+          },
+          "educational_meaning": "넓이, 둘레, 겉넓이, 부피 등 측정 공식을 유도하고 적용하며, 2차원과 3차원의 관계를 이해.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-05",
+              "relation_type": "심화"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-11",
+          "cluster_name": "비와비율",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "두 양의 관계를 비교하는 '비'의 개념을 통해 백분율, 비례식 등 실생활 문제를 해결하고 함수 개념의 기초를 다짐.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-08",
+              "relation_type": "연계"
+            },
+            {
+              "to_cluster_id": "L1-17",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-12",
+          "cluster_name": "자료의표현과해석",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "그림그래프, 띠그래프, 원그래프 등 다양한 형태로 자료를 표현하고 목적에 맞게 해석하는 정보 처리 능력을 육성.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-06",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-25",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-13",
+          "cluster_name": "소인수분해와정수",
+          "characteristics": {
+            "size": "소",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "중등 대수의 시작. 소인수분해를 통해 수의 구조를 파악하고, 음수를 포함한 정수 체계로 확장.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-07",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-14",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-14",
+          "cluster_name": "유리수와순환소수",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "중"
+          },
+          "educational_meaning": "정수와 분수를 통합한 유리수 체계를 완성하고, 순환소수를 통해 무한의 개념을 처음 접함.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-08",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-13",
+              "relation_type": "심화"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-15",
+          "cluster_name": "식의계산",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "문자를 사용하여 일반화된 연산을 다루는 대수 학습의 핵심. 다항식의 사칙연산은 모든 방정식과 함수 풀이의 기본 도구.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-16",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-16",
+          "cluster_name": "일차방정식",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "등식의 성질을 이용하여 미지수의 값을 구하는 과정. 연립방정식, 부등식으로 확장되는 방정식 학습의 기초.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-15",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-17",
+              "relation_type": "연계"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-17",
+          "cluster_name": "함수와그래프",
+          "characteristics": {
+            "size": "대",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "두 변수 사이의 관계를 식으로 표현하고 좌표평면에 시각화하는 수학의 핵심 아이디어. 일차함수와 이차함수를 다룸.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-16",
+              "relation_type": "연계"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-18",
+          "cluster_name": "기본도형과작도",
+          "characteristics": {
+            "size": "소",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "점, 선, 면, 각 등 기하의 기본 요소를 정의하고, 눈금 없는 자와 컴퍼스만을 이용한 작도를 통해 논리적 사고를 훈련.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-19",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-19",
+          "cluster_name": "평면도형의성질",
+          "characteristics": {
+            "size": "대",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "삼각형과 사각형의 내각, 외각, 합동, 무게중심 등 다양한 성질을 증명을 통해 논리적으로 탐구.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-05",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-21",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-20",
+          "cluster_name": "입체도형의성질",
+          "characteristics": {
+            "size": "중",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "다면체, 회전체의 성질을 이해하고 겉넓이와 부피를 구하며 3차원 공간지각 능력을 심화.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-10",
+              "relation_type": "심화"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-21",
+          "cluster_name": "도형의닮음",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "합동에서 확장된 닮음의 개념을 이해하고, 닮음비를 이용하여 길이, 넓이, 부피의 관계를 추론.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-19",
+              "relation_type": "심화"
+            },
+            {
+              "to_cluster_id": "L1-22",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-22",
+          "cluster_name": "피타고라스정리",
+          "characteristics": {
+            "size": "소",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "직각삼각형의 세 변 사이의 관계를 나타내는 기하학의 가장 중요한 정리 중 하나. 좌표평면과 입체도형에 폭넓게 활용.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-21",
+              "relation_type": "연계"
+            },
+            {
+              "to_cluster_id": "L1-23",
+              "relation_type": "선행"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-23",
+          "cluster_name": "삼각비",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "고"
+          },
+          "educational_meaning": "직각삼각형에서 각의 크기와 변의 길이 사이의 관계를 '비'로 정의. 직접 측정하기 어려운 거리나 높이를 구하는 데 활용.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-22",
+              "relation_type": "연계"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-24",
+          "cluster_name": "원의성질",
+          "characteristics": {
+            "size": "중",
+            "density": "고",
+            "centrality": "중"
+          },
+          "educational_meaning": "현, 접선, 원주각 등 원과 관련된 다양한 성질을 탐구하고 증명하며 기하학적 문제 해결 능력을 심화.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-19",
+              "relation_type": "연계"
+            }
+          ]
+        },
+        {
+          "cluster_id": "L1-25",
+          "cluster_name": "통계와확률기초",
+          "characteristics": {
+            "size": "대",
+            "density": "중",
+            "centrality": "중"
+          },
+          "educational_meaning": "도수분포표, 히스토그램 등으로 자료의 분포를 파악하고, 경우의 수를 바탕으로 확률을 계산하는 기본 원리를 학습.",
+          "connections": [
+            {
+              "to_cluster_id": "L1-12",
+              "relation_type": "심화"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "resolution": 1.0,
+      "cluster_count_target": "40-60개",
+      "clusters": [
+        {
+          "cluster_id": "L2-01",
+          "cluster_name": "네자리이하의수",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "수의 계열과 자릿값의 원리를 이해하는 수 감각의 기초.",
+          "connections": [{ "to_cluster_id": "L2-02", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-02",
+          "cluster_name": "덧셈과뺄셈",
+          "characteristics": { "size": "중", "density": "고", "centrality": "고" },
+          "educational_meaning": "받아올림과 받아내림의 원리를 이해하고 두세 자리 수의 덧셈과 뺄셈을 정확하게 계산.",
+          "connections": [{ "to_cluster_id": "L2-03", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-03",
+          "cluster_name": "곱셈구구",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "곱셈의 의미를 이해하고 이후 모든 곱셈과 나눗셈 계산의 기반이 되는 핵심 암기 요소.",
+          "connections": [{ "to_cluster_id": "L2-04", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-04",
+          "cluster_name": "나눗셈",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "똑같이 나누는 상황(등분제)과 덜어내는 상황(포함제)을 통해 나눗셈의 의미를 이해하고 몫과 나머지를 구함.",
+          "connections": [{ "to_cluster_id": "L2-05", "relation_type": "연계" }]
+        },
+        {
+          "cluster_id": "L2-05",
+          "cluster_name": "분수",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "전체를 똑같이 나눈 부분으로 분수를 이해하고, 단위분수, 진분수, 가분수, 대분수를 구별.",
+          "connections": [{ "to_cluster_id": "L2-14", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-06",
+          "cluster_name": "소수",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "분모가 10, 100, 1000인 분수를 통해 소수를 도입하고 소수점의 의미와 자릿값을 이해.",
+          "connections": [{ "to_cluster_id": "L2-17", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-07",
+          "cluster_name": "평면도형의이동",
+          "characteristics": { "size": "소", "density": "중", "centrality": "저" },
+          "educational_meaning": "밀기, 뒤집기, 돌리기를 통해 도형의 움직임을 이해하고 공간 감각을 기름.",
+          "connections": [{ "to_cluster_id": "L2-19", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-08",
+          "cluster_name": "각도",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "각의 크기를 재고 어림하며, 예각, 둔각, 직각을 분류하는 능력 함양.",
+          "connections": [{ "to_cluster_id": "L2-09", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-09",
+          "cluster_name": "삼각형과사각형",
+          "characteristics": { "size": "중", "density": "고", "centrality": "중" },
+          "educational_meaning": "변과 각의 특징에 따라 다양한 삼각형과 사각형을 분류하고 그 성질을 이해.",
+          "connections": [{ "to_cluster_id": "L2-37", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-10",
+          "cluster_name": "원의구성요소",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "원의 중심, 반지름, 지름을 알고 그 관계를 이해하며 원주율의 의미를 파악.",
+          "connections": [{ "to_cluster_id": "L2-40", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-11",
+          "cluster_name": "꺾은선그래프",
+          "characteristics": { "size": "소", "density": "중", "centrality": "저" },
+          "educational_meaning": "시간에 따라 연속적으로 변화하는 양을 나타내고 변화의 경향을 파악하는 데 유용한 그래프 학습.",
+          "connections": [{ "to_cluster_id": "L2-42", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-12",
+          "cluster_name": "규칙과대응",
+          "characteristics": { "size": "소", "density": "중", "centrality": "중" },
+          "educational_meaning": "두 양 사이의 대응 관계를 찾아 식으로 나타내며 함수적 사고의 기초를 형성.",
+          "connections": [{ "to_cluster_id": "L2-32", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-13",
+          "cluster_name": "약수와배수관계",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "공약수, 공배수, 최대공약수, 최소공배수의 의미를 이해하고 구하는 방법을 익힘.",
+          "connections": [{ "to_cluster_id": "L2-14", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-14",
+          "cluster_name": "약분과통분",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "크기가 같은 분수를 이해하고, 분모가 다른 분수의 연산을 위해 필수적인 약분과 통분을 학습.",
+          "connections": [{ "to_cluster_id": "L2-15", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-15",
+          "cluster_name": "분수의덧셈과뺄셈",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "분모가 같거나 다른 분수의 덧셈과 뺄셈 원리를 이해하고 계산.",
+          "connections": [{ "to_cluster_id": "L2-16", "relation_type": "병렬" }]
+        },
+        {
+          "cluster_id": "L2-16",
+          "cluster_name": "분수의곱셈과나눗셈",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "분수의 곱셈과 나눗셈의 계산 원리를 이해하고 자연수와의 혼합 계산을 수행.",
+          "connections": [{ "to_cluster_id": "L2-15", "relation_type": "병렬" }]
+        },
+        {
+          "cluster_id": "L2-17",
+          "cluster_name": "소수의덧셈과뺄셈",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "자릿값을 맞추어 소수의 덧셈과 뺄셈을 계산하는 원리를 학습.",
+          "connections": [{ "to_cluster_id": "L2-18", "relation_type": "병렬" }]
+        },
+        {
+          "cluster_id": "L2-18",
+          "cluster_name": "소수의곱셈과나눗셈",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "소수점의 위치 변화 원리를 이해하며 소수의 곱셈과 나눗셈을 계산.",
+          "connections": [{ "to_cluster_id": "L2-17", "relation_type": "병렬" }]
+        },
+        {
+          "cluster_id": "L2-19",
+          "cluster_name": "도형의합동",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "모양과 크기가 완전히 같은 도형을 찾고, 대응점, 대응변, 대응각의 개념을 이해.",
+          "connections": [{ "to_cluster_id": "L2-36", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-20",
+          "cluster_name": "선대칭과점대칭",
+          "characteristics": { "size": "소", "density": "고", "centrality": "저" },
+          "educational_meaning": "대칭의 중심, 대칭축을 이해하고 선대칭도형과 점대칭도형을 그리며 성질을 탐구.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-21",
+          "cluster_name": "다각형의넓이",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "직사각형 넓이를 기반으로 평행사변형, 삼각형, 사다리꼴, 마름모의 넓이 공식을 유도하고 적용.",
+          "connections": [{ "to_cluster_id": "L2-22", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-22",
+          "cluster_name": "직육면체의겉넓이와부피",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "전개도를 이용하여 겉넓이를 구하고, 단위부피를 통해 부피 공식을 이해.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-23",
+          "cluster_name": "비례식과비례배분",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "비의 성질과 비례식의 성질을 이용하여 문제를 해결하고, 전체를 주어진 비로 나누는 비례배분을 학습.",
+          "connections": [{ "to_cluster_id": "L2-29", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-24",
+          "cluster_name": "평균과가능성",
+          "characteristics": { "size": "소", "density": "중", "centrality": "중" },
+          "educational_meaning": "자료를 대표하는 값으로서 평균을 구하고, 사건이 일어날 가능성을 '불가능하다'부터 '확실하다'까지의 말로 표현.",
+          "connections": [{ "to_cluster_id": "L2-45", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-25",
+          "cluster_name": "소인수분해",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "자연수를 소수들의 곱으로 표현하며 수의 구조를 분석하는 중등 대수의 기본 도구.",
+          "connections": [{ "to_cluster_id": "L2-26", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-26",
+          "cluster_name": "정수와유리수",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "수직선을 통해 음의 정수와 유리수의 개념을 이해하고, 대소 관계 및 사칙연산을 학습.",
+          "connections": [{ "to_cluster_id": "L2-27", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-27",
+          "cluster_name": "문자의사용과식의값",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "구체적인 수 대신 문자를 사용하여 관계를 일반화하고, 문자에 수를 대입하여 식의 값을 구함.",
+          "connections": [{ "to_cluster_id": "L2-28", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-28",
+          "cluster_name": "일차식의계산",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "동류항의 개념을 이해하고 분배법칙을 이용하여 일차식의 덧셈과 뺄셈을 정확히 계산.",
+          "connections": [{ "to_cluster_id": "L2-29", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-29",
+          "cluster_name": "일차방정식의풀이",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "이항과 등식의 성질을 이용하여 미지수 x의 값을 구하는 절차를 숙달.",
+          "connections": [{ "to_cluster_id": "L2-30", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-30",
+          "cluster_name": "연립일차방정식",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "가감법과 대입법을 이용하여 미지수가 두 개인 연립방정식의 해를 구하고 활용 문제를 해결.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-31",
+          "cluster_name": "일차부등식",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "부등식의 성질을 이해하고, 일차부등식의 해를 구해 수직선 위에 나타냄.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-32",
+          "cluster_name": "함수의개념",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "x의 값이 변함에 따라 y의 값이 하나씩 정해지는 대응 관계를 이해하고 함숫값을 구함.",
+          "connections": [{ "to_cluster_id": "L2-33", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-33",
+          "cluster_name": "일차함수와그래프",
+          "characteristics": { "size": "중", "density": "고", "centrality": "고" },
+          "educational_meaning": "기울기와 y절편의 의미를 이해하고, 그래프를 그리거나 식을 구하며, 두 그래프의 위치 관계를 파악.",
+          "connections": [{ "to_cluster_id": "L2-34", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-34",
+          "cluster_name": "이차방정식",
+          "characteristics": { "size": "중", "density": "고", "centrality": "고" },
+          "educational_meaning": "인수분해와 근의 공식을 이용하여 이차방정식의 해를 구하고, 이를 활용하여 문제 해결.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-35",
+          "cluster_name": "점선면과각",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "도형의 기본 요소를 정의하고, 맞꼭지각, 동위각, 엇각의 성질과 평행선의 성질을 이해.",
+          "connections": [{ "to_cluster_id": "L2-36", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-36",
+          "cluster_name": "삼각형의작도와합동",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "삼각형의 결정조건을 이해하고 작도하며, SSS, SAS, ASA 합동 조건을 증명하고 적용.",
+          "connections": [{ "to_cluster_id": "L2-37", "relation_type": "심화" }]
+        },
+        {
+          "cluster_id": "L2-37",
+          "cluster_name": "다각형의성질",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "삼각형의 내심과 외심, 사각형의 여러 종류와 그 성질을 논리적으로 증명하고 이해.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-38",
+          "cluster_name": "피타고라스정리의이해",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "다양한 방법으로 피타고라스 정리를 증명하고, 이를 이용하여 변의 길이를 구하는 문제 해결.",
+          "connections": [{ "to_cluster_id": "L2-39", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-39",
+          "cluster_name": "삼각비의뜻과값",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "sin, cos, tan의 정의를 이해하고, 특수각(30°, 45°, 60°)의 삼각비 값을 구함.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-40",
+          "cluster_name": "원과직선",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "원의 중심, 현, 접선 사이의 관계에 대한 성질을 이해하고 증명.",
+          "connections": [{ "to_cluster_id": "L2-41", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-41",
+          "cluster_name": "원주각",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "원주각과 중심각의 관계를 이해하고, 원에 내접하는 사각형의 성질을 탐구.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-42",
+          "cluster_name": "도수분포표와히스토그램",
+          "characteristics": { "size": "소", "density": "고", "centrality": "중" },
+          "educational_meaning": "많은 양의 자료를 계급으로 나누어 정리하고, 히스토그램으로 시각화하여 분포의 특징을 파악.",
+          "connections": [{ "to_cluster_id": "L2-43", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-43",
+          "cluster_name": "상대도수",
+          "characteristics": { "size": "소", "density": "고", "centrality": "저" },
+          "educational_meaning": "전체 도수에서 각 계급이 차지하는 비율을 나타내는 상대도수를 이해하고, 도수가 다른 두 집단을 비교.",
+          "connections": []
+        },
+        {
+          "cluster_id": "L2-44",
+          "cluster_name": "경우의수",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "합의 법칙과 곱의 법칙을 이용하여 여러 가지 상황에서 일어날 수 있는 모든 경우의 수를 구함.",
+          "connections": [{ "to_cluster_id": "L2-45", "relation_type": "선행" }]
+        },
+        {
+          "cluster_id": "L2-45",
+          "cluster_name": "확률의계산",
+          "characteristics": { "size": "소", "density": "고", "centrality": "고" },
+          "educational_meaning": "확률의 기본 성질을 이해하고, '그리고(and)'와 '또는(or)'이 포함된 사건의 확률을 계산.",
+          "connections": []
+        }
+      ]
+    }
+  ]
+}
+```

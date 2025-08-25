@@ -1,0 +1,622 @@
+```json
+{
+  "knowledge_graph_clusters": {
+    "levels": [
+      {
+        "level": 0,
+        "name": "대분류",
+        "resolution": 0.1,
+        "cluster_count_range": "8-12",
+        "clusters": [
+          {
+            "id": "L0-01",
+            "name_ko": "과학 및 기술",
+            "name_en": "Science & Technology",
+            "description_ko": "자연 과학, 응용 과학, 공학, 컴퓨터 과학, 수학 등 기술 및 과학적 원리와 관련된 모든 개체를 포함하는 클러스터입니다.",
+            "example_entities_ko": ["알베르트 아인슈타인", "DNA", "인공지능", "인터넷", "상대성 이론"]
+          },
+          {
+            "id": "L0-02",
+            "name_ko": "예술 및 문화",
+            "name_en": "Arts & Culture",
+            "description_ko": "문학, 음악, 영화, 미술, 공연 예술, 건축 등 인간의 창의적 표현과 문화적 산물을 다루는 클러스터입니다.",
+            "example_entities_ko": ["레오나르도 다 빈치", "모나리자", "베토벤 교향곡 5번", "셰익스피어", "오스카상"]
+          },
+          {
+            "id": "L0-03",
+            "name_ko": "사회 및 인물",
+            "name_en": "Society & People",
+            "description_ko": "인물, 사회 구조, 교육, 미디어, 인류학 등 인간 사회와 그 구성원에 대한 정보를 포함하는 클러스터입니다.",
+            "example_entities_ko": ["마틴 루터 킹 주니어", "가족", "하버드 대학교", "뉴욕 타임스", "민주주의"]
+          },
+          {
+            "id": "L0-04",
+            "name_ko": "비즈니스 및 경제",
+            "name_en": "Business & Economics",
+            "description_ko": "기업, 산업, 금융, 경제 이론, 시장, 제품 등 상업 및 경제 활동과 관련된 개체를 포함합니다.",
+            "example_entities_ko": ["애플(기업)", "주식 시장", "자본주의", "국내총생산(GDP)", "일론 머스크"]
+          },
+          {
+            "id": "L0-05",
+            "name_ko": "건강 및 의학",
+            "name_en": "Health & Medicine",
+            "description_ko": "질병, 해부학, 약물, 치료법, 의료 기관 등 인간의 건강과 의학 분야를 다루는 클러스터입니다.",
+            "example_entities_ko": ["코로나바이러스감염증-19", "인체", "아스피린", "암", "세계보건기구"]
+          },
+          {
+            "id": "L0-06",
+            "name_ko": "지리 및 장소",
+            "name_en": "Geography & Places",
+            "description_ko": "국가, 도시, 강, 산과 같은 지리적 위치와 장소, 그리고 관련 지형 및 환경 정보를 포함합니다.",
+            "example_entities_ko": ["대한민국", "서울", "아마존강", "에베레스트산", "지구"]
+          },
+          {
+            "id": "L0-07",
+            "name_ko": "역사 및 사건",
+            "name_en": "History & Events",
+            "description_ko": "과거의 주요 사건, 역사적 인물, 시대, 전쟁, 조약 등 역사적 사실과 기록을 다루는 클러스터입니다.",
+            "example_entities_ko": ["제2차 세계 대전", "로마 제국", "프랑스 혁명", "베를린 장벽 붕괴", "마젤란의 세계 일주"]
+          },
+          {
+            "id": "L0-08",
+            "name_ko": "정치 및 거버넌스",
+            "name_en": "Politics & Governance",
+            "description_ko": "정부, 법률, 정치 이념, 국제 관계, 공공 정책 등 통치 체계와 정치 활동에 관련된 개체를 포함합니다.",
+            "example_entities_ko": ["유엔", "미국 헌법", "대통령", "국제사법재판소", "외교"]
+          },
+          {
+            "id": "L0-09",
+            "name_ko": "철학 및 종교",
+            "name_en": "Philosophy & Religion",
+            "description_ko": "철학적 개념, 사상가, 종교, 신화, 윤리 등 인간의 근원적 질문과 신념 체계를 다루는 클러스터입니다.",
+            "example_entities_ko": ["플라톤", "불교", "기독교", "실존주의", "논리학"]
+          },
+          {
+            "id": "L0-10",
+            "name_ko": "스포츠 및 레크리에이션",
+            "name_en": "Sports & Recreation",
+            "description_ko": "각종 스포츠, 스포츠 팀, 선수, 대회, 취미 및 여가 활동을 포함하는 클러스터입니다.",
+            "example_entities_ko": ["올림픽", "FIFA 월드컵", "리오넬 메시", "LA 레이커스", "체스"]
+          }
+        ]
+      },
+      {
+        "level": 1,
+        "name": "중분류",
+        "resolution": 0.5,
+        "cluster_count_range": "20-30",
+        "clusters": [
+          {
+            "id": "L1-01",
+            "parent_id": "L0-01",
+            "name_ko": "컴퓨터 과학 및 정보 기술",
+            "name_en": "Computer Science & IT",
+            "description_ko": "알고리즘, 프로그래밍 언어, 운영 체제, 데이터베이스, 네트워크 등 컴퓨터 관련 이론과 기술을 다룹니다.",
+            "example_entities_ko": ["C++", "리눅스", "SQL", "TCP/IP", "머신러닝"]
+          },
+          {
+            "id": "L1-02",
+            "parent_id": "L0-01",
+            "name_ko": "물리학 및 천문학",
+            "name_en": "Physics & Astronomy",
+            "description_ko": "물질, 에너지, 시공간의 근본 원리를 탐구하는 물리학과 천체 및 우주 현상을 연구하는 천문학을 포함합니다.",
+            "example_entities_ko": ["양자역학", "중력", "블랙홀", "허블 우주 망원경", "힉스 보손"]
+          },
+          {
+            "id": "L1-03",
+            "parent_id": "L0-01",
+            "name_ko": "생명 과학 및 생물학",
+            "name_en": "Life Sciences & Biology",
+            "description_ko": "유전학, 세포 생물학, 생태학, 진화론 등 살아있는 유기체와 생명 현상을 연구하는 분야입니다.",
+            "example_entities_ko": ["유전자", "광합성", "생태계", "찰스 다윈", "바이러스"]
+          },
+          {
+            "id": "L1-04",
+            "parent_id": "L0-01",
+            "name_ko": "화학 및 재료 과학",
+            "name_en": "Chemistry & Materials Science",
+            "description_ko": "원소, 화합물, 화학 반응과 물질의 구조, 속성, 응용을 연구하는 분야를 포함합니다.",
+            "example_entities_ko": ["주기율표", "탄소", "폴리머", "그래핀", "산화-환원 반응"]
+          },
+          {
+            "id": "L1-05",
+            "parent_id": "L0-01",
+            "name_ko": "공학 및 응용 과학",
+            "name_en": "Engineering & Applied Sciences",
+            "description_ko": "기계공학, 전기공학, 토목공학 등 과학적 지식을 실제 문제 해결에 적용하는 기술 분야입니다.",
+            "example_entities_ko": ["내연 기관", "반도체", "현수교", "로봇공학", "항공우주공학"]
+          },
+          {
+            "id": "L1-06",
+            "parent_id": "L0-02",
+            "name_ko": "문학 및 저술",
+            "name_en": "Literature & Writing",
+            "description_ko": "소설, 시, 희곡 등 문학 작품과 작가, 문학 사조, 문학 이론을 다룹니다.",
+            "example_entities_ko": ["햄릿", "돈키호테", "제인 오스틴", "노벨 문학상", "포스트모더니즘 문학"]
+          },
+          {
+            "id": "L1-07",
+            "parent_id": "L0-02",
+            "name_ko": "영화 및 텔레비전",
+            "name_en": "Film & Television",
+            "description_ko": "영화, TV 시리즈, 다큐멘터리, 애니메이션과 감독, 배우, 제작사를 포함합니다.",
+            "example_entities_ko": ["대부", "기생충", "왕좌의 게임", "스티븐 스필버그", "넷플릭스"]
+          },
+          {
+            "id": "L1-08",
+            "parent_id": "L0-02",
+            "name_ko": "음악",
+            "name_en": "Music",
+            "description_ko": "작곡가, 연주자, 밴드, 앨범, 장르(클래식, 재즈, 팝 등)를 포함하는 음악 관련 개체 클러스터입니다.",
+            "example_entities_ko": ["모차르트", "비틀즈", "퀸", "그래미상", "힙합"]
+          },
+          {
+            "id": "L1-09",
+            "parent_id": "L0-02",
+            "name_ko": "시각 예술",
+            "name_en": "Visual Arts",
+            "description_ko": "회화, 조각, 사진, 디자인 등 시각적 매체를 통한 예술 작품과 예술가를 다룹니다.",
+            "example_entities_ko": ["빈센트 반 고흐", "피카소의 게르니카", "로댕의 생각하는 사람", "바우하우스", "사진술"]
+          },
+          {
+            "id": "L1-10",
+            "parent_id": "L0-03",
+            "name_ko": "인물 및 전기",
+            "name_en": "Individuals & Biographies",
+            "description_ko": "특정 개인, 그들의 삶, 업적, 관계 등 인물 중심의 정보를 집계하는 클러스터입니다.",
+            "example_entities_ko": ["마리 퀴리", "넬슨 만델라", "스티브 잡스", "클레오파트라", "이순신"]
+          },
+          {
+            "id": "L1-11",
+            "parent_id": "L0-03",
+            "name_ko": "교육 및 학문",
+            "name_en": "Education & Academia",
+            "description_ko": "대학, 연구 기관, 학문 분야, 교육 이론 등 교육 시스템과 학술 활동을 다룹니다.",
+            "example_entities_ko": ["옥스퍼드 대학교", "MIT", "철학", "교육학", "박사 학위"]
+          },
+          {
+            "id": "L1-12",
+            "parent_id": "L0-04",
+            "name_ko": "기업 및 산업",
+            "name_en": "Corporations & Industries",
+            "description_ko": "개별 기업, 산업 분야(예: 자동차, IT), 기업 유형 및 비즈니스 모델을 포함합니다.",
+            "example_entities_ko": ["구글", "삼성전자", "자동차 산업", "스타트업", "다국적 기업"]
+          },
+          {
+            "id": "L1-13",
+            "parent_id": "L0-04",
+            "name_ko": "금융 및 투자",
+            "name_en": "Finance & Investment",
+            "description_ko": "은행, 증권 거래소, 통화, 투자 상품(주식, 채권), 금융 이론 등을 다룹니다.",
+            "example_entities_ko": ["미국 달러", "뉴욕 증권거래소", "골드만삭스", "워렌 버핏", "암호화폐"]
+          },
+          {
+            "id": "L1-14",
+            "parent_id": "L0-05",
+            "name_ko": "질병 및 상태",
+            "name_en": "Diseases & Conditions",
+            "description_ko": "전염병, 만성 질환, 유전 질환, 정신 건강 상태 등 다양한 질병과 의학적 상태를 분류합니다.",
+            "example_entities_ko": ["당뇨병", "알츠하이머병", "독감", "우울증", "고혈압"]
+          },
+          {
+            "id": "L1-15",
+            "parent_id": "L0-05",
+            "name_ko": "약리학 및 약물",
+            "name_en": "Pharmacology & Drugs",
+            "description_ko": "의약품, 약물의 작용 기전, 화학 구조, 치료 용도 등을 포함하는 클러스터입니다.",
+            "example_entities_ko": ["페니실린", "모르핀", "백신", "화이자", "임상시험"]
+          },
+          {
+            "id": "L1-16",
+            "parent_id": "L0-06",
+            "name_ko": "국가 및 행정 구역",
+            "name_en": "Countries & Administrative Divisions",
+            "description_ko": "국가, 주, 성, 도시 등 정치적, 행정적 경계로 정의된 지리적 단위들을 다룹니다.",
+            "example_entities_ko": ["중국", "캘리포니아 주", "파리", "경기도", "유럽 연합"]
+          },
+          {
+            "id": "L1-17",
+            "parent_id": "L0-06",
+            "name_ko": "지리적 특징",
+            "name_en": "Geographical Features",
+            "description_ko": "산, 강, 바다, 사막, 호수 등 자연적으로 형성된 지형 및 지물을 포함합니다.",
+            "example_entities_ko": ["나일강", "사하라 사막", "태평양", "그랜드 캐니언", "알프스 산맥"]
+          },
+          {
+            "id": "L1-18",
+            "parent_id": "L0-07",
+            "name_ko": "전쟁 및 분쟁",
+            "name_en": "Wars & Conflicts",
+            "description_ko": "국가 간 또는 내부의 무력 충돌, 전투, 군사 작전, 관련 조약 등을 다룹니다.",
+            "example_entities_ko": ["베트남 전쟁", "십자군 전쟁", "한국 전쟁", "게티즈버그 전투", "베르사유 조약"]
+          },
+          {
+            "id": "L1-19",
+            "parent_id": "L0-08",
+            "name_ko": "법률 및 사법 제도",
+            "name_en": "Law & Legal Systems",
+            "description_ko": "헌법, 민법, 형법 등 법률 분야와 법원, 판사 등 사법 시스템 관련 개체를 포함합니다.",
+            "example_entities_ko": ["미국 대법원", "국제형사재판소", "마그나 카르타", "무죄 추정의 원칙", "지적 재산권"]
+          },
+          {
+            "id": "L1-20",
+            "parent_id": "L0-08",
+            "name_ko": "정부 기관 및 기구",
+            "name_en": "Government Bodies & Agencies",
+            "description_ko": "입법, 사법, 행정부와 산하 기관, 국제기구 등 정부 조직을 다룹니다.",
+            "example_entities_ko": ["미국 의회", "대한민국 국회", "CIA", "NASA", "세계은행"]
+          },
+          {
+            "id": "L1-21",
+            "parent_id": "L0-09",
+            "name_ko": "종교 및 신념 체계",
+            "name_en": "Religions & Belief Systems",
+            "description_ko": "주요 종교, 종파, 신화, 종교적 텍스트, 신 및 종교적 인물을 포함합니다.",
+            "example_entities_ko": ["이슬람", "힌두교", "성경", "쿠란", "제우스"]
+          },
+          {
+            "id": "L1-22",
+            "parent_id": "L0-10",
+            "name_ko": "팀 스포츠",
+            "name_en": "Team Sports",
+            "description_ko": "축구, 농구, 야구 등 여러 선수가 한 팀을 이루어 경쟁하는 스포츠 종목과 리그, 팀을 다룹니다.",
+            "example_entities_ko": ["프리미어리그", "NBA", "레알 마드리드 CF", "뉴욕 양키스", "슈퍼볼"]
+          },
+          {
+            "id": "L1-23",
+            "parent_id": "L0-10",
+            "name_ko": "개인 스포츠 및 대회",
+            "name_en": "Individual Sports & Competitions",
+            "description_ko": "테니스, 육상, 수영, 골프 등 개인의 기량으로 경쟁하는 스포츠와 관련 대회를 포함합니다.",
+            "example_entities_ko": ["윔블던 선수권 대회", "우사인 볼트", "마이클 펠프스", "타이거 우즈", "마라톤"]
+          },
+          {
+            "id": "L1-24",
+            "parent_id": "L0-03",
+            "name_ko": "언어 및 언어학",
+            "name_en": "Languages & Linguistics",
+            "description_ko": "세계의 다양한 언어, 어족, 방언 및 언어의 구조와 원리를 연구하는 언어학을 다룹니다.",
+            "example_entities_ko": ["영어", "인도유럽어족", "표준 중국어", "촘스키", "음운론"]
+          },
+          {
+            "id": "L1-25",
+            "parent_id": "L0-07",
+            "name_ko": "고고학 및 고대사",
+            "name_en": "Archaeology & Ancient History",
+            "description_ko": "고대 문명, 유물, 유적지 및 기록 이전의 역사를 연구하는 분야를 포함합니다.",
+            "example_entities_ko": ["고대 이집트", "스톤헨지", "마야 문명", "로제타석", "폼페이"]
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "name": "소분류",
+        "resolution": 1.0,
+        "cluster_count_range": "40-60",
+        "clusters": [
+          {
+            "id": "L2-01",
+            "parent_id": "L1-01",
+            "name_ko": "인공지능 및 기계학습",
+            "name_en": "Artificial Intelligence & Machine Learning",
+            "description_ko": "딥러닝, 자연어 처리, 컴퓨터 비전 등 지능형 에이전트를 연구하고 구축하는 기술 분야입니다.",
+            "example_entities_ko": ["신경망", "GPT-3", "텐서플로우", "강화 학습", "알파고"]
+          },
+          {
+            "id": "L2-02",
+            "parent_id": "L1-01",
+            "name_ko": "소프트웨어 공학 및 프로그래밍",
+            "name_en": "Software Engineering & Programming",
+            "description_ko": "소프트웨어 개발 생명주기, 디자인 패턴, 프로그래밍 패러다임, 버전 관리 시스템 등을 다룹니다.",
+            "example_entities_ko": ["애자일 방법론", "객체 지향 프로그래밍", "Git", "도커", "API"]
+          },
+          {
+            "id": "L2-03",
+            "parent_id": "L1-01",
+            "name_ko": "컴퓨터 네트워크 및 보안",
+            "name_en": "Computer Networks & Security",
+            "description_ko": "인터넷 프로토콜, 네트워크 아키텍처, 암호학, 사이버 보안 위협 및 방어 기술을 포함합니다.",
+            "example_entities_ko": ["HTTP", "라우터", "방화벽", "RSA 암호", "DDoS 공격"]
+          },
+          {
+            "id": "L2-04",
+            "parent_id": "L1-03",
+            "name_ko": "유전학 및 분자생물학",
+            "name_en": "Genetics & Molecular Biology",
+            "description_ko": "DNA, RNA, 단백질 등 분자 수준에서 유전 정보와 생명 현상을 연구하는 분야입니다.",
+            "example_entities_ko": ["크리스퍼 유전자 가위", "인간 게놈 프로젝트", "전사 (생물학)", "PCR", "돌연변이"]
+          },
+          {
+            "id": "L2-05",
+            "parent_id": "L1-03",
+            "name_ko": "생태학 및 진화",
+            "name_en": "Ecology & Evolution",
+            "description_ko": "생물과 환경의 상호작용, 생물 다양성, 자연선택, 종의 기원 등을 연구합니다.",
+            "example_entities_ko": ["먹이 사슬", "생물 군계", "자연선택설", "갈라파고스 제도", "기후 변화"]
+          },
+          {
+            "id": "L2-06",
+            "parent_id": "L1-07",
+            "name_ko": "영화 감독 및 제작자",
+            "name_en": "Film Directors & Producers",
+            "description_ko": "영화를 연출하거나 제작을 총괄하는 인물들을 중심으로 한 클러스터입니다.",
+            "example_entities_ko": ["알프레드 히치콕", "봉준호", "제임스 카메론", "조지 루카스", "쿠엔틴 타란티노"]
+          },
+          {
+            "id": "L2-07",
+            "parent_id": "L1-07",
+            "name_ko": "영화 장르",
+            "name_en": "Film Genres",
+            "description_ko": "공상 과학, 스릴러, 코미디, 드라마 등 서사, 스타일, 주제에 따라 영화를 분류합니다.",
+            "example_entities_ko": ["SF 영화", "느와르", "로맨틱 코미디", "서부 영화", "공포 영화"]
+          },
+          {
+            "id": "L2-08",
+            "parent_id": "L1-08",
+            "name_ko": "클래식 음악",
+            "name_en": "Classical Music",
+            "description_ko": "바로크, 고전, 낭만, 현대 등 서양 고전 음악의 작곡가, 작품, 형식을 다룹니다.",
+            "example_entities_ko": ["바흐", "베토벤", "쇼팽", "교향곡", "오페라"]
+          },
+          {
+            "id": "L2-09",
+            "parent_id": "L1-08",
+            "name_ko": "대중 음악",
+            "name_en": "Popular Music",
+            "description_ko": "록, 팝, 재즈, 힙합, R&B 등 20세기 이후 대중적으로 인기 있는 음악 장르와 아티스트를 포함합니다.",
+            "example_entities_ko": ["엘비스 프레슬리", "마이클 잭슨", "방탄소년단", "재즈", "록 앤 롤"]
+          },
+          {
+            "id": "L2-10",
+            "parent_id": "L1-12",
+            "name_ko": "기술 산업",
+            "name_en": "Technology Industry",
+            "description_ko": "소프트웨어, 하드웨어, 인터넷 서비스, 반도체 등을 개발하고 제공하는 기업들을 포함합니다.",
+            "example_entities_ko": ["마이크로소프트", "아마존 웹 서비스", "엔비디아", "인텔", "오라클"]
+          },
+          {
+            "id": "L2-11",
+            "parent_id": "L1-12",
+            "name_ko": "자동차 산업",
+            "name_en": "Automotive Industry",
+            "description_ko": "자동차 제조사, 부품 공급업체, 관련 기술(예: 전기차, 자율주행)을 다룹니다.",
+            "example_entities_ko": ["포드", "토요타", "현대자동차그룹", "테슬라", "보쉬"]
+          },
+          {
+            "id": "L2-12",
+            "parent_id": "L1-13",
+            "name_ko": "통화 및 중앙은행",
+            "name_en": "Currencies & Central Banks",
+            "description_ko": "각국의 법정 통화, 환율, 그리고 통화 정책을 결정하는 중앙은행을 다룹니다.",
+            "example_entities_ko": ["유로", "일본 엔", "미국 연방준비제도", "유럽 중앙은행", "금본위제"]
+          },
+          {
+            "id": "L2-13",
+            "parent_id": "L1-14",
+            "name_ko": "전염병",
+            "name_en": "Infectious Diseases",
+            "description_ko": "바이러스, 박테리아, 기생충 등에 의해 발생하며 전파될 수 있는 질병들을 다룹니다.",
+            "example_entities_ko": ["에이즈", "결핵", "말라리아", "홍역", "에볼라"]
+          },
+          {
+            "id": "L2-14",
+            "parent_id": "L1-14",
+            "name_ko": "암 (종양학)",
+            "name_en": "Cancer (Oncology)",
+            "description_ko": "비정상적인 세포 성장을 특징으로 하는 다양한 종류의 암, 그 원인, 진단, 치료법을 다룹니다.",
+            "example_entities_ko": ["폐암", "유방암", "백혈병", "화학 요법", "방사선 치료"]
+          },
+          {
+            "id": "L2-15",
+            "parent_id": "L1-16",
+            "name_ko": "도시 및 대도시권",
+            "name_en": "Cities & Metropolitan Areas",
+            "description_ko": "주요 도시, 수도, 그리고 주변 지역을 포함하는 대도시권에 대한 정보를 다룹니다.",
+            "example_entities_ko": ["뉴욕", "도쿄", "런던", "베이징", "수도권 (대한민국)"]
+          },
+          {
+            "id": "L2-16",
+            "parent_id": "L1-18",
+            "name_ko": "제1차 및 제2차 세계 대전",
+            "name_en": "World War I & II",
+            "description_ko": "20세기의 두 차례 세계 대전과 관련된 주요 전투, 인물, 국가, 기술, 결과를 포함합니다.",
+            "example_entities_ko": ["노르망디 상륙작전", "진주만 공격", "스탈린그라드 전투", "윈스턴 처칠", "홀로코스트"]
+          },
+          {
+            "id": "L2-17",
+            "parent_id": "L1-19",
+            "name_ko": "국제법",
+            "name_en": "International Law",
+            "description_ko": "국가 간의 관계를 규율하는 법, 조약, 협약 및 관련 국제기구를 다룹니다.",
+            "example_entities_ko": ["제네바 협약", "유엔 헌장", "국제 해양법", "세계 인권 선언", "전쟁 범죄"]
+          },
+          {
+            "id": "L2-18",
+            "parent_id": "L1-20",
+            "name_ko": "국제 기구",
+            "name_en": "International Organizations",
+            "description_ko": "여러 국가가 회원으로 참여하여 공동의 목표를 추구하는 정부 간 또는 비정부 기구를 포함합니다.",
+            "example_entities_ko": ["NATO", "세계무역기구(WTO)", "국제 통화 기금(IMF)", "국경없는의사회", "그린피스"]
+          },
+          {
+            "id": "L2-19",
+            "parent_id": "L1-21",
+            "name_ko": "고대 철학",
+            "name_en": "Ancient Philosophy",
+            "description_ko": "고대 그리스와 로마를 중심으로 한 철학자, 학파, 사상을 다룹니다.",
+            "example_entities_ko": ["소크라테스", "아리스토텔레스", "스토아 학파", "에피쿠로스 학파", "국가 (플라톤)"]
+          },
+          {
+            "id": "L2-20",
+            "parent_id": "L1-22",
+            "name_ko": "축구 클럽 및 리그",
+            "name_en": "Football Clubs & Leagues",
+            "description_ko": "전 세계의 프로 축구 리그, 클럽 팀, 주요 대회 및 관련 인물을 포함합니다.",
+            "example_entities_ko": ["FC 바르셀로나", "맨체스터 유나이티드", "UEFA 챔피언스리그", "K리그", "펠레"]
+          },
+          {
+            "id": "L2-21",
+            "parent_id": "L1-22",
+            "name_ko": "농구 팀 및 리그",
+            "name_en": "Basketball Teams & Leagues",
+            "description_ko": "NBA를 중심으로 한 프로 농구 리그, 팀, 선수, 주요 기록 등을 다룹니다.",
+            "example_entities_ko": ["시카고 불스", "보스턴 셀틱스", "마이클 조던", "르브론 제임스", "유로리그"]
+          },
+          {
+            "id": "L2-22",
+            "parent_id": "L1-05",
+            "name_ko": "항공우주공학",
+            "name_en": "Aerospace Engineering",
+            "description_ko": "항공기, 우주선, 미사일 등의 설계, 제작, 운용에 관한 기술을 다룹니다.",
+            "example_entities_ko": ["보잉 747", "아폴로 계획", "스페이스X", "새턴 V 로켓", "국제우주정거장"]
+          },
+          {
+            "id": "L2-23",
+            "parent_id": "L1-05",
+            "name_ko": "전기 및 전자공학",
+            "name_en": "Electrical & Electronic Engineering",
+            "description_ko": "회로, 반도체, 통신 시스템, 전력 시스템 등 전기와 전자 기술을 다룹니다.",
+            "example_entities_ko": ["트랜지스터", "집적 회로", "GPS", "교류", "전동기"]
+          },
+          {
+            "id": "L2-24",
+            "parent_id": "L1-09",
+            "name_ko": "건축 양식 및 사조",
+            "name_en": "Architectural Styles & Movements",
+            "description_ko": "고딕, 르네상스, 바로크, 모더니즘 등 특정 시대나 지역의 건축 특징과 사조를 다룹니다.",
+            "example_entities_ko": ["고딕 건축", "아르누보", "국제주의 양식", "포스트모던 건축", "프랭크 로이드 라이트"]
+          },
+          {
+            "id": "L2-25",
+            "parent_id": "L1-11",
+            "name_ko": "사회과학 분야",
+            "name_en": "Social Science Disciplines",
+            "description_ko": "사회학, 정치학, 심리학, 인류학 등 인간 사회와 행동을 연구하는 학문 분야들을 포함합니다.",
+            "example_entities_ko": ["사회학", "심리학", "경제학", "정치학", "인류학"]
+          },
+          {
+            "id": "L2-26",
+            "parent_id": "L1-25",
+            "name_ko": "고대 문명",
+            "name_en": "Ancient Civilizations",
+            "description_ko": "메소포타미아, 이집트, 인더스, 황하 등 고대에 번성했던 주요 문명들을 다룹니다.",
+            "example_entities_ko": ["수메르", "고대 로마", "잉카 제국", "아즈텍 문명", "고대 그리스"]
+          },
+          {
+            "id": "L2-27",
+            "parent_id": "L1-02",
+            "name_ko": "우주 탐사",
+            "name_en": "Space Exploration",
+            "description_ko": "우주 탐사선, 유인 우주 비행, 행성 탐사 임무 등 인류의 우주 탐사 활동을 다룹니다.",
+            "example_entities_ko": ["보이저 1호", "화성 탐사 로버 큐리오시티", "유리 가가린", "닐 암스트롱", "스푸트니크 1호"]
+          },
+          {
+            "id": "L2-28",
+            "parent_id": "L1-04",
+            "name_ko": "유기화학",
+            "name_en": "Organic Chemistry",
+            "description_ko": "탄소를 포함하는 화합물의 구조, 성질, 반응을 연구하는 화학의 한 분야입니다.",
+            "example_entities_ko": ["메탄", "에탄올", "벤젠", "DNA", "단백질"]
+          },
+          {
+            "id": "L2-29",
+            "parent_id": "L1-06",
+            "name_ko": "시 (Poetry)",
+            "name_en": "Poetry",
+            "description_ko": "운율과 비유를 사용하여 감정과 사상을 표현하는 문학 형식, 시인, 시집을 다룹니다.",
+            "example_entities_ko": ["일리아스", "신곡", "T. S. 엘리엇", "파블로 네루다", "하이쿠"]
+          },
+          {
+            "id": "L2-30",
+            "parent_id": "L1-10",
+            "name_ko": "과학자 및 발명가",
+            "name_en": "Scientists & Inventors",
+            "description_ko": "과학적 발견이나 기술적 발명으로 인류에 큰 영향을 미친 인물들을 포함합니다.",
+            "example_entities_ko": ["아이작 뉴턴", "토머스 에디슨", "니콜라 테슬라", "알렉산더 그레이엄 벨", "제임스 와트"]
+          },
+          {
+            "id": "L2-31",
+            "parent_id": "L1-17",
+            "name_ko": "산맥 및 화산",
+            "name_en": "Mountain Ranges & Volcanoes",
+            "description_ko": "지각 활동으로 형성된 주요 산맥과 화산, 관련 지질학적 현상을 다룹니다.",
+            "example_entities_ko": ["히말라야 산맥", "안데스 산맥", "후지산", "베수비오 화산", "환태평양 조산대"]
+          },
+          {
+            "id": "L2-32",
+            "parent_id": "L1-15",
+            "name_ko": "백신 및 면역학",
+            "name_en": "Vaccines & Immunology",
+            "description_ko": "면역 체계의 작동 원리, 백신 개발, 면역 질환 등을 연구하는 분야입니다.",
+            "example_entities_ko": ["MMR 백신", "소아마비 백신", "항체", "B세포", "알레르기"]
+          },
+          {
+            "id": "L2-33",
+            "parent_id": "L1-19",
+            "name_ko": "헌법 및 공법",
+            "name_en": "Constitutional & Public Law",
+            "description_ko": "국가의 기본 구조와 원리, 국민의 기본권을 규정하는 헌법 및 행정법 등을 다룹니다.",
+            "example_entities_ko": ["권력 분립", "표현의 자유", "대한민국 헌법", "행정소송법", "국민투표"]
+          },
+          {
+            "id": "L2-34",
+            "parent_id": "L1-01",
+            "name_ko": "데이터베이스 및 데이터 관리",
+            "name_en": "Databases & Data Management",
+            "description_ko": "데이터를 효율적으로 저장, 검색, 관리하기 위한 기술로 관계형 데이터베이스, NoSQL 등을 포함합니다.",
+            "example_entities_ko": ["MySQL", "PostgreSQL", "MongoDB", "데이터 웨어하우스", "정규화"]
+          },
+          {
+            "id": "L2-35",
+            "parent_id": "L1-08",
+            "name_ko": "악기",
+            "name_en": "Musical Instruments",
+            "description_ko": "음악을 연주하는 데 사용되는 도구로, 현악기, 관악기, 타악기, 건반악기 등을 포함합니다.",
+            "example_entities_ko": ["피아노", "바이올린", "기타", "드럼", "플루트"]
+          },
+          {
+            "id": "L2-36",
+            "parent_id": "L1-12",
+            "name_ko": "에너지 산업",
+            "name_en": "Energy Industry",
+            "description_ko": "석유, 가스, 석탄 등 화석 연료와 태양광, 풍력 등 신재생 에너지를 생산하고 공급하는 산업입니다.",
+            "example_entities_ko": ["엑슨모빌", "사우디 아람코", "OPEC", "원자력 발전", "태양광 발전"]
+          },
+          {
+            "id": "L2-37",
+            "parent_id": "L1-23",
+            "name_ko": "올림픽 종목",
+            "name_en": "Olympic Sports",
+            "description_ko": "하계 및 동계 올림픽에서 정식 종목으로 채택된 스포츠들을 포함합니다.",
+            "example_entities_ko": ["육상", "수영", "체조", "피겨 스케이팅", "스키"]
+          },
+          {
+            "id": "L2-38",
+            "parent_id": "L1-24",
+            "name_ko": "어족 및 어군",
+            "name_en": "Language Families & Groups",
+            "description_ko": "공통 조어에서 갈라져 나왔다고 추정되는 언어들의 집합을 다룹니다.",
+            "example_entities_ko": ["로망스어군", "게르만어파", "슬라브어파", "알타이 제어", "우랄어족"]
+          },
+          {
+            "id": "L2-39",
+            "parent_id": "L1-02",
+            "name_ko": "입자 물리학",
+            "name_en": "Particle Physics",
+            "description_ko": "물질과 복사를 구성하는 기본 입자와 그 상호작용을 연구하는 물리학의 한 분야입니다.",
+            "example_entities_ko": ["쿼크", "렙톤", "표준 모형", "대형 강입자 충돌기", "반물질"]
+          },
+          {
+            "id": "L2-40",
+            "parent_id": "L1-09",
+            "name_ko": "사진술",
+            "name_en": "Photography",
+            "description_ko": "사진 기술, 장비, 유명 사진작가 및 사진의 예술적, 기록적 측면을 다룹니다.",
+            "example_entities_ko": ["앙리 카르티에 브레송", "매그넘 포토스", "다게레오타이프", "DSLR 카메라", "조리개"]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
