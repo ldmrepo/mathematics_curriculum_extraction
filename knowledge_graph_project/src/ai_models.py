@@ -54,16 +54,39 @@ class OpenAIInterface(AIModelInterface):
     async def generate_completion(self, prompt: str, **kwargs) -> Dict[str, Any]:
         """Generate completion using OpenAI API"""
         try:
-            response = await self.client.chat.completions.create(
-                model=self.config.name,
-                messages=[
-                    {"role": "system", "content": "You are a Korean mathematics curriculum expert."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=self.config.temperature,
-                max_tokens=self.config.max_tokens,
-                **kwargs
-            )
+            # Extract max_tokens from kwargs if provided, otherwise use default
+            max_tokens = kwargs.pop('max_tokens', self.config.max_tokens)
+            
+            # Remove unsupported parameters for all OpenAI models
+            kwargs.pop('reasoning_effort', None)
+            kwargs.pop('verbosity', None)
+            kwargs.pop('thinking_budget', None)
+            
+            # For GPT-5, use max_completion_tokens only
+            if 'gpt-5' in self.config.name.lower():
+                # GPT-5 uses max_completion_tokens instead of max_tokens
+                kwargs.pop('temperature', None)  # GPT-5 doesn't support temperature
+                
+                response = await self.client.chat.completions.create(
+                    model=self.config.name,
+                    messages=[
+                        {"role": "system", "content": "You are a Korean mathematics curriculum expert."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    max_completion_tokens=max_tokens,  # GPT-5 uses this parameter
+                    **kwargs
+                )
+            else:
+                response = await self.client.chat.completions.create(
+                    model=self.config.name,
+                    messages=[
+                        {"role": "system", "content": "You are a Korean mathematics curriculum expert."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=self.config.temperature,
+                    max_tokens=max_tokens,  # Other models use this
+                    **kwargs
+                )
             
             # Calculate cost
             usage = response.usage
@@ -119,20 +142,21 @@ class ClaudeInterface(AIModelInterface):
         self.client = anthropic.AsyncAnthropic(api_key=model_config.api_key)
     
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-    async def generate_completion(self, prompt: str, thinking_budget: Optional[int] = None, **kwargs) -> Dict[str, Any]:
+    async def generate_completion(self, prompt: str, **kwargs) -> Dict[str, Any]:
         """Generate completion using Claude API"""
         try:
+            # Extract max_tokens from kwargs if provided, otherwise use default
+            max_tokens = kwargs.pop('max_tokens', self.config.max_tokens)
+            # Remove unsupported parameters
+            kwargs.pop('thinking_budget', None)
+            
             params = {
                 "model": self.config.name,
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": self.config.temperature,
-                "max_tokens": self.config.max_tokens,
+                "max_tokens": max_tokens,
                 **kwargs
             }
-            
-            # Add thinking budget for reasoning models
-            if thinking_budget and "sonnet-4" in self.config.name.lower():
-                params["thinking_budget"] = thinking_budget
             
             response = await self.client.messages.create(**params)
             
@@ -169,13 +193,18 @@ class GeminiInterface(AIModelInterface):
     async def generate_completion(self, prompt: str, **kwargs) -> Dict[str, Any]:
         """Generate completion using Gemini API"""
         try:
+            # Extract max_tokens from kwargs if provided, otherwise use default
+            max_tokens = kwargs.pop('max_tokens', self.config.max_tokens)
+            # For Gemini, also check for max_output_tokens
+            max_output_tokens = kwargs.pop('max_output_tokens', max_tokens)
+            
             # Debug logging
-            logger.debug(f"Gemini config max_tokens: {self.config.max_tokens}")
+            logger.debug(f"Gemini max_output_tokens: {max_output_tokens}")
             logger.debug(f"Additional kwargs: {kwargs}")
             
             generation_config = genai.types.GenerationConfig(
                 temperature=self.config.temperature,
-                max_output_tokens=self.config.max_tokens,
+                max_output_tokens=max_output_tokens,
                 **kwargs
             )
             
@@ -221,8 +250,10 @@ class AIModelManager:
     
     def __init__(self):
         self.models = {
+            'gpt4o': OpenAIInterface(config.models['gpt4o']),  # Best performance
+            'gpt4_turbo': OpenAIInterface(config.models['gpt4_turbo']),  # Most capable
             'gemini_pro': GeminiInterface(config.models['gemini_pro']),
-            'gpt5': OpenAIInterface(config.models['gpt5']),
+            'gpt5': OpenAIInterface(config.models['gpt5']),  # GPT-5 (experimental)
             'claude_sonnet': ClaudeInterface(config.models['claude_sonnet']),
             'claude_opus': ClaudeInterface(config.models['claude_opus'])
         }

@@ -12,15 +12,23 @@ from src.ai_models import AIModelManager
 from src.data_manager import CurriculumDataProcessor
 
 class RelationshipExtractor:
-    """Extracts relationships between curriculum elements using GPT-5"""
+    """Extracts relationships between curriculum elements using GPT-4o"""
     
     def __init__(self, ai_manager: AIModelManager):
         self.ai_manager = ai_manager
-        self.model_name = 'gpt5'  # Using GPT-5 for cost-efficient batch processing
+        self.model_name = 'gpt4o'  # Using GPT-4o (best performance model)
     
     async def extract_all_relationships(self, curriculum_data: Dict[str, Any], foundation_design: Dict[str, Any]) -> Dict[str, Any]:
         """Extract all relationships between curriculum elements"""
-        logger.info("Starting relationship extraction with GPT-5")
+        logger.info("Starting relationship extraction with GPT-4o")
+        
+        # Integrate Phase 1 foundation design
+        self.foundation_design = foundation_design
+        self.relationship_categories = foundation_design.get('relationship_categories', {})
+        self.hierarchical_structure = foundation_design.get('hierarchical_structure', {})
+        self.community_clusters = foundation_design.get('community_clusters', {})
+        
+        logger.info(f"Using foundation design with {len(self.relationship_categories)} relationship categories")
         
         # Use database suggestions as starting point
         prerequisite_suggestions = curriculum_data.get('prerequisite_suggestions', pd.DataFrame())
@@ -37,10 +45,13 @@ class RelationshipExtractor:
             horizontal_suggestions, curriculum_data
         )
         
-        # Extract additional relationship types
+        # Extract additional relationship types guided by foundation design
         similarity_relations = await self._extract_similarity_relationships(curriculum_data)
         domain_bridge_relations = await self._extract_domain_bridge_relationships(curriculum_data)
         grade_progression_relations = await self._extract_grade_progression_relationships(curriculum_data)
+        
+        # Extract relationships based on community clusters from Phase 1
+        cluster_relations = await self._extract_cluster_based_relationships(curriculum_data)
         
         # Calculate initial weights
         weighted_relations = await self._calculate_initial_weights(
@@ -48,8 +59,12 @@ class RelationshipExtractor:
             horizontal_relations,
             similarity_relations,
             domain_bridge_relations,
-            grade_progression_relations
+            grade_progression_relations,
+            cluster_relations
         )
+        
+        # Validate relationships against foundation design categories
+        validated_relations = await self._validate_against_foundation(weighted_relations)
         
         relationship_extraction = {
             'prerequisite_relations': prerequisite_relations,
@@ -57,12 +72,19 @@ class RelationshipExtractor:
             'similarity_relations': similarity_relations,
             'domain_bridge_relations': domain_bridge_relations,
             'grade_progression_relations': grade_progression_relations,
-            'weighted_relations': weighted_relations,
+            'cluster_relations': cluster_relations,
+            'weighted_relations': validated_relations,
+            'foundation_integration': {
+                'categories_used': list(self.relationship_categories.keys()),
+                'hierarchy_levels': len(self.hierarchical_structure.get('knowledgeGraph', {}).get('hierarchicalStructure', [])),
+                'clusters_analyzed': len(self.community_clusters.get('knowledge_graph_clusters', []))
+            },
             'metadata': {
                 'extraction_timestamp': asyncio.get_event_loop().time(),
-                'total_relations_extracted': len(weighted_relations),
-                'relation_types_count': 5,
-                'db_suggestions_used': len(prerequisite_suggestions) + len(horizontal_suggestions)
+                'total_relations_extracted': len(validated_relations),
+                'relation_types_count': 6,
+                'db_suggestions_used': len(prerequisite_suggestions) + len(horizontal_suggestions),
+                'foundation_design_integrated': True
             }
         }
         
@@ -377,6 +399,139 @@ B: [{std_b.standard_code}] {std_b.standard_content[:100]}...
             logger.error(f"Failed to parse progression results: {e}")
             return []
     
+    async def _extract_cluster_based_relationships(self, curriculum_data: Dict) -> List[Dict[str, Any]]:
+        """Extract relationships based on community clusters from Phase 1"""
+        logger.info("Extracting cluster-based relationships")
+        
+        relations = []
+        standards = curriculum_data['achievement_standards']
+        
+        # Get clusters from foundation design
+        clusters = self.community_clusters.get('knowledge_graph_clusters', [])
+        if not clusters:
+            logger.info("No community clusters found in foundation design")
+            return relations
+        
+        # Focus on Level 0 clusters (highest level grouping)
+        level0_clusters = next((c for c in clusters if c.get('level') == 0), None)
+        if not level0_clusters:
+            return relations
+        
+        # Sample standards from same cluster for relationship extraction
+        for cluster in level0_clusters.get('clusters', [])[:3]:  # Process first 3 clusters
+            cluster_standards = cluster.get('nodes', [])
+            if len(cluster_standards) >= 2:
+                # Extract relationships within cluster
+                cluster_name = cluster.get('cluster_name', 'unknown')
+                cluster_rels = await self._analyze_cluster_relationships(
+                    cluster_standards[:5], standards, cluster_name
+                )
+                relations.extend(cluster_rels)
+        
+        logger.info(f"Extracted {len(relations)} cluster-based relationships")
+        return relations
+    
+    async def _analyze_cluster_relationships(self, cluster_standards: List[str], 
+                                            standards_df: pd.DataFrame, 
+                                            cluster_name: str) -> List[Dict[str, Any]]:
+        """Analyze relationships within a cluster"""
+        
+        # Filter standards that belong to this cluster
+        cluster_df = standards_df[standards_df['standard_code'].isin(cluster_standards)]
+        
+        if cluster_df.empty or len(cluster_df) < 2:
+            return []
+        
+        standards_text = ""
+        for _, std in cluster_df.head(5).iterrows():
+            standards_text += f"[{std['standard_code']}] {std['standard_content'][:100]}...\n"
+        
+        prompt = f"""
+클러스터 '{cluster_name}' 내의 성취기준들 간 관계를 분석하세요:
+
+{standards_text}
+
+가장 중요한 관계 2-3개를 JSON으로:
+{{
+  "cluster_relations": [
+    {{
+      "source_code": "코드1",
+      "target_code": "코드2",
+      "relation_type": "관계유형",
+      "strength": 0.0-1.0,
+      "reasoning": "관계 설명"
+    }}
+  ]
+}}
+"""
+        
+        try:
+            response = await self.ai_manager.get_completion(self.model_name, prompt, max_tokens=600)
+            content = response['content']
+            start_idx = content.find('{')
+            end_idx = content.rfind('}') + 1
+            json_str = content[start_idx:end_idx]
+            
+            result = json.loads(json_str)
+            relations = []
+            
+            for rel in result.get('cluster_relations', []):
+                relations.append({
+                    'source_code': rel.get('source_code'),
+                    'target_code': rel.get('target_code'),
+                    'relation_type': 'cluster_based',
+                    'cluster_name': cluster_name,
+                    'strength': rel.get('strength', 0.6),
+                    'reasoning': rel.get('reasoning', '')
+                })
+            
+            return relations
+            
+        except Exception as e:
+            logger.error(f"Failed to analyze cluster relationships: {e}")
+            return []
+    
+    async def _validate_against_foundation(self, relations: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Validate relationships against foundation design categories"""
+        logger.info("Validating relationships against foundation design")
+        
+        validated = []
+        valid_types = set()
+        
+        # Extract valid relationship types from foundation design
+        for category, rel_types in self.relationship_categories.items():
+            if isinstance(rel_types, list):
+                for rel_type in rel_types:
+                    if isinstance(rel_type, dict):
+                        valid_types.add(rel_type.get('name', ''))
+        
+        # Map our extraction types to foundation categories
+        type_mapping = {
+            'prerequisite': 'prerequisite',
+            'horizontal': 'corequisite',
+            'similar_to': 'similar_to',
+            'domain_bridge': 'applies_to',
+            'grade_progression': 'extends',
+            'cluster_based': 'similar_to'
+        }
+        
+        for relation in relations:
+            # Map to foundation category if possible
+            orig_type = relation.get('relation_type', 'unknown')
+            mapped_type = type_mapping.get(orig_type, orig_type)
+            
+            # Update relation with mapped type
+            relation['original_type'] = orig_type
+            relation['mapped_type'] = mapped_type
+            relation['validated'] = mapped_type in valid_types or orig_type in valid_types
+            
+            validated.append(relation)
+        
+        validated_count = sum(1 for r in validated if r.get('validated', False))
+        logger.info(f"Validated {validated_count}/{len(validated)} relationships against foundation categories")
+        
+        return validated
+    
     async def _calculate_initial_weights(self, *relation_lists) -> List[Dict[str, Any]]:
         """Calculate initial weights for all relationships"""
         logger.info("Calculating initial relationship weights")
@@ -392,7 +547,8 @@ B: [{std_b.standard_code}] {std_b.standard_content[:100]}...
             'horizontal': 0.6,
             'similar_to': 0.5,
             'domain_bridge': 0.4,
-            'grade_progression': 0.8
+            'grade_progression': 0.8,
+            'cluster_based': 0.7  # Add weight for cluster-based relationships
         }
         
         weighted_relations = []

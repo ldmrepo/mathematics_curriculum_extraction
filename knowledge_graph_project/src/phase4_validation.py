@@ -12,11 +12,11 @@ class GraphValidator:
     
     def __init__(self, ai_manager: AIModelManager):
         self.ai_manager = ai_manager
-        self.model_name = 'claude_opus'  # Using Claude Opus 4.1 for comprehensive validation
+        self.model_name = 'gpt4o'  # Using GPT-4o for comprehensive validation
     
     async def validate_and_optimize(self, all_results: Dict[str, Any]) -> Dict[str, Any]:
         """Validate and optimize the complete knowledge graph"""
-        logger.info("Starting validation and optimization with Claude Opus 4.1")
+        logger.info("Starting validation and optimization with GPT-4o")
         
         # Extract components
         foundation_design = all_results.get('foundation_design', {})

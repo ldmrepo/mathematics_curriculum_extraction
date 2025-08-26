@@ -45,6 +45,22 @@ class Config:
     def _get_model_configs(self) -> Dict[str, ModelConfig]:
         """Get AI model configurations"""
         return {
+            "gpt4o": ModelConfig(
+                name="gpt-4o-2024-08-06",  # Latest GPT-4o - Best performance
+                api_key=os.getenv("OPENAI_API_KEY"),
+                max_tokens=4096,
+                temperature=0.2,
+                cost_per_input_token=2.5e-6,   # $2.50 per 1M tokens
+                cost_per_output_token=10e-6    # $10.00 per 1M tokens
+            ),
+            "gpt4_turbo": ModelConfig(
+                name="gpt-4-turbo",  # Most capable for complex tasks
+                api_key=os.getenv("OPENAI_API_KEY"),
+                max_tokens=4096,
+                temperature=0.2,
+                cost_per_input_token=10e-6,    # $10 per 1M tokens
+                cost_per_output_token=30e-6    # $30 per 1M tokens
+            ),
             "gemini_pro": ModelConfig(
                 name="gemini-2.5-pro",
                 api_key=os.getenv("GOOGLE_API_KEY"),
@@ -54,12 +70,20 @@ class Config:
                 cost_per_output_token=10e-6    # $10 per 1M tokens
             ),
             "gpt5": ModelConfig(
-                name="gpt-5",
+                name="gpt-5",  # GPT-5 is now available (August 2025)
                 api_key=os.getenv("OPENAI_API_KEY"),
-                max_tokens=4000,
-                temperature=0.1,
-                cost_per_input_token=1.25e-6,  # $1.25 per 1M tokens
-                cost_per_output_token=10e-6    # $10 per 1M tokens
+                max_tokens=16000,  # GPT-5 needs more tokens to generate output
+                temperature=1.0,   # GPT-5 only supports temperature=1.0
+                cost_per_input_token=15e-6,   # Estimated $15 per 1M tokens
+                cost_per_output_token=45e-6   # Estimated $45 per 1M tokens
+            ),
+            "gpt4_1": ModelConfig(
+                name="gpt-4.1",  # Latest GPT-4.1 with 1M context
+                api_key=os.getenv("OPENAI_API_KEY"),
+                max_tokens=4096,
+                temperature=0.2,
+                cost_per_input_token=5e-6,    # Lower cost than GPT-4o
+                cost_per_output_token=15e-6   # Lower cost than GPT-4o
             ),
             "claude_sonnet": ModelConfig(
                 name="claude-sonnet-4-20250514",

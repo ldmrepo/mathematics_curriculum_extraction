@@ -1,0 +1,5255 @@
+{
+  "prerequisite_relations": [
+    {
+      "source_code": "6수04-04",
+      "target_code": "6수04-06",
+      "source_content": "사건이 일어날 가능성을 말로 표현하고 비교할 수 있다.",
+      "target_content": "자료를 이용하여 가능성을 예상하고, 가능성에 근거하여 적절한 판단을 내릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수04-01",
+      "target_code": "4수04-03",
+      "source_content": "자료를 수집하여 그림그래프나 막대그래프로 나타내고 해석할 수 있다.",
+      "target_content": "탐구 문제를 해결하기 위해 자료를 수집, 정리하여 막대그래프나 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-13",
+      "target_code": "6수01-15",
+      "source_content": "소수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "target_content": "소수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-12",
+      "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+      "target_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-02",
+      "target_code": "2수01-04",
+      "source_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+      "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-03",
+      "target_code": "9수01-05",
+      "source_content": "다양한 상황을 이용하여 음수의 필요성을 인식하고, 양수와 음수, 정수와 유리수의 개념을 이해한다.",
+      "target_content": "정수와 유리수의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-05",
+      "target_code": "4수01-07",
+      "source_content": "나눗셈이 이루어지는 실생활 상황과 연결하여 나눗셈의 의미를 알고, 곱셈과 나눗셈의 관계를 이해한다.",
+      "target_content": "나누는 수가 두 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-11",
+      "target_code": "2수03-13",
+      "source_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-09",
+      "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+      "target_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-13",
+      "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-08",
+      "target_code": "9수01-10",
+      "source_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+      "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-10",
+      "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+      "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-09",
+      "target_code": "4수01-11",
+      "source_content": "양의 등분할을 통하여 분수의 필요성을 인식하고, 분수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "분모가 같은 분수끼리, 단위분수끼리 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-07",
+      "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+      "target_content": "덧셈과 뺄셈의 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-04",
+      "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+      "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-12",
+      "target_code": "4수01-14",
+      "source_content": "분모가 10인 진분수와 연결하여 소수 한 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "소수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-05",
+      "target_code": "9수02-07",
+      "source_content": "순서쌍과 좌표를 이해하고, 그 편리함을 인식할 수 있다.",
+      "target_content": "정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-03",
+      "source_content": "여러 가지 사물을 정해진 기준 또는 자신이 정한 기준으로 분류하여 개수를 세어 보고, 기준에 따른 결과를 말할 수 있다.",
+      "target_content": "자료를 분류하여 ○, ×, / 등을 이용한 그래프로 나타내고, 자료를 그래프로 나타내면 편리한 점을 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-08",
+      "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-08",
+      "target_code": "9수02-10",
+      "source_content": "지수법칙을 이해하고, 이를 이용하여 식을 간단히 할 수 있다.",
+      "target_content": "'(단항식)×(다항식)', '(다항식)÷(단항식)'과 같은 곱셈과 나눗셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-08",
+      "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+      "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-01",
+      "target_code": "4수03-03",
+      "source_content": "직선, 선분, 반직선을 이해하고 구별할 수 있다.",
+      "target_content": "직선의 수직 관계와 평행 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-13",
+      "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+      "target_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-14",
+      "target_code": "9수02-16",
+      "source_content": "함수의 개념을 이해하고, 함숫값을 구할 수 있다.",
+      "target_content": "일차함수의 그래프의 성질을 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-03",
+      "target_code": "2수03-05",
+      "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 삼각형, 사각형, 원의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+      "target_content": "삼각형, 사각형에서 각각의 공통점을 찾아 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-12",
+      "target_code": "6수03-14",
+      "source_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+      "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-14",
+      "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+      "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-03",
+      "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+      "target_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-06",
+      "target_code": "6수01-08",
+      "source_content": "크기가 같은 분수를 만드는 방법을 이해하고, 분수를 약분, 통분할 수 있다.",
+      "target_content": "분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-07",
+      "target_code": "2수01-09",
+      "source_content": "덧셈과 뺄셈의 관계를 이해한다.",
+      "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-17",
+      "target_code": "6수03-19",
+      "source_content": "직육면체와 정육면체의 겉넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "target_content": "직육면체와 정육면체의 부피를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-17",
+      "target_code": "4수03-19",
+      "source_content": "들이 단위 1L와 1mL를 알고, 이를 이용하여 들이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 들이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-09",
+      "target_code": "9수03-11",
+      "source_content": "이등변삼각형의 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "사각형의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-07",
+      "target_code": "2수03-09",
+      "source_content": "시계를 보고 시각을 '몇 시 몇 분'까지 읽을 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 1분, 1시간, 1일, 1주일, 1개월, 1년 사이의 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-09",
+      "target_code": "6수01-11",
+      "source_content": "분수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "target_content": "분수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-12",
+      "target_code": "9수03-14",
+      "source_content": "도형의 닮음의 뜻과 닮은 도형의 성질을 이해하고, 닮음비를 구할 수 있다.",
+      "target_content": "평행선 사이의 선분의 길이의 비를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-22",
+      "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-01",
+      "target_code": "6수04-03",
+      "source_content": "평균의 의미를 알고, 자료를 수집하여 평균을 구하고 해석할 수 있다.",
+      "target_content": "탐구 문제를 설정하고, 그에 맞는 자료를 수집, 정리하여 적절한 그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-21",
+      "target_code": "4수03-23",
+      "source_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-23",
+      "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-02",
+      "target_code": "9수04-04",
+      "source_content": "자료를 줄기와 잎 그림, 도수분포표, 히스토그램, 도수분포다각형으로 나타내고 해석할 수 있다.",
+      "target_content": "통계적 탐구 문제를 설정하고, 공학 도구를 이용하여 자료를 수집하여 분석하고, 그 결과를 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-09",
+      "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-09",
+      "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+      "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-05",
+      "target_code": "6수04-06",
+      "source_content": "사건이 일어날 가능성을 수로 나타낼 수 있다.",
+      "target_content": "자료를 이용하여 가능성을 예상하고, 가능성에 근거하여 적절한 판단을 내릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-01",
+      "target_code": "4수01-02",
+      "source_content": "큰 수의 필요성을 인식하면서 10000 이상의 큰 수에 대한 자릿값과 위치적 기수법을 이해하고, 수를 읽고 쓸 수 있다.",
+      "target_content": "다섯 자리 이상의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교하며 그 방법을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-05",
+      "target_code": "4수01-06",
+      "source_content": "나눗셈이 이루어지는 실생활 상황과 연결하여 나눗셈의 의미를 알고, 곱셈과 나눗셈의 관계를 이해한다.",
+      "target_content": "나누는 수가 한 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있으며, 나눗셈에서 몫과 나머지의 의미를 안다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-06",
+      "target_code": "4수01-07",
+      "source_content": "나누는 수가 한 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있으며, 나눗셈에서 몫과 나머지의 의미를 안다.",
+      "target_content": "나누는 수가 두 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-09",
+      "target_code": "4수01-10",
+      "source_content": "양의 등분할을 통하여 분수의 필요성을 인식하고, 분수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "단위분수, 진분수, 가분수, 대분수를 알고, 그 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-10",
+      "target_code": "4수01-11",
+      "source_content": "단위분수, 진분수, 가분수, 대분수를 알고, 그 관계를 이해한다.",
+      "target_content": "분모가 같은 분수끼리, 단위분수끼리 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-12",
+      "target_code": "4수01-13",
+      "source_content": "분모가 10인 진분수와 연결하여 소수 한 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "자릿값의 원리를 바탕으로 소수 두 자리 수와 소수 세 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-13",
+      "target_code": "4수01-14",
+      "source_content": "자릿값의 원리를 바탕으로 소수 두 자리 수와 소수 세 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "소수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수02-01",
+      "target_code": "4수02-02",
+      "source_content": "다양한 변화 규칙을 찾아 설명하고, 그 규칙을 수나 식으로 나타낼 수 있다.",
+      "target_content": "계산식의 배열에서 규칙을 찾고, 계산 결과를 추측할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-01",
+      "target_code": "4수03-02",
+      "source_content": "직선, 선분, 반직선을 이해하고 구별할 수 있다.",
+      "target_content": "각과 직각을 이해하고, 직각과 비교하는 활동을 통하여 예각과 둔각을 구별할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-02",
+      "target_code": "4수03-03",
+      "source_content": "각과 직각을 이해하고, 직각과 비교하는 활동을 통하여 예각과 둔각을 구별할 수 있다.",
+      "target_content": "직선의 수직 관계와 평행 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-04",
+      "target_code": "4수03-05",
+      "source_content": "구체물이나 평면도형의 밀기, 뒤집기, 돌리기 활동을 통하여 그 변화를 이해한다.",
+      "target_content": "평면에서 점의 이동에 대해 위치와 방향을 이용하여 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-06",
+      "target_code": "4수03-07",
+      "source_content": "원의 중심, 반지름, 지름을 이해하고, 그 성질을 안다.",
+      "target_content": "컴퍼스를 이용하여 여러 가지 크기의 원을 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-08",
+      "target_code": "4수03-09",
+      "source_content": "여러 가지 모양의 삼각형에 대한 분류 활동을 통하여 이등변삼각형, 정삼각형을 이해하고, 그 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "여러 가지 모양의 삼각형에 대한 분류 활동을 통하여 직각삼각형, 예각삼각형, 둔각삼각형을 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-11",
+      "target_code": "4수03-12",
+      "source_content": "다각형과 정다각형을 이해한다.",
+      "target_content": "주어진 도형을 이용하여 여러 가지 모양을 만들거나 채우고 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-13",
+      "target_code": "4수03-14",
+      "source_content": "1분과 1초의 관계를 이해하고, 초 단위까지 시각을 읽을 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 초 단위까지의 시간의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-15",
+      "target_code": "4수03-16",
+      "source_content": "길이 단위 1mm와 1km를 알고, 이를 이용하여 길이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "1cm와 1mm, 1km와 1m의 관계를 이해하고, 길이를 '몇 cm 몇 mm'와 '몇 mm', '몇 km 몇 m'와 '몇 m'로 다양하게 표현할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-17",
+      "target_code": "4수03-18",
+      "source_content": "들이 단위 1L와 1mL를 알고, 이를 이용하여 들이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "1L와 1mL의 관계를 이해하고, 들이를 '몇 L 몇 mL'와 '몇 mL'로 표현할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-18",
+      "target_code": "4수03-19",
+      "source_content": "1L와 1mL의 관계를 이해하고, 들이를 '몇 L 몇 mL'와 '몇 mL'로 표현할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 들이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-21",
+      "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-21",
+      "target_code": "4수03-22",
+      "source_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+      "target_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-22",
+      "target_code": "4수03-23",
+      "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+      "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-24",
+      "target_code": "4수03-25",
+      "source_content": "각의 크기의 단위인 1도(°)를 알고, 각도기를 이용하여 각의 크기를 측정하고 어림할 수 있다.",
+      "target_content": "여러 가지 방법으로 삼각형과 사각형의 내각의 크기의 합을 추론하고, 자신의 추론 과정을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수04-01",
+      "target_code": "4수04-02",
+      "source_content": "자료를 수집하여 그림그래프나 막대그래프로 나타내고 해석할 수 있다.",
+      "target_content": "자료를 수집하여 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수04-02",
+      "target_code": "4수04-03",
+      "source_content": "자료를 수집하여 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "target_content": "탐구 문제를 해결하기 위해 자료를 수집, 정리하여 막대그래프나 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-01",
+      "target_code": "9수01-02",
+      "source_content": "소인수분해의 뜻을 알고, 자연수를 소인수분해 할 수 있다.",
+      "target_content": "소인수분해를 이용하여 최대공약수와 최소공배수를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-03",
+      "target_code": "9수01-04",
+      "source_content": "다양한 상황을 이용하여 음수의 필요성을 인식하고, 양수와 음수, 정수와 유리수의 개념을 이해한다.",
+      "target_content": "정수와 유리수의 대소 관계를 판단할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-04",
+      "target_code": "9수01-05",
+      "source_content": "정수와 유리수의 대소 관계를 판단할 수 있다.",
+      "target_content": "정수와 유리수의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-08",
+      "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+      "target_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-08",
+      "target_code": "9수01-09",
+      "source_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+      "target_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-09",
+      "target_code": "9수01-10",
+      "source_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+      "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-01",
+      "target_code": "9수02-02",
+      "source_content": "다양한 상황을 문자를 사용한 식으로 나타내어 그 유용성을 인식하고, 식의 값을 구할 수 있다.",
+      "target_content": "일차식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-03",
+      "target_code": "9수02-04",
+      "source_content": "방정식과 그 해의 뜻을 알고, 등식의 성질을 설명할 수 있다.",
+      "target_content": "일차방정식을 풀 수 있고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-05",
+      "target_code": "9수02-06",
+      "source_content": "순서쌍과 좌표를 이해하고, 그 편리함을 인식할 수 있다.",
+      "target_content": "다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-06",
+      "target_code": "9수02-07",
+      "source_content": "다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.",
+      "target_content": "정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-08",
+      "target_code": "9수02-09",
+      "source_content": "지수법칙을 이해하고, 이를 이용하여 식을 간단히 할 수 있다.",
+      "target_content": "다항식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-09",
+      "target_code": "9수02-10",
+      "source_content": "다항식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "target_content": "'(단항식)×(다항식)', '(다항식)÷(단항식)'과 같은 곱셈과 나눗셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-11",
+      "target_code": "9수02-12",
+      "source_content": "부등식과 그 해의 뜻을 알고, 부등식의 성질을 설명할 수 있다.",
+      "target_content": "일차부등식을 풀 수 있고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-14",
+      "target_code": "9수02-15",
+      "source_content": "함수의 개념을 이해하고, 함숫값을 구할 수 있다.",
+      "target_content": "일차함수의 개념을 이해하고, 그 그래프를 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-15",
+      "target_code": "9수02-16",
+      "source_content": "일차함수의 개념을 이해하고, 그 그래프를 그릴 수 있다.",
+      "target_content": "일차함수의 그래프의 성질을 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-17",
+      "target_code": "9수02-18",
+      "source_content": "일차함수와 미지수가 2개인 일차방정식의 관계를 설명할 수 있다.",
+      "target_content": "두 일차함수의 그래프와 연립일차방정식의 관계를 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-21",
+      "target_code": "9수02-22",
+      "source_content": "이차함수의 개념을 이해한다.",
+      "target_content": "이차함수의 그래프를 그릴 수 있고, 그 성질을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-01",
+      "target_code": "9수03-02",
+      "source_content": "점, 선, 면, 각을 이해하고, 실생활 상황과 연결하여 점, 직선, 평면의 위치 관계를 설명할 수 있다.",
+      "target_content": "평행선에서 동위각과 엇각의 성질을 이해하고 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-03",
+      "target_code": "9수03-04",
+      "source_content": "삼각형을 작도하고, 그 과정을 설명할 수 있다.",
+      "target_content": "삼각형의 합동 조건을 이해하고, 이를 이용하여 두 삼각형이 합동인지 판별할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-05",
+      "target_code": "9수03-06",
+      "source_content": "다각형의 성질을 이해하고 설명할 수 있다.",
+      "target_content": "부채꼴의 중심각과 호의 관계를 이해하고, 이를 이용하여 부채꼴의 호의 길이와 넓이를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-07",
+      "target_code": "9수03-08",
+      "source_content": "구체적인 모형이나 공학 도구를 이용하여 다면체와 회전체의 성질을 탐구하고, 이를 설명할 수 있다.",
+      "target_content": "입체도형의 겉넓이와 부피를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-09",
+      "target_code": "9수03-10",
+      "source_content": "이등변삼각형의 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "삼각형의 외심과 내심의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-10",
+      "target_code": "9수03-11",
+      "source_content": "삼각형의 외심과 내심의 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "사각형의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-12",
+      "target_code": "9수03-13",
+      "source_content": "도형의 닮음의 뜻과 닮은 도형의 성질을 이해하고, 닮음비를 구할 수 있다.",
+      "target_content": "삼각형의 닮음 조건을 이해하고, 이를 이용하여 두 삼각형이 닮음인지 판별할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-13",
+      "target_code": "9수03-14",
+      "source_content": "삼각형의 닮음 조건을 이해하고, 이를 이용하여 두 삼각형이 닮음인지 판별할 수 있다.",
+      "target_content": "평행선 사이의 선분의 길이의 비를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-16",
+      "target_code": "9수03-17",
+      "source_content": "삼각비의 뜻을 알고, 간단한 삼각비의 값을 구할 수 있다.",
+      "target_content": "삼각비를 활용하여 여러 가지 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-18",
+      "target_code": "9수03-19",
+      "source_content": "원의 현에 관한 성질과 접선에 관한 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "원주각의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-02",
+      "target_code": "9수04-03",
+      "source_content": "자료를 줄기와 잎 그림, 도수분포표, 히스토그램, 도수분포다각형으로 나타내고 해석할 수 있다.",
+      "target_content": "상대도수를 구하고, 상대도수의 분포를 표나 그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-03",
+      "target_code": "9수04-04",
+      "source_content": "상대도수를 구하고, 상대도수의 분포를 표나 그래프로 나타내고 해석할 수 있다.",
+      "target_content": "통계적 탐구 문제를 설정하고, 공학 도구를 이용하여 자료를 수집하여 분석하고, 그 결과를 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-05",
+      "target_code": "9수04-06",
+      "source_content": "경우의 수를 구할 수 있다.",
+      "target_content": "확률의 개념과 그 기본 성질을 이해하고, 확률을 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-02",
+      "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+      "target_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-08",
+      "target_code": "9수04-09",
+      "source_content": "공학 도구를 이용하여 자료를 상자그림으로 나타내고 분포를 비교할 수 있다.",
+      "target_content": "자료를 산점도로 나타내고 상관관계를 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-02",
+      "target_code": "2수01-03",
+      "source_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+      "target_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "2수01-04",
+      "source_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+      "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-06",
+      "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+      "target_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-07",
+      "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "target_content": "덧셈과 뺄셈의 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-07",
+      "target_code": "2수01-08",
+      "source_content": "덧셈과 뺄셈의 관계를 이해한다.",
+      "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-08",
+      "target_code": "2수01-09",
+      "source_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+      "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-10",
+      "target_code": "2수01-11",
+      "source_content": "곱셈이 이루어지는 실생활 상황과 연결하여 곱셈의 의미를 이해한다.",
+      "target_content": "곱셈구구를 이해하고, 한 자리 수의 곱셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수02-01",
+      "target_code": "2수02-02",
+      "source_content": "물체, 무늬, 수 등의 배열에서 규칙을 찾아 여러 가지 방법으로 표현할 수 있다.",
+      "target_content": "자신이 정한 규칙에 따라 물체, 무늬, 수 등을 배열할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-01",
+      "target_code": "2수03-02",
+      "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 직육면체, 원기둥, 구의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+      "target_content": "쌓기나무를 이용하여 여러 가지 입체도형의 모양을 만들고, 그 모양에 대해 위치나 방향을 이용하여 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-03",
+      "target_code": "2수03-04",
+      "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 삼각형, 사각형, 원의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+      "target_content": "삼각형, 사각형, 원을 직관적으로 이해하고, 그 모양을 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-04",
+      "target_code": "2수03-05",
+      "source_content": "삼각형, 사각형, 원을 직관적으로 이해하고, 그 모양을 그릴 수 있다.",
+      "target_content": "삼각형, 사각형에서 각각의 공통점을 찾아 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-07",
+      "target_code": "2수03-08",
+      "source_content": "시계를 보고 시각을 '몇 시 몇 분'까지 읽을 수 있다.",
+      "target_content": "1시간과 1분의 관계를 이해하고, 시간을 '시간', '분'으로 표현할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-08",
+      "target_code": "2수03-09",
+      "source_content": "1시간과 1분의 관계를 이해하고, 시간을 '시간', '분'으로 표현할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 1분, 1시간, 1일, 1주일, 1개월, 1년 사이의 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-11",
+      "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+      "target_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-11",
+      "target_code": "2수03-12",
+      "source_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+      "target_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-12",
+      "target_code": "2수03-13",
+      "source_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+      "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-02",
+      "source_content": "여러 가지 사물을 정해진 기준 또는 자신이 정한 기준으로 분류하여 개수를 세어 보고, 기준에 따른 결과를 말할 수 있다.",
+      "target_content": "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수04-02",
+      "target_code": "2수04-03",
+      "source_content": "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다.",
+      "target_content": "자료를 분류하여 ○, ×, / 등을 이용한 그래프로 나타내고, 자료를 그래프로 나타내면 편리한 점을 말할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-02",
+      "target_code": "6수01-03",
+      "source_content": "실생활과 연결하여 이상, 이하, 초과, 미만의 의미와 쓰임을 알고, 이를 활용하여 수의 범위를 나타낼 수 있다.",
+      "target_content": "어림값을 구하기 위한 방법으로 올림, 버림, 반올림의 의미와 필요성을 알고, 이를 실생활에 활용함으로써 수학의 유용성을 인식할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-04",
+      "target_code": "6수01-05",
+      "source_content": "약수, 공약수, 최대공약수를 이해하고 구할 수 있다.",
+      "target_content": "배수, 공배수, 최소공배수를 이해하고 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-06",
+      "target_code": "6수01-07",
+      "source_content": "크기가 같은 분수를 만드는 방법을 이해하고, 분수를 약분, 통분할 수 있다.",
+      "target_content": "분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-07",
+      "target_code": "6수01-08",
+      "source_content": "분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "target_content": "분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-09",
+      "target_code": "6수01-10",
+      "source_content": "분수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "target_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 분수로 나타낼 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-10",
+      "target_code": "6수01-11",
+      "source_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 분수로 나타낼 수 있다.",
+      "target_content": "분수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-13",
+      "target_code": "6수01-14",
+      "source_content": "소수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "target_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 소수로 나타낼 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-14",
+      "target_code": "6수01-15",
+      "source_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 소수로 나타낼 수 있다.",
+      "target_content": "소수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수02-02",
+      "target_code": "6수02-03",
+      "source_content": "두 양의 크기를 비교하는 상황을 통해 비의 개념을 이해하고, 두 양의 관계를 비로 나타낼 수 있다.",
+      "target_content": "비율을 이해하고, 비율을 분수, 소수, 백분율로 나타낼 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수02-04",
+      "target_code": "6수02-05",
+      "source_content": "비례식을 알고, 그 성질을 이해하며, 이를 활용하여 간단한 비례식을 풀 수 있다.",
+      "target_content": "비례배분을 알고, 주어진 양을 비례배분 할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-01",
+      "target_code": "6수03-02",
+      "source_content": "도형의 합동을 이해하고, 합동인 도형의 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "실생활과 연결하여 선대칭도형과 점대칭도형을 이해하고 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-03",
+      "target_code": "6수03-04",
+      "source_content": "직육면체와 정육면체를 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "직육면체와 정육면체의 겨냥도와 전개도를 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-05",
+      "target_code": "6수03-06",
+      "source_content": "각기둥과 각뿔을 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "각기둥의 전개도를 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-07",
+      "target_code": "6수03-08",
+      "source_content": "원기둥, 원뿔, 구를 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "원기둥의 전개도를 그릴 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-09",
+      "target_code": "6수03-10",
+      "source_content": "쌓기나무로 만든 입체도형을 보고 사용된 쌓기나무의 개수를 구할 수 있다.",
+      "target_content": "쌓기나무로 만든 입체도형의 위, 앞, 옆에서 본 모양을 표현할 수 있고, 이러한 표현을 보고 입체도형의 모양을 추측할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-12",
+      "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+      "target_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-12",
+      "target_code": "6수03-13",
+      "source_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+      "target_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-13",
+      "target_code": "6수03-14",
+      "source_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-15",
+      "target_code": "6수03-16",
+      "source_content": "여러 가지 원 모양 물체의 원주와 지름을 측정하는 활동을 통하여, 원주율이 일정한 값임을 알고 그 근삿값을 사용할 수 있다.",
+      "target_content": "원주와 원의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-17",
+      "target_code": "6수03-18",
+      "source_content": "직육면체와 정육면체의 겉넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "target_content": "부피 단위 1cm³, 1m³를 알며, 그 관계를 이해한다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-18",
+      "target_code": "6수03-19",
+      "source_content": "부피 단위 1cm³, 1m³를 알며, 그 관계를 이해한다.",
+      "target_content": "직육면체와 정육면체의 부피를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-01",
+      "target_code": "6수04-02",
+      "source_content": "평균의 의미를 알고, 자료를 수집하여 평균을 구하고 해석할 수 있다.",
+      "target_content": "자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-02",
+      "target_code": "6수04-03",
+      "source_content": "자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다.",
+      "target_content": "탐구 문제를 설정하고, 그에 맞는 자료를 수집, 정리하여 적절한 그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-04",
+      "target_code": "6수04-05",
+      "source_content": "사건이 일어날 가능성을 말로 표현하고 비교할 수 있다.",
+      "target_content": "사건이 일어날 가능성을 수로 나타낼 수 있다.",
+      "relation_type": "prerequisite",
+      "strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule"
+    }
+  ],
+  "horizontal_relations": [
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-02",
+      "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+      "target_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-02",
+      "target_code": "2수01-03",
+      "source_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+      "target_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "2수01-04",
+      "source_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+      "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-06",
+      "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+      "target_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-07",
+      "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "target_content": "덧셈과 뺄셈의 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-07",
+      "target_code": "2수01-08",
+      "source_content": "덧셈과 뺄셈의 관계를 이해한다.",
+      "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-08",
+      "target_code": "2수01-09",
+      "source_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+      "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수01-10",
+      "target_code": "2수01-11",
+      "source_content": "곱셈이 이루어지는 실생활 상황과 연결하여 곱셈의 의미를 이해한다.",
+      "target_content": "곱셈구구를 이해하고, 한 자리 수의 곱셈을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수02-01",
+      "target_code": "2수02-02",
+      "source_content": "물체, 무늬, 수 등의 배열에서 규칙을 찾아 여러 가지 방법으로 표현할 수 있다.",
+      "target_content": "자신이 정한 규칙에 따라 물체, 무늬, 수 등을 배열할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-01",
+      "target_code": "2수03-02",
+      "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 직육면체, 원기둥, 구의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+      "target_content": "쌓기나무를 이용하여 여러 가지 입체도형의 모양을 만들고, 그 모양에 대해 위치나 방향을 이용하여 말할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-03",
+      "target_code": "2수03-04",
+      "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 삼각형, 사각형, 원의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+      "target_content": "삼각형, 사각형, 원을 직관적으로 이해하고, 그 모양을 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-04",
+      "target_code": "2수03-05",
+      "source_content": "삼각형, 사각형, 원을 직관적으로 이해하고, 그 모양을 그릴 수 있다.",
+      "target_content": "삼각형, 사각형에서 각각의 공통점을 찾아 말할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-07",
+      "target_code": "2수03-08",
+      "source_content": "시계를 보고 시각을 '몇 시 몇 분'까지 읽을 수 있다.",
+      "target_content": "1시간과 1분의 관계를 이해하고, 시간을 '시간', '분'으로 표현할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-08",
+      "target_code": "2수03-09",
+      "source_content": "1시간과 1분의 관계를 이해하고, 시간을 '시간', '분'으로 표현할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 1분, 1시간, 1일, 1주일, 1개월, 1년 사이의 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-11",
+      "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+      "target_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-11",
+      "target_code": "2수03-12",
+      "source_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+      "target_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수03-12",
+      "target_code": "2수03-13",
+      "source_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+      "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-02",
+      "source_content": "여러 가지 사물을 정해진 기준 또는 자신이 정한 기준으로 분류하여 개수를 세어 보고, 기준에 따른 결과를 말할 수 있다.",
+      "target_content": "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "2수04-02",
+      "target_code": "2수04-03",
+      "source_content": "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다.",
+      "target_content": "자료를 분류하여 ○, ×, / 등을 이용한 그래프로 나타내고, 자료를 그래프로 나타내면 편리한 점을 말할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-02",
+      "target_code": "6수01-03",
+      "source_content": "실생활과 연결하여 이상, 이하, 초과, 미만의 의미와 쓰임을 알고, 이를 활용하여 수의 범위를 나타낼 수 있다.",
+      "target_content": "어림값을 구하기 위한 방법으로 올림, 버림, 반올림의 의미와 필요성을 알고, 이를 실생활에 활용함으로써 수학의 유용성을 인식할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-04",
+      "target_code": "6수01-05",
+      "source_content": "약수, 공약수, 최대공약수를 이해하고 구할 수 있다.",
+      "target_content": "배수, 공배수, 최소공배수를 이해하고 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-06",
+      "target_code": "6수01-07",
+      "source_content": "크기가 같은 분수를 만드는 방법을 이해하고, 분수를 약분, 통분할 수 있다.",
+      "target_content": "분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-07",
+      "target_code": "6수01-08",
+      "source_content": "분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "target_content": "분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-09",
+      "target_code": "6수01-10",
+      "source_content": "분수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "target_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 분수로 나타낼 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-10",
+      "target_code": "6수01-11",
+      "source_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 분수로 나타낼 수 있다.",
+      "target_content": "분수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-13",
+      "target_code": "6수01-14",
+      "source_content": "소수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "target_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 소수로 나타낼 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수01-14",
+      "target_code": "6수01-15",
+      "source_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 소수로 나타낼 수 있다.",
+      "target_content": "소수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수02-02",
+      "target_code": "6수02-03",
+      "source_content": "두 양의 크기를 비교하는 상황을 통해 비의 개념을 이해하고, 두 양의 관계를 비로 나타낼 수 있다.",
+      "target_content": "비율을 이해하고, 비율을 분수, 소수, 백분율로 나타낼 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수02-04",
+      "target_code": "6수02-05",
+      "source_content": "비례식을 알고, 그 성질을 이해하며, 이를 활용하여 간단한 비례식을 풀 수 있다.",
+      "target_content": "비례배분을 알고, 주어진 양을 비례배분 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-01",
+      "target_code": "6수03-02",
+      "source_content": "도형의 합동을 이해하고, 합동인 도형의 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "실생활과 연결하여 선대칭도형과 점대칭도형을 이해하고 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-03",
+      "target_code": "6수03-04",
+      "source_content": "직육면체와 정육면체를 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "직육면체와 정육면체의 겨냥도와 전개도를 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-05",
+      "target_code": "6수03-06",
+      "source_content": "각기둥과 각뿔을 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "각기둥의 전개도를 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-07",
+      "target_code": "6수03-08",
+      "source_content": "원기둥, 원뿔, 구를 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "원기둥의 전개도를 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-09",
+      "target_code": "6수03-10",
+      "source_content": "쌓기나무로 만든 입체도형을 보고 사용된 쌓기나무의 개수를 구할 수 있다.",
+      "target_content": "쌓기나무로 만든 입체도형의 위, 앞, 옆에서 본 모양을 표현할 수 있고, 이러한 표현을 보고 입체도형의 모양을 추측할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-12",
+      "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+      "target_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-12",
+      "target_code": "6수03-13",
+      "source_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+      "target_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-13",
+      "target_code": "6수03-14",
+      "source_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-15",
+      "target_code": "6수03-16",
+      "source_content": "여러 가지 원 모양 물체의 원주와 지름을 측정하는 활동을 통하여, 원주율이 일정한 값임을 알고 그 근삿값을 사용할 수 있다.",
+      "target_content": "원주와 원의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-17",
+      "target_code": "6수03-18",
+      "source_content": "직육면체와 정육면체의 겉넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "target_content": "부피 단위 1cm³, 1m³를 알며, 그 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수03-18",
+      "target_code": "6수03-19",
+      "source_content": "부피 단위 1cm³, 1m³를 알며, 그 관계를 이해한다.",
+      "target_content": "직육면체와 정육면체의 부피를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-01",
+      "target_code": "6수04-02",
+      "source_content": "평균의 의미를 알고, 자료를 수집하여 평균을 구하고 해석할 수 있다.",
+      "target_content": "자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-02",
+      "target_code": "6수04-03",
+      "source_content": "자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다.",
+      "target_content": "탐구 문제를 설정하고, 그에 맞는 자료를 수집, 정리하여 적절한 그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-04",
+      "target_code": "6수04-05",
+      "source_content": "사건이 일어날 가능성을 말로 표현하고 비교할 수 있다.",
+      "target_content": "사건이 일어날 가능성을 수로 나타낼 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "6수04-05",
+      "target_code": "6수04-06",
+      "source_content": "사건이 일어날 가능성을 수로 나타낼 수 있다.",
+      "target_content": "자료를 이용하여 가능성을 예상하고, 가능성에 근거하여 적절한 판단을 내릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-01",
+      "target_code": "4수01-02",
+      "source_content": "큰 수의 필요성을 인식하면서 10000 이상의 큰 수에 대한 자릿값과 위치적 기수법을 이해하고, 수를 읽고 쓸 수 있다.",
+      "target_content": "다섯 자리 이상의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교하며 그 방법을 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-05",
+      "target_code": "4수01-06",
+      "source_content": "나눗셈이 이루어지는 실생활 상황과 연결하여 나눗셈의 의미를 알고, 곱셈과 나눗셈의 관계를 이해한다.",
+      "target_content": "나누는 수가 한 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있으며, 나눗셈에서 몫과 나머지의 의미를 안다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-06",
+      "target_code": "4수01-07",
+      "source_content": "나누는 수가 한 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있으며, 나눗셈에서 몫과 나머지의 의미를 안다.",
+      "target_content": "나누는 수가 두 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-09",
+      "target_code": "4수01-10",
+      "source_content": "양의 등분할을 통하여 분수의 필요성을 인식하고, 분수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "단위분수, 진분수, 가분수, 대분수를 알고, 그 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-10",
+      "target_code": "4수01-11",
+      "source_content": "단위분수, 진분수, 가분수, 대분수를 알고, 그 관계를 이해한다.",
+      "target_content": "분모가 같은 분수끼리, 단위분수끼리 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-12",
+      "target_code": "4수01-13",
+      "source_content": "분모가 10인 진분수와 연결하여 소수 한 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "자릿값의 원리를 바탕으로 소수 두 자리 수와 소수 세 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수01-13",
+      "target_code": "4수01-14",
+      "source_content": "자릿값의 원리를 바탕으로 소수 두 자리 수와 소수 세 자리 수를 이해하고 읽고 쓸 수 있다.",
+      "target_content": "소수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수02-01",
+      "target_code": "4수02-02",
+      "source_content": "다양한 변화 규칙을 찾아 설명하고, 그 규칙을 수나 식으로 나타낼 수 있다.",
+      "target_content": "계산식의 배열에서 규칙을 찾고, 계산 결과를 추측할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-01",
+      "target_code": "4수03-02",
+      "source_content": "직선, 선분, 반직선을 이해하고 구별할 수 있다.",
+      "target_content": "각과 직각을 이해하고, 직각과 비교하는 활동을 통하여 예각과 둔각을 구별할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-02",
+      "target_code": "4수03-03",
+      "source_content": "각과 직각을 이해하고, 직각과 비교하는 활동을 통하여 예각과 둔각을 구별할 수 있다.",
+      "target_content": "직선의 수직 관계와 평행 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-04",
+      "target_code": "4수03-05",
+      "source_content": "구체물이나 평면도형의 밀기, 뒤집기, 돌리기 활동을 통하여 그 변화를 이해한다.",
+      "target_content": "평면에서 점의 이동에 대해 위치와 방향을 이용하여 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-06",
+      "target_code": "4수03-07",
+      "source_content": "원의 중심, 반지름, 지름을 이해하고, 그 성질을 안다.",
+      "target_content": "컴퍼스를 이용하여 여러 가지 크기의 원을 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-08",
+      "target_code": "4수03-09",
+      "source_content": "여러 가지 모양의 삼각형에 대한 분류 활동을 통하여 이등변삼각형, 정삼각형을 이해하고, 그 성질을 탐구하고 설명할 수 있다.",
+      "target_content": "여러 가지 모양의 삼각형에 대한 분류 활동을 통하여 직각삼각형, 예각삼각형, 둔각삼각형을 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-11",
+      "target_code": "4수03-12",
+      "source_content": "다각형과 정다각형을 이해한다.",
+      "target_content": "주어진 도형을 이용하여 여러 가지 모양을 만들거나 채우고 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-13",
+      "target_code": "4수03-14",
+      "source_content": "1분과 1초의 관계를 이해하고, 초 단위까지 시각을 읽을 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 초 단위까지의 시간의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-15",
+      "target_code": "4수03-16",
+      "source_content": "길이 단위 1mm와 1km를 알고, 이를 이용하여 길이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "1cm와 1mm, 1km와 1m의 관계를 이해하고, 길이를 '몇 cm 몇 mm'와 '몇 mm', '몇 km 몇 m'와 '몇 m'로 다양하게 표현할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-17",
+      "target_code": "4수03-18",
+      "source_content": "들이 단위 1L와 1mL를 알고, 이를 이용하여 들이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "1L와 1mL의 관계를 이해하고, 들이를 '몇 L 몇 mL'와 '몇 mL'로 표현할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-18",
+      "target_code": "4수03-19",
+      "source_content": "1L와 1mL의 관계를 이해하고, 들이를 '몇 L 몇 mL'와 '몇 mL'로 표현할 수 있다.",
+      "target_content": "실생활 문제 상황과 연결하여 들이의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-21",
+      "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+      "target_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-21",
+      "target_code": "4수03-22",
+      "source_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+      "target_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-22",
+      "target_code": "4수03-23",
+      "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+      "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수03-24",
+      "target_code": "4수03-25",
+      "source_content": "각의 크기의 단위인 1도(°)를 알고, 각도기를 이용하여 각의 크기를 측정하고 어림할 수 있다.",
+      "target_content": "여러 가지 방법으로 삼각형과 사각형의 내각의 크기의 합을 추론하고, 자신의 추론 과정을 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수04-01",
+      "target_code": "4수04-02",
+      "source_content": "자료를 수집하여 그림그래프나 막대그래프로 나타내고 해석할 수 있다.",
+      "target_content": "자료를 수집하여 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "4수04-02",
+      "target_code": "4수04-03",
+      "source_content": "자료를 수집하여 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "target_content": "탐구 문제를 해결하기 위해 자료를 수집, 정리하여 막대그래프나 꺾은선그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-01",
+      "target_code": "9수01-02",
+      "source_content": "소인수분해의 뜻을 알고, 자연수를 소인수분해 할 수 있다.",
+      "target_content": "소인수분해를 이용하여 최대공약수와 최소공배수를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-03",
+      "target_code": "9수01-04",
+      "source_content": "다양한 상황을 이용하여 음수의 필요성을 인식하고, 양수와 음수, 정수와 유리수의 개념을 이해한다.",
+      "target_content": "정수와 유리수의 대소 관계를 판단할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-04",
+      "target_code": "9수01-05",
+      "source_content": "정수와 유리수의 대소 관계를 판단할 수 있다.",
+      "target_content": "정수와 유리수의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-08",
+      "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+      "target_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-08",
+      "target_code": "9수01-09",
+      "source_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+      "target_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수01-09",
+      "target_code": "9수01-10",
+      "source_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+      "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-01",
+      "target_code": "9수02-02",
+      "source_content": "다양한 상황을 문자를 사용한 식으로 나타내어 그 유용성을 인식하고, 식의 값을 구할 수 있다.",
+      "target_content": "일차식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-03",
+      "target_code": "9수02-04",
+      "source_content": "방정식과 그 해의 뜻을 알고, 등식의 성질을 설명할 수 있다.",
+      "target_content": "일차방정식을 풀 수 있고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-05",
+      "target_code": "9수02-06",
+      "source_content": "순서쌍과 좌표를 이해하고, 그 편리함을 인식할 수 있다.",
+      "target_content": "다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-06",
+      "target_code": "9수02-07",
+      "source_content": "다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.",
+      "target_content": "정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-08",
+      "target_code": "9수02-09",
+      "source_content": "지수법칙을 이해하고, 이를 이용하여 식을 간단히 할 수 있다.",
+      "target_content": "다항식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-09",
+      "target_code": "9수02-10",
+      "source_content": "다항식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "target_content": "'(단항식)×(다항식)', '(다항식)÷(단항식)'과 같은 곱셈과 나눗셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-11",
+      "target_code": "9수02-12",
+      "source_content": "부등식과 그 해의 뜻을 알고, 부등식의 성질을 설명할 수 있다.",
+      "target_content": "일차부등식을 풀 수 있고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-14",
+      "target_code": "9수02-15",
+      "source_content": "함수의 개념을 이해하고, 함숫값을 구할 수 있다.",
+      "target_content": "일차함수의 개념을 이해하고, 그 그래프를 그릴 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-15",
+      "target_code": "9수02-16",
+      "source_content": "일차함수의 개념을 이해하고, 그 그래프를 그릴 수 있다.",
+      "target_content": "일차함수의 그래프의 성질을 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-17",
+      "target_code": "9수02-18",
+      "source_content": "일차함수와 미지수가 2개인 일차방정식의 관계를 설명할 수 있다.",
+      "target_content": "두 일차함수의 그래프와 연립일차방정식의 관계를 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수02-21",
+      "target_code": "9수02-22",
+      "source_content": "이차함수의 개념을 이해한다.",
+      "target_content": "이차함수의 그래프를 그릴 수 있고, 그 성질을 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-01",
+      "target_code": "9수03-02",
+      "source_content": "점, 선, 면, 각을 이해하고, 실생활 상황과 연결하여 점, 직선, 평면의 위치 관계를 설명할 수 있다.",
+      "target_content": "평행선에서 동위각과 엇각의 성질을 이해하고 설명할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-03",
+      "target_code": "9수03-04",
+      "source_content": "삼각형을 작도하고, 그 과정을 설명할 수 있다.",
+      "target_content": "삼각형의 합동 조건을 이해하고, 이를 이용하여 두 삼각형이 합동인지 판별할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-05",
+      "target_code": "9수03-06",
+      "source_content": "다각형의 성질을 이해하고 설명할 수 있다.",
+      "target_content": "부채꼴의 중심각과 호의 관계를 이해하고, 이를 이용하여 부채꼴의 호의 길이와 넓이를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-07",
+      "target_code": "9수03-08",
+      "source_content": "구체적인 모형이나 공학 도구를 이용하여 다면체와 회전체의 성질을 탐구하고, 이를 설명할 수 있다.",
+      "target_content": "입체도형의 겉넓이와 부피를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-09",
+      "target_code": "9수03-10",
+      "source_content": "이등변삼각형의 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "삼각형의 외심과 내심의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-10",
+      "target_code": "9수03-11",
+      "source_content": "삼각형의 외심과 내심의 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "사각형의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-12",
+      "target_code": "9수03-13",
+      "source_content": "도형의 닮음의 뜻과 닮은 도형의 성질을 이해하고, 닮음비를 구할 수 있다.",
+      "target_content": "삼각형의 닮음 조건을 이해하고, 이를 이용하여 두 삼각형이 닮음인지 판별할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-13",
+      "target_code": "9수03-14",
+      "source_content": "삼각형의 닮음 조건을 이해하고, 이를 이용하여 두 삼각형이 닮음인지 판별할 수 있다.",
+      "target_content": "평행선 사이의 선분의 길이의 비를 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-16",
+      "target_code": "9수03-17",
+      "source_content": "삼각비의 뜻을 알고, 간단한 삼각비의 값을 구할 수 있다.",
+      "target_content": "삼각비를 활용하여 여러 가지 문제를 해결할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수03-18",
+      "target_code": "9수03-19",
+      "source_content": "원의 현에 관한 성질과 접선에 관한 성질을 이해하고 정당화할 수 있다.",
+      "target_content": "원주각의 성질을 이해하고 정당화할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-02",
+      "target_code": "9수04-03",
+      "source_content": "자료를 줄기와 잎 그림, 도수분포표, 히스토그램, 도수분포다각형으로 나타내고 해석할 수 있다.",
+      "target_content": "상대도수를 구하고, 상대도수의 분포를 표나 그래프로 나타내고 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-03",
+      "target_code": "9수04-04",
+      "source_content": "상대도수를 구하고, 상대도수의 분포를 표나 그래프로 나타내고 해석할 수 있다.",
+      "target_content": "통계적 탐구 문제를 설정하고, 공학 도구를 이용하여 자료를 수집하여 분석하고, 그 결과를 해석할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-05",
+      "target_code": "9수04-06",
+      "source_content": "경우의 수를 구할 수 있다.",
+      "target_content": "확률의 개념과 그 기본 성질을 이해하고, 확률을 구할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    },
+    {
+      "source_code": "9수04-08",
+      "target_code": "9수04-09",
+      "source_content": "공학 도구를 이용하여 자료를 상자그림으로 나타내고 분포를 비교할 수 있다.",
+      "target_content": "자료를 산점도로 나타내고 상관관계를 말할 수 있다.",
+      "relation_type": "horizontal",
+      "strength": 0.4,
+      "reasoning": "same level/domain & same element; order distance<=1",
+      "method": "rule"
+    }
+  ],
+  "similarity_relations": [
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-02",
+      "relation_type": "similar_to",
+      "similarity_score": 0.7,
+      "reasoning": "두 성취기준 모두 수의 읽기와 쓰기에 관련되어 있으며, 수의 개념 이해를 포함합니다."
+    },
+    {
+      "source_code": "2수02-01",
+      "target_code": "2수02-02",
+      "relation_type": "similar_to",
+      "similarity_score": 0.8,
+      "reasoning": "두 성취기준 모두 규칙을 찾고 배열하는 것에 중점을 두고 있으며, 표현 방식에 차이가 있을 뿐이다."
+    },
+    {
+      "source_code": "2수03-01",
+      "target_code": "2수03-03",
+      "relation_type": "similar_to",
+      "similarity_score": 0.8,
+      "reasoning": "두 성취기준 모두 물건을 관찰하여 도형을 찾고 이를 이용하여 모양을 만드는 활동을 포함하고 있습니다. 다만, 다루는 도형의 종류가 다릅니다."
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-02",
+      "relation_type": "similar_to",
+      "similarity_score": 0.8,
+      "reasoning": "두 성취기준 모두 자료를 분류하고 결과를 나타내는 것에 중점을 두고 있어 유사성이 높습니다."
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-03",
+      "relation_type": "similar_to",
+      "similarity_score": 0.7,
+      "reasoning": "두 성취기준 모두 자료를 분류하고 시각적으로 나타내는 것에 중점을 두고 있지만, 한 쪽은 표, 다른 쪽은 그래프를 사용합니다."
+    }
+  ],
+  "domain_bridge_relations": [
+    {
+      "source_code": "2수01-05",
+      "target_code": "4수02-02",
+      "relation_type": "domain_bridge",
+      "strength": 0.8,
+      "reasoning": "덧셈과 뺄셈의 의미를 이해하는 것은 계산식의 배열에서 규칙을 찾고 계산 결과를 추측하는 데 중요한 기초가 됩니다. 덧셈과 뺄셈의 기본 개념을 이해하면 계산식의 규칙성을 파악하고 예측하는 능력이 향상됩니다."
+    },
+    {
+      "source_code": "2수01-04",
+      "target_code": "2수02-01",
+      "relation_type": "domain_bridge",
+      "strength": 0.7,
+      "reasoning": "하나의 수를 두 수로 분해하고 합성하는 활동은 수의 배열에서 규칙을 찾는 데 도움이 됩니다. 수의 분해와 합성은 수의 패턴을 이해하고 표현하는 데 기초가 됩니다."
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "4수02-03",
+      "relation_type": "domain_bridge",
+      "strength": 0.6,
+      "reasoning": "수의 크기를 비교하는 능력은 등호를 사용하여 크기가 같은 두 양의 관계를 식으로 나타내는 데 필수적입니다. 수의 크기를 비교하는 것은 수학적 관계를 이해하는 데 중요한 역할을 합니다."
+    }
+  ],
+  "grade_progression_relations": [
+    {
+      "source_code": "2수01-02",
+      "target_code": "4수01-01",
+      "relation_type": "grade_progression",
+      "strength": 0.9,
+      "reasoning": "2학년에서는 네 자리 이하의 수에 대한 자릿값과 위치적 기수법을 이해하고, 4학년에서는 이를 확장하여 10000 이상의 큰 수에 대한 자릿값과 위치적 기수법을 이해하는 것으로 발전한다."
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "4수01-02",
+      "relation_type": "grade_progression",
+      "strength": 0.8,
+      "reasoning": "2학년에서는 네 자리 이하의 수의 크기를 비교하는 방법을 배우고, 4학년에서는 다섯 자리 이상의 수의 크기를 비교하며 그 방법을 설명할 수 있는 능력을 기른다."
+    },
+    {
+      "source_code": "4수01-01",
+      "target_code": "6수01-03",
+      "relation_type": "grade_progression",
+      "strength": 0.7,
+      "reasoning": "4학년에서는 큰 수의 자릿값과 위치적 기수법을 이해하는 것을 배우고, 6학년에서는 올림, 버림, 반올림을 통해 어림값을 구하는 방법을 배우며, 이는 큰 수의 이해와 관련이 있다."
+    },
+    {
+      "source_code": "4수01-03",
+      "target_code": "6수01-01",
+      "relation_type": "grade_progression",
+      "strength": 0.8,
+      "reasoning": "4학년에서는 세 자리 수의 덧셈과 뺄셈을 배우고, 6학년에서는 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산을 배우며, 이는 기본 연산의 확장으로 이어진다."
+    },
+    {
+      "source_code": "6수01-01",
+      "target_code": "9수01-02",
+      "relation_type": "grade_progression",
+      "strength": 0.7,
+      "reasoning": "6학년에서 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산을 학습하여 계산의 기초를 다진 후, 9학년에서 소인수분해를 이용한 최대공약수와 최소공배수 계산으로 확장된다."
+    },
+    {
+      "source_code": "6수01-03",
+      "target_code": "9수01-03",
+      "relation_type": "grade_progression",
+      "strength": 0.6,
+      "reasoning": "6학년에서 어림값을 구하는 방법을 통해 수학적 개념의 유용성을 인식한 후, 9학년에서 음수와 유리수의 개념을 이해하여 수의 확장된 범위를 다룬다."
+    }
+  ],
+  "cluster_relations": [],
+  "weighted_relations": [
+    {
+      "source_code": "6수04-04",
+      "target_code": "6수04-06",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "사건이 일어날 가능성을 말로 표현하고 비교할 수 있다.",
+        "target_content": "자료를 이용하여 가능성을 예상하고, 가능성에 근거하여 적절한 판단을 내릴 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수04-01",
+      "target_code": "4수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 수집하여 그림그래프나 막대그래프로 나타내고 해석할 수 있다.",
+        "target_content": "탐구 문제를 해결하기 위해 자료를 수집, 정리하여 막대그래프나 꺾은선그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-13",
+      "target_code": "6수01-15",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "소수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "target_content": "소수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-12",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+        "target_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-02",
+      "target_code": "2수01-04",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+        "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-03",
+      "target_code": "9수01-05",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다양한 상황을 이용하여 음수의 필요성을 인식하고, 양수와 음수, 정수와 유리수의 개념을 이해한다.",
+        "target_content": "정수와 유리수의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-05",
+      "target_code": "4수01-07",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "나눗셈이 이루어지는 실생활 상황과 연결하여 나눗셈의 의미를 알고, 곱셈과 나눗셈의 관계를 이해한다.",
+        "target_content": "나누는 수가 두 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-11",
+      "target_code": "2수03-13",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-09",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+        "target_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-13",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-08",
+      "target_code": "9수01-10",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+        "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-10",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+        "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-09",
+      "target_code": "4수01-11",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "양의 등분할을 통하여 분수의 필요성을 인식하고, 분수를 이해하고 읽고 쓸 수 있다.",
+        "target_content": "분모가 같은 분수끼리, 단위분수끼리 크기를 비교하고 그 방법을 설명할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-07",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+        "target_content": "덧셈과 뺄셈의 관계를 이해한다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-04",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+        "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-12",
+      "target_code": "4수01-14",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "분모가 10인 진분수와 연결하여 소수 한 자리 수를 이해하고 읽고 쓸 수 있다.",
+        "target_content": "소수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-05",
+      "target_code": "9수02-07",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "순서쌍과 좌표를 이해하고, 그 편리함을 인식할 수 있다.",
+        "target_content": "정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "여러 가지 사물을 정해진 기준 또는 자신이 정한 기준으로 분류하여 개수를 세어 보고, 기준에 따른 결과를 말할 수 있다.",
+        "target_content": "자료를 분류하여 ○, ×, / 등을 이용한 그래프로 나타내고, 자료를 그래프로 나타내면 편리한 점을 말할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-08",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+        "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-08",
+      "target_code": "9수02-10",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "지수법칙을 이해하고, 이를 이용하여 식을 간단히 할 수 있다.",
+        "target_content": "'(단항식)×(다항식)', '(다항식)÷(단항식)'과 같은 곱셈과 나눗셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-08",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+        "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-01",
+      "target_code": "4수03-03",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "직선, 선분, 반직선을 이해하고 구별할 수 있다.",
+        "target_content": "직선의 수직 관계와 평행 관계를 이해한다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-13",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+        "target_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-14",
+      "target_code": "9수02-16",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "함수의 개념을 이해하고, 함숫값을 구할 수 있다.",
+        "target_content": "일차함수의 그래프의 성질을 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-03",
+      "target_code": "2수03-05",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 삼각형, 사각형, 원의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+        "target_content": "삼각형, 사각형에서 각각의 공통점을 찾아 말할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-12",
+      "target_code": "6수03-14",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+        "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-14",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+        "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-03",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+        "target_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-06",
+      "target_code": "6수01-08",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "크기가 같은 분수를 만드는 방법을 이해하고, 분수를 약분, 통분할 수 있다.",
+        "target_content": "분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-07",
+      "target_code": "2수01-09",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "덧셈과 뺄셈의 관계를 이해한다.",
+        "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-17",
+      "target_code": "6수03-19",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "직육면체와 정육면체의 겉넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "target_content": "직육면체와 정육면체의 부피를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-17",
+      "target_code": "4수03-19",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "들이 단위 1L와 1mL를 알고, 이를 이용하여 들이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 들이의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-09",
+      "target_code": "9수03-11",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "이등변삼각형의 성질을 이해하고 정당화할 수 있다.",
+        "target_content": "사각형의 성질을 이해하고 정당화할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-07",
+      "target_code": "2수03-09",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "시계를 보고 시각을 '몇 시 몇 분'까지 읽을 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 1분, 1시간, 1일, 1주일, 1개월, 1년 사이의 관계를 이해한다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-09",
+      "target_code": "6수01-11",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "분수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "target_content": "분수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-12",
+      "target_code": "9수03-14",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "도형의 닮음의 뜻과 닮은 도형의 성질을 이해하고, 닮음비를 구할 수 있다.",
+        "target_content": "평행선 사이의 선분의 길이의 비를 구할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-22",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+        "target_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수04-01",
+      "target_code": "6수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "평균의 의미를 알고, 자료를 수집하여 평균을 구하고 해석할 수 있다.",
+        "target_content": "탐구 문제를 설정하고, 그에 맞는 자료를 수집, 정리하여 적절한 그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-21",
+      "target_code": "4수03-23",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-23",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수04-02",
+      "target_code": "9수04-04",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 줄기와 잎 그림, 도수분포표, 히스토그램, 도수분포다각형으로 나타내고 해석할 수 있다.",
+        "target_content": "통계적 탐구 문제를 설정하고, 공학 도구를 이용하여 자료를 수집하여 분석하고, 그 결과를 해석할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-09",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+        "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-09",
+      "relation_type": "prerequisite",
+      "weight": 0.7,
+      "base_weight": 1.0,
+      "specific_strength": 0.7,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+        "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+        "strength": 0.7
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수04-05",
+      "target_code": "6수04-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "사건이 일어날 가능성을 수로 나타낼 수 있다.",
+        "target_content": "자료를 이용하여 가능성을 예상하고, 가능성에 근거하여 적절한 판단을 내릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-01",
+      "target_code": "4수01-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "큰 수의 필요성을 인식하면서 10000 이상의 큰 수에 대한 자릿값과 위치적 기수법을 이해하고, 수를 읽고 쓸 수 있다.",
+        "target_content": "다섯 자리 이상의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교하며 그 방법을 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-05",
+      "target_code": "4수01-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "나눗셈이 이루어지는 실생활 상황과 연결하여 나눗셈의 의미를 알고, 곱셈과 나눗셈의 관계를 이해한다.",
+        "target_content": "나누는 수가 한 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있으며, 나눗셈에서 몫과 나머지의 의미를 안다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-06",
+      "target_code": "4수01-07",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "나누는 수가 한 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있으며, 나눗셈에서 몫과 나머지의 의미를 안다.",
+        "target_content": "나누는 수가 두 자리 수인 나눗셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-09",
+      "target_code": "4수01-10",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "양의 등분할을 통하여 분수의 필요성을 인식하고, 분수를 이해하고 읽고 쓸 수 있다.",
+        "target_content": "단위분수, 진분수, 가분수, 대분수를 알고, 그 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-10",
+      "target_code": "4수01-11",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "단위분수, 진분수, 가분수, 대분수를 알고, 그 관계를 이해한다.",
+        "target_content": "분모가 같은 분수끼리, 단위분수끼리 크기를 비교하고 그 방법을 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-12",
+      "target_code": "4수01-13",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "분모가 10인 진분수와 연결하여 소수 한 자리 수를 이해하고 읽고 쓸 수 있다.",
+        "target_content": "자릿값의 원리를 바탕으로 소수 두 자리 수와 소수 세 자리 수를 이해하고 읽고 쓸 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-13",
+      "target_code": "4수01-14",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자릿값의 원리를 바탕으로 소수 두 자리 수와 소수 세 자리 수를 이해하고 읽고 쓸 수 있다.",
+        "target_content": "소수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수02-01",
+      "target_code": "4수02-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다양한 변화 규칙을 찾아 설명하고, 그 규칙을 수나 식으로 나타낼 수 있다.",
+        "target_content": "계산식의 배열에서 규칙을 찾고, 계산 결과를 추측할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-01",
+      "target_code": "4수03-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "직선, 선분, 반직선을 이해하고 구별할 수 있다.",
+        "target_content": "각과 직각을 이해하고, 직각과 비교하는 활동을 통하여 예각과 둔각을 구별할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-02",
+      "target_code": "4수03-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "각과 직각을 이해하고, 직각과 비교하는 활동을 통하여 예각과 둔각을 구별할 수 있다.",
+        "target_content": "직선의 수직 관계와 평행 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-04",
+      "target_code": "4수03-05",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "구체물이나 평면도형의 밀기, 뒤집기, 돌리기 활동을 통하여 그 변화를 이해한다.",
+        "target_content": "평면에서 점의 이동에 대해 위치와 방향을 이용하여 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-06",
+      "target_code": "4수03-07",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "원의 중심, 반지름, 지름을 이해하고, 그 성질을 안다.",
+        "target_content": "컴퍼스를 이용하여 여러 가지 크기의 원을 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-08",
+      "target_code": "4수03-09",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "여러 가지 모양의 삼각형에 대한 분류 활동을 통하여 이등변삼각형, 정삼각형을 이해하고, 그 성질을 탐구하고 설명할 수 있다.",
+        "target_content": "여러 가지 모양의 삼각형에 대한 분류 활동을 통하여 직각삼각형, 예각삼각형, 둔각삼각형을 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-11",
+      "target_code": "4수03-12",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다각형과 정다각형을 이해한다.",
+        "target_content": "주어진 도형을 이용하여 여러 가지 모양을 만들거나 채우고 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-13",
+      "target_code": "4수03-14",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1분과 1초의 관계를 이해하고, 초 단위까지 시각을 읽을 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 초 단위까지의 시간의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-15",
+      "target_code": "4수03-16",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "길이 단위 1mm와 1km를 알고, 이를 이용하여 길이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+        "target_content": "1cm와 1mm, 1km와 1m의 관계를 이해하고, 길이를 '몇 cm 몇 mm'와 '몇 mm', '몇 km 몇 m'와 '몇 m'로 다양하게 표현할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-17",
+      "target_code": "4수03-18",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "들이 단위 1L와 1mL를 알고, 이를 이용하여 들이를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+        "target_content": "1L와 1mL의 관계를 이해하고, 들이를 '몇 L 몇 mL'와 '몇 mL'로 표현할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-18",
+      "target_code": "4수03-19",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1L와 1mL의 관계를 이해하고, 들이를 '몇 L 몇 mL'와 '몇 mL'로 표현할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 들이의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-20",
+      "target_code": "4수03-21",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1g과 1kg을 알고, 이를 이용하여 무게를 측정하고 어림하며 수학의 유용성을 인식할 수 있다.",
+        "target_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-21",
+      "target_code": "4수03-22",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1kg과 1g의 관계를 이해하고, 무게를 '몇 kg 몇 g'과 '몇 g'으로 표현할 수 있다.",
+        "target_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-22",
+      "target_code": "4수03-23",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "실생활에서 무게를 나타낼 때 사용하는 단위 1t을 알고, 1t과 1kg의 관계를 이해한다.",
+        "target_content": "실생활 문제 상황과 연결하여 무게의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수03-24",
+      "target_code": "4수03-25",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "각의 크기의 단위인 1도(°)를 알고, 각도기를 이용하여 각의 크기를 측정하고 어림할 수 있다.",
+        "target_content": "여러 가지 방법으로 삼각형과 사각형의 내각의 크기의 합을 추론하고, 자신의 추론 과정을 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수04-01",
+      "target_code": "4수04-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 수집하여 그림그래프나 막대그래프로 나타내고 해석할 수 있다.",
+        "target_content": "자료를 수집하여 꺾은선그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "4수04-02",
+      "target_code": "4수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 수집하여 꺾은선그래프로 나타내고 해석할 수 있다.",
+        "target_content": "탐구 문제를 해결하기 위해 자료를 수집, 정리하여 막대그래프나 꺾은선그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-01",
+      "target_code": "9수01-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "소인수분해의 뜻을 알고, 자연수를 소인수분해 할 수 있다.",
+        "target_content": "소인수분해를 이용하여 최대공약수와 최소공배수를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-03",
+      "target_code": "9수01-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다양한 상황을 이용하여 음수의 필요성을 인식하고, 양수와 음수, 정수와 유리수의 개념을 이해한다.",
+        "target_content": "정수와 유리수의 대소 관계를 판단할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-04",
+      "target_code": "9수01-05",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "정수와 유리수의 대소 관계를 판단할 수 있다.",
+        "target_content": "정수와 유리수의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-07",
+      "target_code": "9수01-08",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "제곱근의 뜻과 성질을 알고, 제곱근의 대소 관계를 판단할 수 있다.",
+        "target_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-08",
+      "target_code": "9수01-09",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "무리수의 개념을 이해하고, 무리수의 유용성을 인식할 수 있다.",
+        "target_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수01-09",
+      "target_code": "9수01-10",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "실수의 대소 관계를 판단하고 설명할 수 있다.",
+        "target_content": "근호를 포함한 식의 사칙계산의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-01",
+      "target_code": "9수02-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다양한 상황을 문자를 사용한 식으로 나타내어 그 유용성을 인식하고, 식의 값을 구할 수 있다.",
+        "target_content": "일차식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-03",
+      "target_code": "9수02-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "방정식과 그 해의 뜻을 알고, 등식의 성질을 설명할 수 있다.",
+        "target_content": "일차방정식을 풀 수 있고, 이를 활용하여 문제를 해결할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-05",
+      "target_code": "9수02-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "순서쌍과 좌표를 이해하고, 그 편리함을 인식할 수 있다.",
+        "target_content": "다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-06",
+      "target_code": "9수02-07",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.",
+        "target_content": "정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-08",
+      "target_code": "9수02-09",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "지수법칙을 이해하고, 이를 이용하여 식을 간단히 할 수 있다.",
+        "target_content": "다항식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-09",
+      "target_code": "9수02-10",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다항식의 덧셈과 뺄셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "target_content": "'(단항식)×(다항식)', '(다항식)÷(단항식)'과 같은 곱셈과 나눗셈의 원리를 이해하고, 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-11",
+      "target_code": "9수02-12",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "부등식과 그 해의 뜻을 알고, 부등식의 성질을 설명할 수 있다.",
+        "target_content": "일차부등식을 풀 수 있고, 이를 활용하여 문제를 해결할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-14",
+      "target_code": "9수02-15",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "함수의 개념을 이해하고, 함숫값을 구할 수 있다.",
+        "target_content": "일차함수의 개념을 이해하고, 그 그래프를 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-15",
+      "target_code": "9수02-16",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "일차함수의 개념을 이해하고, 그 그래프를 그릴 수 있다.",
+        "target_content": "일차함수의 그래프의 성질을 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-17",
+      "target_code": "9수02-18",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "일차함수와 미지수가 2개인 일차방정식의 관계를 설명할 수 있다.",
+        "target_content": "두 일차함수의 그래프와 연립일차방정식의 관계를 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수02-21",
+      "target_code": "9수02-22",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "이차함수의 개념을 이해한다.",
+        "target_content": "이차함수의 그래프를 그릴 수 있고, 그 성질을 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-01",
+      "target_code": "9수03-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "점, 선, 면, 각을 이해하고, 실생활 상황과 연결하여 점, 직선, 평면의 위치 관계를 설명할 수 있다.",
+        "target_content": "평행선에서 동위각과 엇각의 성질을 이해하고 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-03",
+      "target_code": "9수03-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "삼각형을 작도하고, 그 과정을 설명할 수 있다.",
+        "target_content": "삼각형의 합동 조건을 이해하고, 이를 이용하여 두 삼각형이 합동인지 판별할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-05",
+      "target_code": "9수03-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "다각형의 성질을 이해하고 설명할 수 있다.",
+        "target_content": "부채꼴의 중심각과 호의 관계를 이해하고, 이를 이용하여 부채꼴의 호의 길이와 넓이를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-07",
+      "target_code": "9수03-08",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "구체적인 모형이나 공학 도구를 이용하여 다면체와 회전체의 성질을 탐구하고, 이를 설명할 수 있다.",
+        "target_content": "입체도형의 겉넓이와 부피를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-09",
+      "target_code": "9수03-10",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "이등변삼각형의 성질을 이해하고 정당화할 수 있다.",
+        "target_content": "삼각형의 외심과 내심의 성질을 이해하고 정당화할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-10",
+      "target_code": "9수03-11",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "삼각형의 외심과 내심의 성질을 이해하고 정당화할 수 있다.",
+        "target_content": "사각형의 성질을 이해하고 정당화할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-12",
+      "target_code": "9수03-13",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "도형의 닮음의 뜻과 닮은 도형의 성질을 이해하고, 닮음비를 구할 수 있다.",
+        "target_content": "삼각형의 닮음 조건을 이해하고, 이를 이용하여 두 삼각형이 닮음인지 판별할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-13",
+      "target_code": "9수03-14",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "삼각형의 닮음 조건을 이해하고, 이를 이용하여 두 삼각형이 닮음인지 판별할 수 있다.",
+        "target_content": "평행선 사이의 선분의 길이의 비를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-16",
+      "target_code": "9수03-17",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "삼각비의 뜻을 알고, 간단한 삼각비의 값을 구할 수 있다.",
+        "target_content": "삼각비를 활용하여 여러 가지 문제를 해결할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수03-18",
+      "target_code": "9수03-19",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "원의 현에 관한 성질과 접선에 관한 성질을 이해하고 정당화할 수 있다.",
+        "target_content": "원주각의 성질을 이해하고 정당화할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수04-02",
+      "target_code": "9수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 줄기와 잎 그림, 도수분포표, 히스토그램, 도수분포다각형으로 나타내고 해석할 수 있다.",
+        "target_content": "상대도수를 구하고, 상대도수의 분포를 표나 그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수04-03",
+      "target_code": "9수04-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "상대도수를 구하고, 상대도수의 분포를 표나 그래프로 나타내고 해석할 수 있다.",
+        "target_content": "통계적 탐구 문제를 설정하고, 공학 도구를 이용하여 자료를 수집하여 분석하고, 그 결과를 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수04-05",
+      "target_code": "9수04-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "경우의 수를 구할 수 있다.",
+        "target_content": "확률의 개념과 그 기본 성질을 이해하고, 확률을 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-01",
+      "target_code": "2수01-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다.",
+        "target_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "9수04-08",
+      "target_code": "9수04-09",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "공학 도구를 이용하여 자료를 상자그림으로 나타내고 분포를 비교할 수 있다.",
+        "target_content": "자료를 산점도로 나타내고 상관관계를 말할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-02",
+      "target_code": "2수01-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "일, 십, 백, 천의 자릿값과 위치적 기수법을 이해하고, 네 자리 이하의 수를 읽고 쓸 수 있다.",
+        "target_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "2수01-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "네 자리 이하의 수의 범위에서 수의 계열을 이해하고, 수의 크기를 비교할 수 있다.",
+        "target_content": "하나의 수를 두 수로 분해하고 두 수를 하나의 수로 합성하는 활동을 통하여 수 감각을 기른다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "2수01-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "덧셈과 뺄셈이 이루어지는 실생활 상황과 연결하여 덧셈과 뺄셈의 의미를 이해한다.",
+        "target_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-06",
+      "target_code": "2수01-07",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.",
+        "target_content": "덧셈과 뺄셈의 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-07",
+      "target_code": "2수01-08",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "덧셈과 뺄셈의 관계를 이해한다.",
+        "target_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-08",
+      "target_code": "2수01-09",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "두 자리 수의 범위에서 세 수의 덧셈과 뺄셈을 할 수 있다.",
+        "target_content": "□가 사용된 덧셈식과 뺄셈식을 만들고, □의 값을 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-10",
+      "target_code": "2수01-11",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "곱셈이 이루어지는 실생활 상황과 연결하여 곱셈의 의미를 이해한다.",
+        "target_content": "곱셈구구를 이해하고, 한 자리 수의 곱셈을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수02-01",
+      "target_code": "2수02-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "물체, 무늬, 수 등의 배열에서 규칙을 찾아 여러 가지 방법으로 표현할 수 있다.",
+        "target_content": "자신이 정한 규칙에 따라 물체, 무늬, 수 등을 배열할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-01",
+      "target_code": "2수03-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 직육면체, 원기둥, 구의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+        "target_content": "쌓기나무를 이용하여 여러 가지 입체도형의 모양을 만들고, 그 모양에 대해 위치나 방향을 이용하여 말할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-03",
+      "target_code": "2수03-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 삼각형, 사각형, 원의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다.",
+        "target_content": "삼각형, 사각형, 원을 직관적으로 이해하고, 그 모양을 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-04",
+      "target_code": "2수03-05",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "삼각형, 사각형, 원을 직관적으로 이해하고, 그 모양을 그릴 수 있다.",
+        "target_content": "삼각형, 사각형에서 각각의 공통점을 찾아 말할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-07",
+      "target_code": "2수03-08",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "시계를 보고 시각을 '몇 시 몇 분'까지 읽을 수 있다.",
+        "target_content": "1시간과 1분의 관계를 이해하고, 시간을 '시간', '분'으로 표현할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-08",
+      "target_code": "2수03-09",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1시간과 1분의 관계를 이해하고, 시간을 '시간', '분'으로 표현할 수 있다.",
+        "target_content": "실생활 문제 상황과 연결하여 1분, 1시간, 1일, 1주일, 1개월, 1년 사이의 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-10",
+      "target_code": "2수03-11",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "길이 단위 1cm와 1m를 알고, 이를 이용하여 주변 사물의 길이를 측정할 수 있다.",
+        "target_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-11",
+      "target_code": "2수03-12",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "1m와 1cm의 관계를 이해하고, 길이를 '몇 m 몇 cm'와 '몇 cm'로 표현할 수 있다.",
+        "target_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-12",
+      "target_code": "2수03-13",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "여러 가지 물건의 길이를 어림하고, 길이에 대한 양감을 기른다.",
+        "target_content": "실생활 문제 상황과 연결하여 길이의 덧셈과 뺄셈을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수04-01",
+      "target_code": "2수04-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "여러 가지 사물을 정해진 기준 또는 자신이 정한 기준으로 분류하여 개수를 세어 보고, 기준에 따른 결과를 말할 수 있다.",
+        "target_content": "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수04-02",
+      "target_code": "2수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다.",
+        "target_content": "자료를 분류하여 ○, ×, / 등을 이용한 그래프로 나타내고, 자료를 그래프로 나타내면 편리한 점을 말할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-02",
+      "target_code": "6수01-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "실생활과 연결하여 이상, 이하, 초과, 미만의 의미와 쓰임을 알고, 이를 활용하여 수의 범위를 나타낼 수 있다.",
+        "target_content": "어림값을 구하기 위한 방법으로 올림, 버림, 반올림의 의미와 필요성을 알고, 이를 실생활에 활용함으로써 수학의 유용성을 인식할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-04",
+      "target_code": "6수01-05",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "약수, 공약수, 최대공약수를 이해하고 구할 수 있다.",
+        "target_content": "배수, 공배수, 최소공배수를 이해하고 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-06",
+      "target_code": "6수01-07",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "크기가 같은 분수를 만드는 방법을 이해하고, 분수를 약분, 통분할 수 있다.",
+        "target_content": "분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-07",
+      "target_code": "6수01-08",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다.",
+        "target_content": "분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-09",
+      "target_code": "6수01-10",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "분수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "target_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 분수로 나타낼 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-10",
+      "target_code": "6수01-11",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 분수로 나타낼 수 있다.",
+        "target_content": "분수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-13",
+      "target_code": "6수01-14",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "소수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "target_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 소수로 나타낼 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-14",
+      "target_code": "6수01-15",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "'(자연수)÷(자연수)'에서 나눗셈의 몫을 소수로 나타낼 수 있다.",
+        "target_content": "소수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수02-02",
+      "target_code": "6수02-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "두 양의 크기를 비교하는 상황을 통해 비의 개념을 이해하고, 두 양의 관계를 비로 나타낼 수 있다.",
+        "target_content": "비율을 이해하고, 비율을 분수, 소수, 백분율로 나타낼 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수02-04",
+      "target_code": "6수02-05",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "비례식을 알고, 그 성질을 이해하며, 이를 활용하여 간단한 비례식을 풀 수 있다.",
+        "target_content": "비례배분을 알고, 주어진 양을 비례배분 할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-01",
+      "target_code": "6수03-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "도형의 합동을 이해하고, 합동인 도형의 성질을 탐구하고 설명할 수 있다.",
+        "target_content": "실생활과 연결하여 선대칭도형과 점대칭도형을 이해하고 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-03",
+      "target_code": "6수03-04",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "직육면체와 정육면체를 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+        "target_content": "직육면체와 정육면체의 겨냥도와 전개도를 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-05",
+      "target_code": "6수03-06",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "각기둥과 각뿔을 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+        "target_content": "각기둥의 전개도를 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-07",
+      "target_code": "6수03-08",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "원기둥, 원뿔, 구를 이해하고, 구성 요소와 성질을 탐구하고 설명할 수 있다.",
+        "target_content": "원기둥의 전개도를 그릴 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-09",
+      "target_code": "6수03-10",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "쌓기나무로 만든 입체도형을 보고 사용된 쌓기나무의 개수를 구할 수 있다.",
+        "target_content": "쌓기나무로 만든 입체도형의 위, 앞, 옆에서 본 모양을 표현할 수 있고, 이러한 표현을 보고 입체도형의 모양을 추측할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-11",
+      "target_code": "6수03-12",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "평면도형의 둘레를 이해하고, 기본적인 평면도형의 둘레를 구할 수 있다.",
+        "target_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-12",
+      "target_code": "6수03-13",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "넓이 단위 1cm², 1m², 1km²를 알며, 그 관계를 이해한다.",
+        "target_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-13",
+      "target_code": "6수03-14",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "직사각형과 정사각형의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "target_content": "평행사변형, 삼각형, 사다리꼴, 마름모의 넓이를 구하는 방법을 다양하게 추론하고, 이와 관련된 문제를 해결할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-15",
+      "target_code": "6수03-16",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "여러 가지 원 모양 물체의 원주와 지름을 측정하는 활동을 통하여, 원주율이 일정한 값임을 알고 그 근삿값을 사용할 수 있다.",
+        "target_content": "원주와 원의 넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-17",
+      "target_code": "6수03-18",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "직육면체와 정육면체의 겉넓이를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "target_content": "부피 단위 1cm³, 1m³를 알며, 그 관계를 이해한다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수03-18",
+      "target_code": "6수03-19",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "부피 단위 1cm³, 1m³를 알며, 그 관계를 이해한다.",
+        "target_content": "직육면체와 정육면체의 부피를 구하는 방법을 이해하고, 이를 구할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수04-01",
+      "target_code": "6수04-02",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "평균의 의미를 알고, 자료를 수집하여 평균을 구하고 해석할 수 있다.",
+        "target_content": "자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수04-02",
+      "target_code": "6수04-03",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다.",
+        "target_content": "탐구 문제를 설정하고, 그에 맞는 자료를 수집, 정리하여 적절한 그래프로 나타내고 해석할 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "6수04-04",
+      "target_code": "6수04-05",
+      "relation_type": "prerequisite",
+      "weight": 0.55,
+      "base_weight": 1.0,
+      "specific_strength": 0.55,
+      "reasoning": "same level/domain & same element; order asc",
+      "method": "rule",
+      "metadata": {
+        "source_content": "사건이 일어날 가능성을 말로 표현하고 비교할 수 있다.",
+        "target_content": "사건이 일어날 가능성을 수로 나타낼 수 있다.",
+        "strength": 0.55
+      },
+      "original_type": "prerequisite",
+      "mapped_type": "prerequisite",
+      "validated": true
+    },
+    {
+      "source_code": "2수03-01",
+      "target_code": "2수03-03",
+      "relation_type": "similar_to",
+      "weight": 0.4,
+      "base_weight": 0.5,
+      "specific_strength": 0.8,
+      "reasoning": "두 성취기준 모두 물건을 관찰하여 도형을 찾고 이를 이용하여 모양을 만드는 활동을 포함하고 있습니다. 다만, 다루는 도형의 종류가 다릅니다.",
+      "method": "ai",
+      "metadata": {
+        "similarity_score": 0.8
+      },
+      "original_type": "similar_to",
+      "mapped_type": "similar_to",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-05",
+      "target_code": "4수02-02",
+      "relation_type": "domain_bridge",
+      "weight": 0.32,
+      "base_weight": 0.4,
+      "specific_strength": 0.8,
+      "reasoning": "덧셈과 뺄셈의 의미를 이해하는 것은 계산식의 배열에서 규칙을 찾고 계산 결과를 추측하는 데 중요한 기초가 됩니다. 덧셈과 뺄셈의 기본 개념을 이해하면 계산식의 규칙성을 파악하고 예측하는 능력이 향상됩니다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.8
+      },
+      "original_type": "domain_bridge",
+      "mapped_type": "applies_to",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-04",
+      "target_code": "2수02-01",
+      "relation_type": "domain_bridge",
+      "weight": 0.28,
+      "base_weight": 0.4,
+      "specific_strength": 0.7,
+      "reasoning": "하나의 수를 두 수로 분해하고 합성하는 활동은 수의 배열에서 규칙을 찾는 데 도움이 됩니다. 수의 분해와 합성은 수의 패턴을 이해하고 표현하는 데 기초가 됩니다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.7
+      },
+      "original_type": "domain_bridge",
+      "mapped_type": "applies_to",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "4수02-03",
+      "relation_type": "domain_bridge",
+      "weight": 0.24,
+      "base_weight": 0.4,
+      "specific_strength": 0.6,
+      "reasoning": "수의 크기를 비교하는 능력은 등호를 사용하여 크기가 같은 두 양의 관계를 식으로 나타내는 데 필수적입니다. 수의 크기를 비교하는 것은 수학적 관계를 이해하는 데 중요한 역할을 합니다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.6
+      },
+      "original_type": "domain_bridge",
+      "mapped_type": "applies_to",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-02",
+      "target_code": "4수01-01",
+      "relation_type": "grade_progression",
+      "weight": 0.72,
+      "base_weight": 0.8,
+      "specific_strength": 0.9,
+      "reasoning": "2학년에서는 네 자리 이하의 수에 대한 자릿값과 위치적 기수법을 이해하고, 4학년에서는 이를 확장하여 10000 이상의 큰 수에 대한 자릿값과 위치적 기수법을 이해하는 것으로 발전한다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.9
+      },
+      "original_type": "grade_progression",
+      "mapped_type": "extends",
+      "validated": true
+    },
+    {
+      "source_code": "2수01-03",
+      "target_code": "4수01-02",
+      "relation_type": "grade_progression",
+      "weight": 0.64,
+      "base_weight": 0.8,
+      "specific_strength": 0.8,
+      "reasoning": "2학년에서는 네 자리 이하의 수의 크기를 비교하는 방법을 배우고, 4학년에서는 다섯 자리 이상의 수의 크기를 비교하며 그 방법을 설명할 수 있는 능력을 기른다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.8
+      },
+      "original_type": "grade_progression",
+      "mapped_type": "extends",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-01",
+      "target_code": "6수01-03",
+      "relation_type": "grade_progression",
+      "weight": 0.56,
+      "base_weight": 0.8,
+      "specific_strength": 0.7,
+      "reasoning": "4학년에서는 큰 수의 자릿값과 위치적 기수법을 이해하는 것을 배우고, 6학년에서는 올림, 버림, 반올림을 통해 어림값을 구하는 방법을 배우며, 이는 큰 수의 이해와 관련이 있다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.7
+      },
+      "original_type": "grade_progression",
+      "mapped_type": "extends",
+      "validated": true
+    },
+    {
+      "source_code": "4수01-03",
+      "target_code": "6수01-01",
+      "relation_type": "grade_progression",
+      "weight": 0.64,
+      "base_weight": 0.8,
+      "specific_strength": 0.8,
+      "reasoning": "4학년에서는 세 자리 수의 덧셈과 뺄셈을 배우고, 6학년에서는 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산을 배우며, 이는 기본 연산의 확장으로 이어진다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.8
+      },
+      "original_type": "grade_progression",
+      "mapped_type": "extends",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-01",
+      "target_code": "9수01-02",
+      "relation_type": "grade_progression",
+      "weight": 0.56,
+      "base_weight": 0.8,
+      "specific_strength": 0.7,
+      "reasoning": "6학년에서 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산을 학습하여 계산의 기초를 다진 후, 9학년에서 소인수분해를 이용한 최대공약수와 최소공배수 계산으로 확장된다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.7
+      },
+      "original_type": "grade_progression",
+      "mapped_type": "extends",
+      "validated": true
+    },
+    {
+      "source_code": "6수01-03",
+      "target_code": "9수01-03",
+      "relation_type": "grade_progression",
+      "weight": 0.48,
+      "base_weight": 0.8,
+      "specific_strength": 0.6,
+      "reasoning": "6학년에서 어림값을 구하는 방법을 통해 수학적 개념의 유용성을 인식한 후, 9학년에서 음수와 유리수의 개념을 이해하여 수의 확장된 범위를 다룬다.",
+      "method": "ai",
+      "metadata": {
+        "strength": 0.6
+      },
+      "original_type": "grade_progression",
+      "mapped_type": "extends",
+      "validated": true
+    }
+  ],
+  "foundation_integration": {
+    "categories_used": [
+      "structural_relations",
+      "learning_sequence_relations",
+      "semantic_relations"
+    ],
+    "hierarchy_levels": 5,
+    "clusters_analyzed": 3
+  },
+  "metadata": {
+    "extraction_timestamp": 76740.839632625,
+    "total_relations_extracted": 152,
+    "relation_types_count": 6,
+    "db_suggestions_used": 241,
+    "foundation_design_integrated": true
+  }
+}

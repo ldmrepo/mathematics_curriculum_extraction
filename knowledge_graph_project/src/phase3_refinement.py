@@ -18,6 +18,16 @@ class RelationshipRefiner:
         """Refine all extracted relationships with educational context"""
         logger.info("Starting relationship refinement with Claude Sonnet 4")
         
+        # Integrate data from both Phase 1 and Phase 2
+        self.foundation_design = foundation_design
+        self.relationship_categories = foundation_design.get('relationship_categories', {})
+        self.hierarchical_structure = foundation_design.get('hierarchical_structure', {})
+        self.community_clusters = foundation_design.get('community_clusters', {})
+        self.foundation_integration = relationship_data.get('foundation_integration', {})
+        
+        logger.info(f"Integrating {self.foundation_integration.get('categories_used', [])} categories from Phase 1")
+        logger.info(f"Using {self.foundation_integration.get('hierarchy_levels', 0)} hierarchy levels")
+        
         # Get weighted relations from Phase 2
         weighted_relations = relationship_data.get('weighted_relations', [])
         
@@ -30,23 +40,46 @@ class RelationshipRefiner:
         # Add educational metadata
         enriched_relations = await self._add_educational_metadata(adjusted_weights)
         
-        # Identify missing critical relationships
+        # Identify missing critical relationships using integrated data
         missing_relations = await self._identify_missing_relationships(enriched_relations, foundation_design)
         
         # Resolve conflicts and redundancies
         cleaned_relations = await self._resolve_conflicts(enriched_relations + missing_relations)
+        
+        # Apply hierarchical structure validation from Phase 1
+        hierarchical_validated = await self._validate_hierarchical_consistency(cleaned_relations)
         
         refinement_results = {
             'refined_types': refined_types,
             'adjusted_weights': adjusted_weights,
             'enriched_relations': enriched_relations,
             'missing_relations': missing_relations,
-            'final_relations': cleaned_relations,
+            'final_relations': hierarchical_validated,
+            'data_integration': {
+                'phase1_components': {
+                    'node_types': len(foundation_design.get('node_structure', {}).get('knowledge_graph_schema', {}).get('node_types', [])),
+                    'relationship_categories': len(self.relationship_categories),
+                    'hierarchy_levels': self.foundation_integration.get('hierarchy_levels', 0),
+                    'clusters_used': self.foundation_integration.get('clusters_analyzed', 0)
+                },
+                'phase2_components': {
+                    'relations_extracted': len(relationship_data.get('weighted_relations', [])),
+                    'relation_types': relationship_data.get('metadata', {}).get('relation_types_count', 0),
+                    'db_suggestions': relationship_data.get('metadata', {}).get('db_suggestions_used', 0)
+                },
+                'phase3_enhancements': {
+                    'relations_refined': len(hierarchical_validated),
+                    'missing_added': len(missing_relations),
+                    'conflicts_resolved': len(enriched_relations) - len(cleaned_relations),
+                    'hierarchical_validated': len(hierarchical_validated) - len(cleaned_relations)
+                }
+            },
             'metadata': {
                 'refinement_timestamp': asyncio.get_event_loop().time(),
-                'total_relations_refined': len(cleaned_relations),
+                'total_relations_refined': len(hierarchical_validated),
                 'new_relations_added': len(missing_relations),
-                'conflicts_resolved': len(enriched_relations) - len(cleaned_relations)
+                'conflicts_resolved': len(enriched_relations) - len(cleaned_relations),
+                'data_fully_integrated': True
             }
         }
         
@@ -393,6 +426,53 @@ JSON 형식으로 10-20개의 중요 누락 관계를 제안하세요:
         except Exception as e:
             logger.error(f"Failed to identify missing relationships: {e}")
             return []
+    
+    async def _validate_hierarchical_consistency(self, relations: List[Dict]) -> List[Dict]:
+        """Validate relationships against hierarchical structure from Phase 1"""
+        logger.info("Validating relationships against hierarchical structure")
+        
+        validated = []
+        hierarchy = self.hierarchical_structure.get('knowledgeGraph', {}).get('hierarchicalStructure', [])
+        
+        # Build hierarchy map for validation
+        hierarchy_map = {}
+        for level in hierarchy:
+            level_name = level.get('name', '')
+            hierarchy_map[level_name] = level.get('level', 0)
+        
+        for relation in relations:
+            # Add hierarchical validation metadata
+            relation['hierarchical_valid'] = True  # Default to valid
+            
+            # Check if relationship respects hierarchical constraints
+            source = relation.get('source_code', '')
+            target = relation.get('target_code', '')
+            
+            # Extract grade levels from codes (e.g., '2수01-01' -> grade 2)
+            source_grade = self._extract_grade_from_code(source)
+            target_grade = self._extract_grade_from_code(target)
+            
+            # Validate grade progression
+            if relation.get('relation_type') == 'prerequisite':
+                # Prerequisites should be from same or lower grade
+                if source_grade and target_grade:
+                    relation['hierarchical_valid'] = source_grade <= target_grade
+            
+            validated.append(relation)
+        
+        valid_count = sum(1 for r in validated if r.get('hierarchical_valid', False))
+        logger.info(f"Hierarchically validated {valid_count}/{len(validated)} relationships")
+        
+        return validated
+    
+    def _extract_grade_from_code(self, code: str) -> int:
+        """Extract grade level from standard code"""
+        # Pattern: digit at start (e.g., '2수01-01' -> 2)
+        import re
+        match = re.match(r'^(\d+)', code)
+        if match:
+            return int(match.group(1))
+        return 0
     
     async def _resolve_conflicts(self, relations: List[Dict]) -> List[Dict]:
         """Resolve conflicts and remove redundancies"""

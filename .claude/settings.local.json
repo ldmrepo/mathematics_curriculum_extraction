@@ -11,7 +11,20 @@
       "Bash(env)",
       "WebSearch",
       "Bash(sed:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebFetch(domain:platform.openai.com)",
+      "Bash([ ! -z \"$OPENAI_API_KEY\" ])",
+      "Bash(source .env)",
+      "Bash(export OPENAI_API_KEY)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker logs:*)",
+      "Bash(pip install:*)",
+      "Bash(docker-compose:*)",
+      "Bash(psql:*)",
+      "Bash(PGPASSWORD=postgres123 psql -h localhost -p 5432 -U postgres -d mathematics_curriculum -c \"\\dt curriculum.*\")",
+      "Bash(PGPASSWORD=postgres123 psql -h localhost -p 5432 -U postgres -d mathematics_curriculum -c \"\nSELECT \n    schemaname,\n    tablename,\n    n_tup_ins as total_rows\nFROM pg_stat_user_tables \nWHERE schemaname = ''curriculum''\nORDER BY tablename;\n\")",
+      "Bash(PGPASSWORD=postgres123 psql -h localhost -p 5432 -U postgres -d mathematics_curriculum -c \"\nSELECT \n    schemaname,\n    relname as tablename,\n    n_tup_ins as total_rows\nFROM pg_stat_user_tables \nWHERE schemaname = ''curriculum''\nORDER BY relname;\n\")",
+      "Bash(PGPASSWORD=postgres123 psql:*)"
     ],
     "deny": [],
     "ask": []
